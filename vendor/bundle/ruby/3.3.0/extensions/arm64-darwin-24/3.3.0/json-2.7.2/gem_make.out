@@ -1,0 +1,16 @@
+current directory: /Users/anojanyogenthiran/Documents/Projects/Personal/ayogenthiran.github.io/vendor/bundle/ruby/3.3.0/gems/json-2.7.2/ext/json
+/opt/homebrew/opt/ruby/bin/ruby extconf.rb
+creating Makefile
+
+current directory: /Users/anojanyogenthiran/Documents/Projects/Personal/ayogenthiran.github.io/vendor/bundle/ruby/3.3.0/gems/json-2.7.2/ext/json
+make DESTDIR\= sitearchdir\=./.gem.20241014-19061-cwmzke sitelibdir\=./.gem.20241014-19061-cwmzke clean
+
+current directory: /Users/anojanyogenthiran/Documents/Projects/Personal/ayogenthiran.github.io/vendor/bundle/ruby/3.3.0/gems/json-2.7.2/ext/json
+make DESTDIR\= sitearchdir\=./.gem.20241014-19061-cwmzke sitelibdir\=./.gem.20241014-19061-cwmzke
+make: Nothing to be done for `all'.
+
+current directory: /Users/anojanyogenthiran/Documents/Projects/Personal/ayogenthiran.github.io/vendor/bundle/ruby/3.3.0/gems/json-2.7.2/ext/json
+make DESTDIR\= sitearchdir\=./.gem.20241014-19061-cwmzke sitelibdir\=./.gem.20241014-19061-cwmzke install
+
+current directory: /Users/anojanyogenthiran/Documents/Projects/Personal/ayogenthiran.github.io/vendor/bundle/ruby/3.3.0/gems/json-2.7.2/ext/json
+make DESTDIR\= sitearchdir\=./.gem.20241014-19061-cwmzke sitelibdir\=./.gem.20241014-19061-cwmzke clean
