@@ -1,0 +1,43 @@
+.project-container {
+    display: flex;
+    margin-bottom: 2.5rem;
+    
+    .project-content {
+      flex: 1;
+    }
+    
+    .project-title {
+      margin: 0px;
+      font-size: 130%;
+      font-weight: bold;
+    }
+    
+    .project-date {
+      float: right;
+      font-size: 80%;
+      color: #7a7a7a;
+    }
+    
+    .project-tech {
+      margin-top: 0.5rem;
+      span {
+        color: #666;
+      }
+    }
+    
+    .project-description {
+      color: #7a7a7a;
+      margin-top: 0.5rem;
+    }
+    
+    .project-link {
+      margin-top: 0.5rem;
+      a {
+        color: #dc3545;
+        text-decoration: none;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
