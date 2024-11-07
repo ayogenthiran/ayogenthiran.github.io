@@ -299,5 +299,13 @@ details[open] summary{
   text-decoration: underline;
   color: black;
 }
+.author__desktop {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
 
-
+.fa-map-marker {
+  font-size: 1.1em;
+  color: #666;
+}
