@@ -299,3 +299,14 @@ details[open] summary{
   text-decoration: underline;
   color: black;
 }
+
+
+.icon-pad-right {
+  padding-right: 5px;
+}
+
+.author__desktop {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
