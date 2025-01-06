@@ -1,0 +1,713 @@
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+
+<meta charset="utf-8">
+
+<!-- Favicons -->
+<link rel="apple-touch-icon" sizes="180x180" href="http://localhost:4000/images/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:4000/images/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:4000/images/favicon-16x16.png">
+<link rel="shortcut icon" href="http://localhost:4000/images/favicon.ico">
+<link rel="manifest" href="http://localhost:4000/manifest.json">
+
+
+
+<!-- begin SEO -->
+
+
+
+
+
+
+
+
+
+<title>Advancing Federated Learning with ConfFedProto: Tackling Non-IID Challenges with Confidence-Based Prototypes - Anojan Yogenthiran</title>
+
+
+
+
+
+
+
+<meta property="og:locale" content="en-US">
+<meta property="og:site_name" content="Anojan Yogenthiran">
+<meta property="og:title" content="Advancing Federated Learning with ConfFedProto: Tackling Non-IID Challenges with Confidence-Based Prototypes">
+
+
+  <link rel="canonical" href="http://localhost:4000/posts/2025/01/confedroto-non-iid/">
+  <meta property="og:url" content="http://localhost:4000/posts/2025/01/confedroto-non-iid/">
+
+
+
+  <meta property="og:description" content="ConfFedProto: A novel approach that leverages confidence scores for adaptive prototype aggregation, effectively addressing non-IID data challenges in Federated Learning.">
+
+
+
+  <meta name="twitter:site" content="@ayogenth">
+  <meta name="twitter:title" content="Advancing Federated Learning with ConfFedProto: Tackling Non-IID Challenges with Confidence-Based Prototypes">
+  <meta name="twitter:description" content="ConfFedProto: A novel approach that leverages confidence scores for adaptive prototype aggregation, effectively addressing non-IID data challenges in Federated Learning.">
+  <meta name="twitter:url" content="http://localhost:4000/posts/2025/01/confedroto-non-iid/">
+
+  
+    <meta name="twitter:card" content="summary">
+    
+  
+
+  
+
+
+
+  
+
+  
+
+
+
+
+
+  <meta property="og:type" content="article">
+  <meta property="article:published_time" content="2025-01-05T00:00:00-08:00">
+
+
+
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context" : "http://schema.org",
+      "@type" : "Person",
+      "name" : "Anojan Yogenthiran",
+      "url" : "http://localhost:4000",
+      "sameAs" : ["https://x.com/ayogenth","https://www.linkedin.com/in/anojan-yogenthiran/"]
+    }
+  </script>
+
+
+
+
+
+
+<!-- end SEO -->
+
+
+<link href="http://localhost:4000/feed.xml" type="application/atom+xml" rel="alternate" title="Anojan Yogenthiran Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="http://localhost:4000/assets/css/main.css">
+
+<meta http-equiv="cleartype" content="on">
+    
+
+<!-- start custom head snippets -->
+
+<link rel="apple-touch-icon" sizes="57x57" href="http://localhost:4000/images/apple-touch-icon-57x57.png?v=M44lzPylqQ">
+<link rel="apple-touch-icon" sizes="60x60" href="http://localhost:4000/images/apple-touch-icon-60x60.png?v=M44lzPylqQ">
+<link rel="apple-touch-icon" sizes="72x72" href="http://localhost:4000/images/apple-touch-icon-72x72.png?v=M44lzPylqQ">
+<link rel="apple-touch-icon" sizes="76x76" href="http://localhost:4000/images/apple-touch-icon-76x76.png?v=M44lzPylqQ">
+<link rel="apple-touch-icon" sizes="114x114" href="http://localhost:4000/images/apple-touch-icon-114x114.png?v=M44lzPylqQ">
+<link rel="apple-touch-icon" sizes="120x120" href="http://localhost:4000/images/apple-touch-icon-120x120.png?v=M44lzPylqQ">
+<link rel="apple-touch-icon" sizes="144x144" href="http://localhost:4000/images/apple-touch-icon-144x144.png?v=M44lzPylqQ">
+<link rel="apple-touch-icon" sizes="152x152" href="http://localhost:4000/images/apple-touch-icon-152x152.png?v=M44lzPylqQ">
+<link rel="apple-touch-icon" sizes="180x180" href="http://localhost:4000/images/apple-touch-icon-180x180.png?v=M44lzPylqQ">
+<link rel="icon" type="image/png" href="http://localhost:4000/images/favicon-32x32.png?v=M44lzPylqQ" sizes="32x32">
+<link rel="icon" type="image/png" href="http://localhost:4000/images/android-chrome-192x192.png?v=M44lzPylqQ" sizes="192x192">
+<link rel="icon" type="image/png" href="http://localhost:4000/images/favicon-96x96.png?v=M44lzPylqQ" sizes="96x96">
+<link rel="icon" type="image/png" href="http://localhost:4000/images/favicon-16x16.png?v=M44lzPylqQ" sizes="16x16">
+<link rel="manifest" href="http://localhost:4000/images/manifest.json?v=M44lzPylqQ">
+<link rel="mask-icon" href="http://localhost:4000/images/safari-pinned-tab.svg?v=M44lzPylqQ" color="#000000">
+<link rel="shortcut icon" href="/images/favicon.ico?v=M44lzPylqQ">
+<meta name="msapplication-TileColor" content="#000000">
+<meta name="msapplication-TileImage" content="http://localhost:4000/images/mstile-144x144.png?v=M44lzPylqQ">
+<meta name="msapplication-config" content="http://localhost:4000/images/browserconfig.xml?v=M44lzPylqQ">
+<meta name="theme-color" content="#ffffff">
+<link rel="stylesheet" href="http://localhost:4000/assets/css/academicons.css"/>
+
+<script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: { autoNumber: "all" } } }); </script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML' async></script>
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <button><div class="navicon"></div></button>
+        <ul class="visible-links">
+          <li class="masthead__menu-item masthead__menu-item--lg"><a href="http://localhost:4000/">Anojan Yogenthiran</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="http://localhost:4000/projects/">Projects</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="http://localhost:4000/year-archive/">Blog</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="http://localhost:4000/cv/">CV</a></li>
+          
+        </ul>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+    
+
+
+
+
+
+<div id="main" role="main">
+  
+
+
+  <div class="sidebar sticky">
+  
+
+
+
+<div itemscope itemtype="http://schema.org/Person">
+
+  <div class="author__avatar">
+    
+    	<img src="http://localhost:4000/images/profile.jpg" class="author__avatar" alt="Anojan Yogenthiran">
+    
+  </div>
+
+  <div class="author__content">
+    <h3 class="author__name">Anojan Yogenthiran</h3>
+    <p class="author__bio">Master's student in Artificial Intelligence</p>
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+      <li class="author__desktop"><i class="fa fa-map-marker" aria-hidden="true"></i> London, ON</li>
+      
+      
+        <li><i class="fas fa-fw fa-university" aria-hidden="true"></i> Western University</li>
+      
+      
+      
+        <li><a href="mailto:ayogenth@uwo.ca"><i class="fas fa-fw fa-envelope" aria-hidden="true"></i> Email</a></li>
+      
+      
+       
+      
+        <li><a href="https://twitter.com/ayogenth"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+      
+      
+      
+      
+        <li><a href="https://www.linkedin.com/in/anojan-yogenthiran"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> LinkedIn</a></li>
+      
+      
+      
+      
+      
+      
+        <li><a href="https://github.com/ayogenthiran"><i class="fab fa-fw fa-github" aria-hidden="true"></i> Github</a></li>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    </ul>
+  </div>
+</div>
+  
+  </div>
+
+
+  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Advancing Federated Learning with ConfFedProto: Tackling Non-IID Challenges with Confidence-Based Prototypes">
+    <meta itemprop="description" content="ConfFedProto: A novel approach that leverages confidence scores for adaptive prototype aggregation, effectively addressing non-IID data challenges in Federated Learning.">
+    <meta itemprop="datePublished" content="January 05, 2025">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 class="page__title" itemprop="headline">Advancing Federated Learning with ConfFedProto: Tackling Non-IID Challenges with Confidence-Based Prototypes
+</h1>
+          <!-- 
+            <p class="page__meta"><i class="fa fa-clock" aria-hidden="true"></i> 
+
+
+  
+	  0 min.
+	
+</p>
+           -->
+        <!--  -->
+
+        
+        
+        
+        <p class="page__meta" style="font-size:1em;display: inline;">
+    <time datetime="2025-01-05T00:00:00-08:00">January 05, 2025</time>
+    
+
+
+
+
+  
+  
+  
+
+    <span class="page__taxonomy" itemprop="keywords">
+    
+      
+      
+      <a href="http://localhost:4000/tags/#federated-learning" class="page__taxonomy-item" rel="tag">Federated Learning</a><span class="sep">, </span>
+    
+      
+      
+      <a href="http://localhost:4000/tags/#machine-learning" class="page__taxonomy-item" rel="tag">Machine Learning</a><span class="sep">, </span>
+    
+      
+      
+      <a href="http://localhost:4000/tags/#non-iid-data" class="page__taxonomy-item" rel="tag">Non-IID Data</a><span class="sep">, </span>
+    
+      
+      
+      <a href="http://localhost:4000/tags/#privacy-preserving-ml" class="page__taxonomy-item" rel="tag">Privacy-Preserving ML</a>
+    
+    </span>
+
+    <br>
+    <span style="font-size:70%;"><i class="fa fa-clock" aria-hidden="true"></i> 
+
+
+  
+	  4 min.
+	
+</span>
+    <!--  -->
+    <!-- 
+
+
+  
+
+
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fa fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="http://localhost:4000/tags/#federated-learning" class="page__taxonomy-item" rel="tag">Federated Learning</a><span class="sep">, </span>
+    
+      
+      
+      <a href="http://localhost:4000/tags/#machine-learning" class="page__taxonomy-item" rel="tag">Machine Learning</a><span class="sep">, </span>
+    
+      
+      
+      <a href="http://localhost:4000/tags/#non-iid-data" class="page__taxonomy-item" rel="tag">Non-IID Data</a><span class="sep">, </span>
+    
+      
+      
+      <a href="http://localhost:4000/tags/#privacy-preserving-ml" class="page__taxonomy-item" rel="tag">Privacy-Preserving ML</a>
+    
+    </span>
+  </p>
+
+
+
+ -->
+    <!-- 
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Published:</strong> <time datetime="2025-01-05">January 5, 2025</time></p>
+
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2025-01-05">January 5, 2025</time></p>
+ -->
+  </p>
+  
+  <!-- 
+    <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Published:</strong> <time datetime="2025-01-05T00:00:00-08:00">January 05, 2025</time></p>
+   -->
+        
+             
+        
+    
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <p>In the era of distributed systems and privacy-first computing, Federated Learning (FL) is a game-changer. However, FL faces significant challenges when client data distributions are non-identical (non-IID). In my latest machine learning project, I developed ConfFedProto, a framework that leverages confidence scores for adaptive prototype aggregation, effectively addressing non-IID data challenges in Federated Learning</p>
+
+<p>Here's an overview of my project, its impact, and why it matters.</p>
+
+<h2 id="the-challenge-non-iid-data-in-federated-learning">The Challenge: Non-IID Data in Federated Learning</h2>
+
+<p>Federated Learning allows devices to collaboratively train a global model while keeping their data private. Federated learning involves the following process:</p>
+
+<ol>
+  <li>A global model is initialized and sent to selected clients</li>
+  <li>Clients train locally on their data</li>
+  <li>Updates are uploaded to the server</li>
+  <li>The server aggregates these updates to refine the global model</li>
+</ol>
+
+<p><img src="/images/blog/ConfFedProto/federated-learning.jpeg" alt="Federated Learning Process" />
+<em>Figure 1: Federated learning training process.</em></p>
+
+<p>Yet, real-world scenarios often involve non-IID data—clients have uneven or biased data distributions. Non-IID data significantly hinders the global model's ability to generalize across clients, making it a key challenge for practical FL systems.</p>
+
+<p>Addressing these challenges is essential for enabling FL to be scalable and applicable across diverse, real-world domains.</p>
+
+<p>This leads to:</p>
+<ul>
+  <li>Slower model convergence</li>
+  <li>Biased updates from clients</li>
+  <li>Reduced global model performance</li>
+</ul>
+
+<p>While FedProto focuses on prototype aggregation, it treats all prototypes equally, overlooking variations in quality. In contrast, methods like FedAvg aggregate model updates using simple averaging, without the benefits of prototype-based learning.</p>
+
+<h2 id="the-solution-conffedproto">The Solution: ConfFedProto</h2>
+
+<p>ConfFedProto (Adaptive Confidence-Based Prototype Aggregation) is a novel approach that prioritizes high-quality data contributions from clients. Instead of treating all prototypes equally, ConfFedProto assigns confidence scores to each prototype based on its reliability, enhancing robustness and scalability in FL systems.</p>
+
+<h3 id="how-conffedproto-works">How ConfFedProto Works</h3>
+
+<h4 id="local-prototype-creation">Local Prototype Creation:</h4>
+
+<ul>
+  <li>Each client computes class prototypes (mean feature embeddings) weighted by confidence scores derived from model confidence</li>
+  <li>These confidence-weighted prototypes reflect the reliability of each client's contributions</li>
+  <li>This approach ensures that higher-quality data has a greater influence on the global model, improving robustness</li>
+</ul>
+
+<p><img src="/images/blog/ConfFedProto/Prototypes.png" alt="Confidence-Weighted Prototype Creation" />
+<em>Figure 2: Confidence-Weighted Prototype Creation.</em></p>
+
+<h4 id="confidence-weighted-global-aggregation">Confidence-Weighted Global Aggregation:</h4>
+
+<ul>
+  <li>The central server aggregates the confidence-weighted prototypes into global prototypes and distributes them back to clients for local updates</li>
+</ul>
+
+<p><img src="/images/blog/ConfFedProto/overview-confedproto.png" alt="ConfFedProto Framework Overview" />
+<em>Figure 3: An overview of the ConfFedProto framework, showcasing the process of local prototype creation, global aggregation, and iterative model refinement.</em></p>
+
+<p>This iterative process ensures the global model remains robust, even in the presence of significant data heterogeneity.</p>
+
+<h2 id="key-results">Key Results</h2>
+
+<p>To validate ConfFedProto, I ran experiments on benchmark datasets (MNIST, CIFAR-10, and EMNIST) with varying levels of data heterogeneity.</p>
+
+<h3 id="performance-highlights">Performance Highlights</h3>
+
+<p><strong>Improved Accuracy:</strong> ConfFedProto outperformed FedAvg and FedProto, especially in highly imbalanced scenarios. For example:</p>
+<ul>
+  <li>MNIST (α = 0.1): ConfFedProto achieved 98.43% accuracy, compared to 98.11% with FedProto</li>
+  <li>CIFAR-10 (α = 0.1): ConfFedProto scored 57.29%, a significant improvement over alternatives</li>
+</ul>
+
+<p><strong>Reduced Communication Overhead:</strong> ConfFedProto requires sharing only 1,270 parameters per round, compared to 163,690 parameters for FedAvg.</p>
+
+<p>These results demonstrate ConfFedProto's ability to address severe data imbalances, ensuring more equitable model contributions across diverse clients. Below is a detailed comparison of accuracy across different methods and datasets:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Dataset</th>
+      <th>Method</th>
+      <th>α = 0.1</th>
+      <th>α = 0.3</th>
+      <th>α = 0.5</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>MNIST</td>
+      <td>FedAvg</td>
+      <td>88.34</td>
+      <td>95.29</td>
+      <td>97.16</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>FedProto</td>
+      <td>98.11</td>
+      <td>98.70</td>
+      <td>98.67</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>confFedproto</td>
+      <td><strong>98.43</strong></td>
+      <td><strong>98.79</strong></td>
+      <td><strong>98.91</strong></td>
+    </tr>
+    <tr>
+      <td>CIFAR10</td>
+      <td>FedAvg</td>
+      <td>47.18</td>
+      <td>62.07</td>
+      <td>63.65</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>FedProto</td>
+      <td>56.60</td>
+      <td>73.57</td>
+      <td>78.59</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>confFedproto</td>
+      <td><strong>57.29</strong></td>
+      <td><strong>75.02</strong></td>
+      <td><strong>79.71</strong></td>
+    </tr>
+    <tr>
+      <td>EMNIST</td>
+      <td>FedAvg</td>
+      <td>73.89</td>
+      <td>82.59</td>
+      <td>84.45</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>FedProto</td>
+      <td>76.32</td>
+      <td>89.59</td>
+      <td>91.01</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>confFedproto</td>
+      <td><strong>77.09</strong></td>
+      <td><strong>90.40</strong></td>
+      <td><strong>94.42</strong></td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="visualizing-the-results">Visualizing the Results</h3>
+
+<p>The evolution of data representations during training illustrates ConfFedProto's effectiveness in achieving distinct and robust embeddings, even under heterogeneous conditions</p>
+
+<p><img src="/images/blog/ConfFedProto/Visualization.png" alt="Evolution of test set embeddings" />
+<em>Figure 4: Evolution of test set embeddings during training across global rounds (0, 5, 20, and 45). ConfFedProto enables tighter clustering of representations, showcasing its effectiveness in handling data heterogeneity.</em></p>
+
+<h2 id="why-it-matters">Why It Matters</h2>
+
+<p>ConfFedProto is a breakthrough for real-world federated learning applications like:</p>
+
+<ul>
+  <li><strong>Healthcare:</strong> Enabling hospitals to collaborate on AI models without sharing sensitive patient data</li>
+  <li><strong>Finance:</strong> Allowing institutions to build robust models on distributed financial data</li>
+  <li><strong>IoT Devices:</strong> Facilitating collaborative learning across devices with heterogeneous data</li>
+  <li><strong>Education:</strong> Supporting privacy-preserving AI models across institutions with diverse and non-uniform datasets</li>
+</ul>
+
+<p>Its lightweight communication and scalability make it ideal for resource-constrained environments. By addressing core FL challenges, ConfFedProto not only advances state-of-the-art techniques but also paves the way for broader adoption in these critical domains.</p>
+
+<h2 id="final-thoughts">Final Thoughts</h2>
+
+<p>ConfFedProto sets a foundation for exploring more advanced prototype aggregation techniques and expanding applications in domains with extreme non-IID data.</p>
+
+<p>For a deeper dive into this project, including the complete report and presentation slides, check out my <a href="https://github.com/ayogenthiran/ConfFedProto.git">GitHub repository</a>.</p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+  
+
+
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fa fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="http://localhost:4000/tags/#federated-learning" class="page__taxonomy-item" rel="tag">Federated Learning</a><span class="sep">, </span>
+    
+      
+      
+      <a href="http://localhost:4000/tags/#machine-learning" class="page__taxonomy-item" rel="tag">Machine Learning</a><span class="sep">, </span>
+    
+      
+      
+      <a href="http://localhost:4000/tags/#non-iid-data" class="page__taxonomy-item" rel="tag">Non-IID Data</a><span class="sep">, </span>
+    
+      
+      
+      <a href="http://localhost:4000/tags/#privacy-preserving-ml" class="page__taxonomy-item" rel="tag">Privacy-Preserving ML</a>
+    
+    </span>
+  </p>
+
+
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Published:</strong> <time datetime="2025-01-05">January 5, 2025</time></p>
+
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2025-01-05">January 5, 2025</time></p>
+
+        
+          
+          <p><i class="fas fa-clock" aria-hidden="true"></i> 
+
+
+  
+	  4 min.
+	
+</p>
+        
+      </footer>
+
+      
+
+<section class="page__share">
+  
+
+  <a href="https://twitter.com/intent/tweet?text=http://localhost:4000/posts/2025/01/confedroto-non-iid/" class="btn btn--twitter" title="Share on Twitter"><i class="fab fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/posts/2025/01/confedroto-non-iid/" class="btn btn--facebook" title="Share on Facebook"><i class="fab fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/posts/2025/01/confedroto-non-iid/" class="btn btn--linkedin" title="Share on LinkedIn"><i class="fab fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+      <!-- 
+
+ -->
+    </div>
+
+    
+      
+
+<div class="page__comments">
+  
+  
+    <!-- <h4 class="page__comments-title">Comments</h4> -->
+    <section id="disqus_thread"></section>
+  
+</div>
+    
+  </article>
+
+  
+  
+</div>
+
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+<a href="/sitemap/">Sitemap</a>
+<!-- end custom footer snippets -->
+
+        
+
+<div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+    
+      <li><a href="https://twitter.com/ayogenth"><i class="fab fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+    
+    
+    
+      <li><a href="http://github.com/ayogenthiran"><i class="fab fa-github" aria-hidden="true"></i> GitHub</a></li>
+    
+    
+    <li><a href="http://localhost:4000/feed.xml"><i class="fa fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2025 Anojan Yogenthiran. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://github.com/academicpages/academicpages.github.io">AcademicPages</a>, a fork of <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    <script src="http://localhost:4000/assets/js/main.min.js"></script>
+
+
+
+
+
+  
+
+
+
+
+
+  </body>
+</html>
+

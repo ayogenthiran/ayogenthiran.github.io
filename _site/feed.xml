@@ -1,7 +1,177 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-11-06T21:53:17-08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Anojan Yogenthiran</title><subtitle>Master's in CS at Western</subtitle><author><name>Anojan Yogenthiran</name><email>ayogenth@uwo.ca</email></author><entry><title type="html">Prototype-Based Federated Learning (FedProto) for Non-IID Data</title><link href="http://localhost:4000/posts/2024/03/fedproto-non-iid/" rel="alternate" type="text/html" title="Prototype-Based Federated Learning (FedProto) for Non-IID Data" /><published>2024-11-04T00:00:00-08:00</published><updated>2024-11-04T00:00:00-08:00</updated><id>http://localhost:4000/posts/2024/03/blog-post-1</id><content type="html" xml:base="http://localhost:4000/posts/2024/03/fedproto-non-iid/"><![CDATA[<h1 id="introduction">Introduction</h1>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-01-05T22:10:54-08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Anojan Yogenthiran</title><subtitle>Master's in CS at Western</subtitle><author><name>Anojan Yogenthiran</name><email>ayogenth@uwo.ca</email></author><entry><title type="html">Advancing Federated Learning with ConfFedProto: Tackling Non-IID Challenges with Confidence-Based Prototypes</title><link href="http://localhost:4000/posts/2025/01/confedroto-non-iid/" rel="alternate" type="text/html" title="Advancing Federated Learning with ConfFedProto: Tackling Non-IID Challenges with Confidence-Based Prototypes" /><published>2025-01-05T00:00:00-08:00</published><updated>2025-01-05T00:00:00-08:00</updated><id>http://localhost:4000/posts/2025/01/blog-post-1</id><content type="html" xml:base="http://localhost:4000/posts/2025/01/confedroto-non-iid/"><![CDATA[<p>In the era of distributed systems and privacy-first computing, Federated Learning (FL) is a game-changer. However, FL faces significant challenges when client data distributions are non-identical (non-IID). In my latest machine learning project, I developed ConfFedProto, a framework that leverages confidence scores for adaptive prototype aggregation, effectively addressing non-IID data challenges in Federated Learning</p>
 
-<h1 id="background">Background</h1>
+<p>Here's an overview of my project, its impact, and why it matters.</p>
 
-<h2 id="traditional-federated-learning">Traditional Federated Learning</h2>
+<h2 id="the-challenge-non-iid-data-in-federated-learning">The Challenge: Non-IID Data in Federated Learning</h2>
 
-<p>I</p>]]></content><author><name>Anojan Yogenthiran</name><email>ayogenth@uwo.ca</email></author><category term="Federated Learning" /><category term="Machine Learning" /><category term="Non-IID Data" /><category term="Privacy-Preserving ML" /><summary type="html"><![CDATA[FedProto: A novel approach to handle Non-IID data in Federated Learning.]]></summary></entry></feed>
+<p>Federated Learning allows devices to collaboratively train a global model while keeping their data private. Federated learning involves the following process:</p>
+
+<ol>
+  <li>A global model is initialized and sent to selected clients</li>
+  <li>Clients train locally on their data</li>
+  <li>Updates are uploaded to the server</li>
+  <li>The server aggregates these updates to refine the global model</li>
+</ol>
+
+<p><img src="/images/blog/ConfFedProto/federated-learning.jpeg" alt="Federated Learning Process" />
+<em>Figure 1: Federated learning training process.</em></p>
+
+<p>Yet, real-world scenarios often involve non-IID data—clients have uneven or biased data distributions. Non-IID data significantly hinders the global model's ability to generalize across clients, making it a key challenge for practical FL systems.</p>
+
+<p>Addressing these challenges is essential for enabling FL to be scalable and applicable across diverse, real-world domains.</p>
+
+<p>This leads to:</p>
+<ul>
+  <li>Slower model convergence</li>
+  <li>Biased updates from clients</li>
+  <li>Reduced global model performance</li>
+</ul>
+
+<p>While FedProto focuses on prototype aggregation, it treats all prototypes equally, overlooking variations in quality. In contrast, methods like FedAvg aggregate model updates using simple averaging, without the benefits of prototype-based learning.</p>
+
+<h2 id="the-solution-conffedproto">The Solution: ConfFedProto</h2>
+
+<p>ConfFedProto (Adaptive Confidence-Based Prototype Aggregation) is a novel approach that prioritizes high-quality data contributions from clients. Instead of treating all prototypes equally, ConfFedProto assigns confidence scores to each prototype based on its reliability, enhancing robustness and scalability in FL systems.</p>
+
+<h3 id="how-conffedproto-works">How ConfFedProto Works</h3>
+
+<h4 id="local-prototype-creation">Local Prototype Creation:</h4>
+
+<ul>
+  <li>Each client computes class prototypes (mean feature embeddings) weighted by confidence scores derived from model confidence</li>
+  <li>These confidence-weighted prototypes reflect the reliability of each client's contributions</li>
+  <li>This approach ensures that higher-quality data has a greater influence on the global model, improving robustness</li>
+</ul>
+
+<p><img src="/images/blog/ConfFedProto/Prototypes.png" alt="Confidence-Weighted Prototype Creation" />
+<em>Figure 2: Confidence-Weighted Prototype Creation.</em></p>
+
+<h4 id="confidence-weighted-global-aggregation">Confidence-Weighted Global Aggregation:</h4>
+
+<ul>
+  <li>The central server aggregates the confidence-weighted prototypes into global prototypes and distributes them back to clients for local updates</li>
+</ul>
+
+<p><img src="/images/blog/ConfFedProto/overview-confedproto.png" alt="ConfFedProto Framework Overview" />
+<em>Figure 3: An overview of the ConfFedProto framework, showcasing the process of local prototype creation, global aggregation, and iterative model refinement.</em></p>
+
+<p>This iterative process ensures the global model remains robust, even in the presence of significant data heterogeneity.</p>
+
+<h2 id="key-results">Key Results</h2>
+
+<p>To validate ConfFedProto, I ran experiments on benchmark datasets (MNIST, CIFAR-10, and EMNIST) with varying levels of data heterogeneity.</p>
+
+<h3 id="performance-highlights">Performance Highlights</h3>
+
+<p><strong>Improved Accuracy:</strong> ConfFedProto outperformed FedAvg and FedProto, especially in highly imbalanced scenarios. For example:</p>
+<ul>
+  <li>MNIST (α = 0.1): ConfFedProto achieved 98.43% accuracy, compared to 98.11% with FedProto</li>
+  <li>CIFAR-10 (α = 0.1): ConfFedProto scored 57.29%, a significant improvement over alternatives</li>
+</ul>
+
+<p><strong>Reduced Communication Overhead:</strong> ConfFedProto requires sharing only 1,270 parameters per round, compared to 163,690 parameters for FedAvg.</p>
+
+<p>These results demonstrate ConfFedProto's ability to address severe data imbalances, ensuring more equitable model contributions across diverse clients. Below is a detailed comparison of accuracy across different methods and datasets:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Dataset</th>
+      <th>Method</th>
+      <th>α = 0.1</th>
+      <th>α = 0.3</th>
+      <th>α = 0.5</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>MNIST</td>
+      <td>FedAvg</td>
+      <td>88.34</td>
+      <td>95.29</td>
+      <td>97.16</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>FedProto</td>
+      <td>98.11</td>
+      <td>98.70</td>
+      <td>98.67</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>confFedproto</td>
+      <td><strong>98.43</strong></td>
+      <td><strong>98.79</strong></td>
+      <td><strong>98.91</strong></td>
+    </tr>
+    <tr>
+      <td>CIFAR10</td>
+      <td>FedAvg</td>
+      <td>47.18</td>
+      <td>62.07</td>
+      <td>63.65</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>FedProto</td>
+      <td>56.60</td>
+      <td>73.57</td>
+      <td>78.59</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>confFedproto</td>
+      <td><strong>57.29</strong></td>
+      <td><strong>75.02</strong></td>
+      <td><strong>79.71</strong></td>
+    </tr>
+    <tr>
+      <td>EMNIST</td>
+      <td>FedAvg</td>
+      <td>73.89</td>
+      <td>82.59</td>
+      <td>84.45</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>FedProto</td>
+      <td>76.32</td>
+      <td>89.59</td>
+      <td>91.01</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>confFedproto</td>
+      <td><strong>77.09</strong></td>
+      <td><strong>90.40</strong></td>
+      <td><strong>94.42</strong></td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="visualizing-the-results">Visualizing the Results</h3>
+
+<p>The evolution of data representations during training illustrates ConfFedProto's effectiveness in achieving distinct and robust embeddings, even under heterogeneous conditions</p>
+
+<p><img src="/images/blog/ConfFedProto/Visualization.png" alt="Evolution of test set embeddings" />
+<em>Figure 4: Evolution of test set embeddings during training across global rounds (0, 5, 20, and 45). ConfFedProto enables tighter clustering of representations, showcasing its effectiveness in handling data heterogeneity.</em></p>
+
+<h2 id="why-it-matters">Why It Matters</h2>
+
+<p>ConfFedProto is a breakthrough for real-world federated learning applications like:</p>
+
+<ul>
+  <li><strong>Healthcare:</strong> Enabling hospitals to collaborate on AI models without sharing sensitive patient data</li>
+  <li><strong>Finance:</strong> Allowing institutions to build robust models on distributed financial data</li>
+  <li><strong>IoT Devices:</strong> Facilitating collaborative learning across devices with heterogeneous data</li>
+  <li><strong>Education:</strong> Supporting privacy-preserving AI models across institutions with diverse and non-uniform datasets</li>
+</ul>
+
+<p>Its lightweight communication and scalability make it ideal for resource-constrained environments. By addressing core FL challenges, ConfFedProto not only advances state-of-the-art techniques but also paves the way for broader adoption in these critical domains.</p>
+
+<h2 id="final-thoughts">Final Thoughts</h2>
+
+<p>ConfFedProto sets a foundation for exploring more advanced prototype aggregation techniques and expanding applications in domains with extreme non-IID data.</p>
+
+<p>For a deeper dive into this project, including the complete report and presentation slides, check out my <a href="https://github.com/ayogenthiran/ConfFedProto.git">GitHub repository</a>.</p>]]></content><author><name>Anojan Yogenthiran</name><email>ayogenth@uwo.ca</email></author><category term="Federated Learning" /><category term="Machine Learning" /><category term="Non-IID Data" /><category term="Privacy-Preserving ML" /><summary type="html"><![CDATA[ConfFedProto: A novel approach that leverages confidence scores for adaptive prototype aggregation, effectively addressing non-IID data challenges in Federated Learning.]]></summary></entry></feed>
