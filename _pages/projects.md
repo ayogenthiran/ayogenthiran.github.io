@@ -6,7 +6,7 @@ author_profile: true
 ---
 {% include base_path %}
 
-Updated October 2024.
+Updated January 2025.
 
 
 <!-- ConFedProto Project -->
@@ -55,7 +55,7 @@ Updated October 2024.
       <span>Tech Stack:</span> Python, PyTorch, LLMs
     </div>
     <div class="project-description">
-      An LLMs to improve miRNA-target prediction for biological sequence analysis.
+      Fine-tuned LLMs to improve miRNA-target prediction for biological sequence analysis.
     </div>
     <div class="project-link">
       <a href="https://github.com/ayogenthiran/miRNA-Target-LLM">View Project on GitHub</a>
