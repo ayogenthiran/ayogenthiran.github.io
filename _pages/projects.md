@@ -8,6 +8,43 @@ author_profile: true
 
 Updated October 2024.
 
+
+<!-- ConFedProto Project -->
+<div class="project-container">
+  <div class="project-content">
+    <p class="project-title">ConfFedProto: Confidence-Weighted Prototype Aggregation
+      <span class="project-date">Oct 2024 - Dec2024</span>
+    </p>
+    <div class="project-tech">
+      <span>Tech Stack:</span> Python, PyTorch, Federated Learning, Machine Learning
+    </div>
+    <div class="project-description">
+      ConfFedProto is a FL framework that improves global model accuracy in decentralized environments by using confidence-weighted prototype aggregation to handle non-identical data distributions effectively.
+    </div>
+    <div class="project-link">
+      <a href="https://github.com/ayogenthiran/ConfFedProto.git">View Project on GitHub</a>
+    </div>
+  </div>
+</div>
+
+<!-- Material Selection Project -->
+<div class="project-container">
+  <div class="project-content">
+    <p class="project-title">EcoValley: Material Selection for Sustainability
+      <span class="project-date">Oct 2024 - Oct 2024</span>
+    </p>
+    <div class="project-tech">
+      <span>Tech Stack:</span> Python, Flask, OpenAI API, Cohere API
+    </div>
+    <div class="project-description">
+      An LLM- and data-based web application for eco-friendly material selection with a carbon credits calculator for industries.
+    </div>
+    <div class="project-link">
+      <a href="https://github.com/mqzpt/ecovalley.git">View Project on GitHub</a>
+    </div>
+  </div>
+</div>
+
 <!-- miRNA Project -->
 <div class="project-container">
   <div class="project-content">
@@ -18,7 +55,7 @@ Updated October 2024.
       <span>Tech Stack:</span> Python, PyTorch, LLMs
     </div>
     <div class="project-description">
-      Fine-tuned the Mistral-7B and Llama 3.1 LLM on the miRTarBase dataset to enhance biological sequence understanding for miRNA-target predictions
+      Fine-tuned LLMs to improve miRNA-target prediction for biological sequence analysis.
     </div>
     <div class="project-link">
       <a href="https://github.com/ayogenthiran/miRNA-Target-LLM">View Project on GitHub</a>
@@ -36,7 +73,7 @@ Updated October 2024.
       <span>Tech Stack:</span> Python, YOLOv8, Machine Learning
     </div>
     <div class="project-description">
-      Built and fine-tuned YOLOv8 model for upper limb pose detection using video data. Developed angle prediction algorithms for key anatomical points.
+      Developed a machine learning model for tracking and analyzing upper limb movements using video data, enabling precise pose detection and anatomical analysis.
     </div>
     <div class="project-link">
       <a href="https://github.com/ayogenthiran/MarkerBasedMotionAnalysis">View Project on GitHub</a>
@@ -54,7 +91,7 @@ Updated October 2024.
       <span>Tech Stack:</span> Python, SUMO, Reinforcement Learning (DQN)
     </div>
     <div class="project-description">
-      Implemented a DQN-based system to optimize traffic flow and reduce congestion in real-time. Built a TraCI API to interface the DQN agent with SUMO.
+      Designed a reinforcement learning-based system to optimize traffic signals and reduce congestion in urban environments.
     </div>
     <div class="project-link">
       <a href="https://github.com/ayogenthiran/traffic-flow-optimization">View Project on GitHub</a>
@@ -62,20 +99,3 @@ Updated October 2024.
   </div>
 </div>
 
-<!-- Material Selection Project -->
-<div class="project-container">
-  <div class="project-content">
-    <p class="project-title">Material Selection for Sustainability
-      <span class="project-date">2024</span>
-    </p>
-    <div class="project-tech">
-      <span>Tech Stack:</span> Python, OpenAI API, Cohere API
-    </div>
-    <div class="project-description">
-      Developed a material selection project using AI to inform sustainable decisions. Integrated multiple AI APIs for comprehensive analysis.
-    </div>
-    <div class="project-link">
-      <a href="https://github.com/yourusername/material-selection">View Project on GitHub</a>
-    </div>
-  </div>
-</div>
