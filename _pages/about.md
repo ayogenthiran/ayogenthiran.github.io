@@ -11,9 +11,8 @@ redirect_from:
 
 Hello!
 
-I'm a Master's student in Computer Science specializing in Artificial Intelligence at Western University, currently working as a Research Assistant at the Intelligence Data Science Lab under [Dr. Apurva Narayan](https://a-narayan.github.io/). My research focuses on using generative AI to accelerate drug discovery by identifying optimal aptamers, advancing healthcare through AI-driven innovation.
+I am an AI enthusiast and a recent Master of Computer Science graduate from Western University, where I specialized in Artificial Intelligence. During my graduate studies, I worked as a Research Assistant in [Dr. Apurva Narayan's](https://a-narayan.github.io/) Intelligence Data Science Lab, leveraging generative AI to accelerate drug discovery by identifying optimal aptamers.
 
-Before my Master's, I worked as an Associate AI/ML Engineer at [HeHealth](https://hehealth.ai/), where I developed deep learning models to enhance medical diagnostics, incorporating explainable AI to build trust in AI-powered healthcare solutions. I also gained hands-on experience in IoT data analysis and anomaly detection at [SenzMate AIoT Intelligence](https://www.senzmate.com/), working on projects ranging from optimizing sensor data to vehicle damage detection.
+Prior to my Master’s, I held the role of Associate AI/ML Engineer at [HeHealth](https://hehealth.ai/), where I developed deep learning models for medical diagnostics and incorporated explainable AI to enhance trust in healthcare solutions. At [SenzMate AIoT Intelligence](https://www.senzmate.com/), I worked on IoT data analysis and anomaly detection, delivering impactful projects, including optimizing sensor data and automating vehicle damage detection workflows.
 
 Outside of AI, I enjoy playing soccer, hiking, exploring new recipes, and watching anime(⚽, ⛰️, 🍲, 🎌, 🏋️).
-
