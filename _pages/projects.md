@@ -91,7 +91,7 @@ Updated October 2024.
       <span>Tech Stack:</span> Python, SUMO, Reinforcement Learning (DQN)
     </div>
     <div class="project-description">
-      Designed a reinforcement learning-based system to optimize traffic signals and reduce congestion in urban environments.
+      Designed a reinforcement learning based system to optimize traffic signals and reduce congestion in urban environments.
     </div>
     <div class="project-link">
       <a href="https://github.com/ayogenthiran/traffic-flow-optimization">View Project on GitHub</a>
