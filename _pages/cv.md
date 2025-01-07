@@ -62,31 +62,11 @@ Work Experience 💼
     </p>
     Research Assistant, Intelligence Data Science Lab
     <div style="color:#7a7a7a">
-      Applyied Generative AI to accelerate drug discovery, specifically focused on optimal aptamer discovery.
+      Applied Generative AI to accelerate drug discovery, specifically focused on optimal aptamer discovery.
     </div>
   </div>
 </div>
 <hr style="height:1em; margin:0em; visibility:hidden;" />
-
-<!-- Teaching Assistant-->
-<div style="display:flex;">
-  <div style="flex:0.5; padding-right:5%">
-    <img src="{{ site.url }}/images/resume/western.png" style="align:left; border: 1px solid #d3d3d3; border-style: outset;">
-  </div>
-
-  <div style="flex:4;">
-    <p style="margin:0px">
-      <b style="font-size: 130%;">Western University</b>
-      <span style="float:right; font-size:80%; color:#7a7a7a;">Apr 2024 - Dec 2024</span>
-    </p>
-    Teaching Assistant
-    <div style="color:#7a7a7a">
-      Assisted students in labs and office hours to understand course material for Computer Science Fundamentals II.
-    </div>
-  </div>
-</div>
-<hr style="height:1em; margin:0em; visibility:hidden;" />
-
 
 <!-- HeHealth -->
 <div style="display:flex;">
