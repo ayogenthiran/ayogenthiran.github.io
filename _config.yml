@@ -85,8 +85,8 @@ analytics:
 author:
   name             : *name
   avatar           : "profile.jpg"
-  bio              : "Master's student in Artificial Intelligence"
-  location         :  "London, ON"
+  bio              : "Machine Learning Engineer"
+  location         :  "Toronto , ON"
   employer         : "Western University"
   pubmed           : #"https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
   googlescholar    : #"https://scholar.google.com/citations?user=bfM1kzAAAAAJ&hl"
