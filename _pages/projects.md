@@ -55,7 +55,7 @@ Updated October 2024.
       <span>Tech Stack:</span> Python, PyTorch, LLMs
     </div>
     <div class="project-description">
-      Fine-tuned LLMs to improve miRNA-target prediction for biological sequence analysis.
+      An LLMs to improve miRNA-target prediction for biological sequence analysis.
     </div>
     <div class="project-link">
       <a href="https://github.com/ayogenthiran/miRNA-Target-LLM">View Project on GitHub</a>
@@ -73,7 +73,7 @@ Updated October 2024.
       <span>Tech Stack:</span> Python, YOLOv8, Machine Learning
     </div>
     <div class="project-description">
-      Developed a machine learning model for tracking and analyzing upper limb movements using video data, enabling precise pose detection and anatomical analysis.
+      A machine learning model for tracking and analyzing upper limb movements using video data, enabling precise pose detection and anatomical analysis.
     </div>
     <div class="project-link">
       <a href="https://github.com/ayogenthiran/MarkerBasedMotionAnalysis">View Project on GitHub</a>
@@ -91,7 +91,7 @@ Updated October 2024.
       <span>Tech Stack:</span> Python, SUMO, Reinforcement Learning (DQN)
     </div>
     <div class="project-description">
-      Designed a reinforcement learning based system to optimize traffic signals and reduce congestion in urban environments.
+      A reinforcement learning based system to optimize traffic signals and reduce congestion in urban environments.
     </div>
     <div class="project-link">
       <a href="https://github.com/ayogenthiran/traffic-flow-optimization">View Project on GitHub</a>
