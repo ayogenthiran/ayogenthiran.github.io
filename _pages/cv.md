@@ -68,7 +68,6 @@ Work Experience 💼
 </div>
 <hr style="height:1em; margin:0em; visibility:hidden;" />
 
-
 <!-- HeHealth -->
 <div style="display:flex;">
   <div style="flex:0.5; padding-right:5%">
@@ -107,7 +106,7 @@ Work Experience 💼
 </div>
 <hr style="height:2em; margin:0em; visibility:hidden;" />
 
-<br> You can download my full CV [here]({{ site.url }}/files/Anojan Yogenthiran.pdf).
+<br> You can download my full CV [here](/files/Anojan_CV.pdf).
 
 
 
