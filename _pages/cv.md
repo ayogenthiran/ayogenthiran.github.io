@@ -106,7 +106,7 @@ Work Experience 💼
 </div>
 <hr style="height:2em; margin:0em; visibility:hidden;" />
 
-<br> You can download my full CV [here]({{ site.url }}/files/Anojan Yogenthiran.pdf).
+<br> You can download my full CV [here]({{ site.url }}/files/Anojan_Yogenthiran_Resume.pdf).
 
 
 
