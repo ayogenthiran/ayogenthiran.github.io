@@ -9,7 +9,7 @@ redirect_from:
 
 {% include base_path %}
 
-Updated October 2024.
+Updated January 2025.
 
 Education 🎓
 ======
@@ -106,7 +106,7 @@ Work Experience 💼
 </div>
 <hr style="height:2em; margin:0em; visibility:hidden;" />
 
-<br> You can download my full CV [here](/files/Anojan_CV.pdf).
+<br> You can download my full CV [here](/files/AnojanYogenthiran_CV.pdf).
 
 
 
