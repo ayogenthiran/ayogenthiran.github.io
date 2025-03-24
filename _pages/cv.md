@@ -62,7 +62,7 @@ Work Experience 💼
     </p>
     Data Science Intern
     <div style="color:#7a7a7a">
-      Applied Generative AI to accelerate drug discovery, specifically focused on optimal aptamer discovery.
+      Kaidu Inc. specializes in spatial intelligence solutions using artificial intelligence to improve occupancy sensing and customer behavior analytics.      
     </div>
   </div>
 </div>
@@ -81,7 +81,7 @@ Work Experience 💼
     </p>
     Research Assistant, Intelligence Data Science Lab
     <div style="color:#7a7a7a">
-      Kaidu Inc. specializes in spatial intelligence solutions using artificial intelligence to improve occupancy sensing and customer behavior analytics.
+      Applied Generative AI to accelerate drug discovery, specifically focused on optimal aptamer discovery.
     </div>
   </div>
 </div>
