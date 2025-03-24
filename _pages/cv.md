@@ -57,10 +57,10 @@ Work Experience 💼
 
   <div style="flex:4;">
     <p style="margin:0px">
-      <b style="font-size: 130%;">Western University</b>
+      <b style="font-size: 130%;">kaidu.ai</b>
       <span style="float:right; font-size:80%; color:#7a7a7a;">Jan 2025 - Present</span>
     </p>
-    Data Science Intern, Kaidu.ai
+    Data Science Intern
     <div style="color:#7a7a7a">
       Applied Generative AI to accelerate drug discovery, specifically focused on optimal aptamer discovery.
     </div>
