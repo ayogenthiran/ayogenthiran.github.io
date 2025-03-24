@@ -57,7 +57,7 @@ Work Experience 💼
 
   <div style="flex:4;">
     <p style="margin:0px">
-      <b style="font-size: 130%;">kaidu.ai</b>
+      <b style="font-size: 130%;">Kaidu.ai</b>
       <span style="float:right; font-size:80%; color:#7a7a7a;">Jan 2025 - Present</span>
     </p>
     Data Science Intern
