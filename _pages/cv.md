@@ -52,7 +52,7 @@ Work Experience 💼
 <!-- Kaidu.ai -->
 <div style="display:flex;">
   <div style="flex:0.5; padding-right:5%">
-    <img src="{{ site.url }}/images/resume/kaidu.png" style="align:left; border: 1px solid #d3d3d3; border-style: outset;">
+    <img src="/images/resume/kaidu.png" style="align:left; border: 1px solid #d3d3d3; border-style: outset;">
   </div>
 
   <div style="flex:4;">
@@ -62,16 +62,17 @@ Work Experience 💼
     </p>
     Data Science Intern
     <div style="color:#7a7a7a">
-      Kaidu Inc. specializes in spatial intelligence solutions using artificial intelligence to improve occupancy sensing and customer behavior analytics.      
+      Kaidu Inc. specializes in spatial intelligence solutions using artificial intelligence to improve occupancy sensing and customer behavior analytics.
     </div>
   </div>
 </div>
 <hr style="height:1em; margin:0em; visibility:hidden;" />
 
+
 <!-- Western Research -->
 <div style="display:flex;">
   <div style="flex:0.5; padding-right:5%">
-    <img src="{{ site.url }}/images/resume/western.png" style="align:left; border: 1px solid #d3d3d3; border-style: outset;">
+    <img src="/images/resume/western.png" style="align:left; border: 1px solid #d3d3d3; border-style: outset;">
   </div>
 
   <div style="flex:4;">
@@ -81,11 +82,12 @@ Work Experience 💼
     </p>
     Research Assistant, Intelligence Data Science Lab
     <div style="color:#7a7a7a">
-      Applied Generative AI to accelerate drug discovery, specifically focused on optimal aptamer discovery.
+      Applied Generative AI techniques to accelerate drug discovery workflows, focusing on the identification and optimization of aptamers for targeted molecular binding.
     </div>
   </div>
 </div>
 <hr style="height:1em; margin:0em; visibility:hidden;" />
+
 
 <!-- HeHealth -->
 <div style="display:flex;">
