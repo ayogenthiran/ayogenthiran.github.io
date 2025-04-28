@@ -11,7 +11,7 @@ tags:
   - LLM Applications
 ---
 
-# CiteRight: Automating Literature Reviews with RAG + GPT-4
+<!-- # CiteRight: Automating Literature Reviews with RAG + GPT-4 -->
 
 A deep dive into how I built an AI-powered assistant to generate structured, high-quality literature reviews in minutes.
 
