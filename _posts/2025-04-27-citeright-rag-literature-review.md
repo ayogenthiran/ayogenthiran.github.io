@@ -78,10 +78,10 @@ CiteRight follows a modular architecture, with distinct components that transfor
 - **ArXiv API:** Retrieves open-access academic papers.
 - **OpenAI API:** Powers LLM-based keyword generation and review synthesis.
 
-## User Experience Walkthrough
+## User Experience
 
 <div style="text-align: center; margin: 20px auto; max-width: 800px;">
-    <img src="/images/blog/CiteRight/citeright-interface.png" alt="CiteRight User Interface" style="width: 100%; height: auto; border: 1px solid #ddd; border-radius: 5px;"/>
+    <img src="/images/blog/CiteRight/interface.png" alt="CiteRight User Interface" style="width: 100%; height: auto; border: 1px solid #ddd; border-radius: 5px;"/>
     <div style="font-size: 0.9em; color: #666; margin-top: 10px; font-style: italic;">
         Figure 2: CiteRight interface — research input on the left, generated literature review on the right.
     </div>
@@ -297,7 +297,7 @@ By making literature reviews faster and more accessible, CiteRight aims to accel
 ## References
 
 - Lewis, P., Perez, E., Piktus, A., Petroni, F., Karpukhin, V., Guu, K., Riedel, S. "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks." *arXiv preprint arXiv:2005.11401*, 2020. [Paper Link](https://arxiv.org/abs/2005.11401)
-- Atlas: Few-shot Learning with Retrieval-Augmented Language Models - [Paper Link](https://arxiv.org/abs/2112.04426)
+- Atlas: Few-shot Learning with Retrieval-Augmented Language Models - [Paper Link](https://arxiv.org/abs/2208.03299)
 - OpenAI API Documentation - [API Reference](https://platform.openai.com/docs/)
 - ArXiv API Documentation - [API Reference](https://info.arxiv.org/help/api/index.html)
-- LangChain - [GitHub Repository](https://github.com/langchain-ai/langchain)
+<!-- - LangChain - [GitHub Repository](https://github.com/langchain-ai/langchain) -->
