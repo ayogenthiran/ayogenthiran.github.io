@@ -21,7 +21,7 @@ Academic research often begins with a comprehensive literature review, a critica
 
 To address this challenge, I developed **CiteRight**, an AI-powered literature review generator that leverages **Retrieval Augmented Generation (RAG)**. With minimal input—just a paper title and a problem statement—CiteRight can generate a structured, high-quality literature review in minutes.
 
-In this post, I’ll walk you through the journey of building CiteRight, its architecture, key technologies used, and how it transforms academic research workflows.
+In this post, I'll walk you through the journey of building CiteRight, its architecture, key technologies used, and how it transforms academic research workflows.
 
 ## What is Retrieval-Augmented Generation (RAG)?
 
@@ -81,9 +81,9 @@ CiteRight follows a modular architecture, with distinct components that transfor
 ## User Experience
 
 <div style="text-align: center; margin: 20px auto; max-width: 800px;">
-    <img src="/images/blog/CiteRight/interface.png" alt="CiteRight User Interface" style="width: 100%; height: auto; border: 1px solid #ddd; border-radius: 5px;"/>
+    <img src="/images/blog/CiteRight/Streamlit_UI.jpg" alt="CiteRight User Interface" style="width: 100%; height: auto; border: 1px solid #ddd; border-radius: 5px;"/>
     <div style="font-size: 0.9em; color: #666; margin-top: 10px; font-style: italic;">
-        Figure 2: CiteRight interface — research input on the left, generated literature review on the right.
+        Figure 2: CiteRight Streamlit interface — showing the input form for research queries and parameters.
     </div>
 </div>
 
