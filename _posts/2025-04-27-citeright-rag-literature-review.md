@@ -81,7 +81,7 @@ CiteRight follows a modular architecture, with distinct components that transfor
 ## User Experience
 
 <div style="text-align: center; margin: 20px auto; max-width: 800px;">
-    <img src="/images/blog/CiteRight/Streamlit_UI.jpg" alt="CiteRight User Interface" style="width: 100%; height: auto; border: 1px solid #ddd; border-radius: 5px;"/>
+    <img src="/images/blog/CiteRight/Streamlit_UI.png" alt="CiteRight User Interface" style="width: 100%; height: auto; border: 1px solid #ddd; border-radius: 5px;"/>
     <div style="font-size: 0.9em; color: #666; margin-top: 10px; font-style: italic;">
         Figure 2: CiteRight Streamlit interface — showing the input form for research queries and parameters.
     </div>
