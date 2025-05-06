@@ -84,8 +84,8 @@ layout: default
     {% endif %}
   </article>
 
-  {% comment %}<!-- Show other posts except current one -->{% endcomment %}
-  {% if site.posts.size > 1 %}
+  {% comment %}<!-- Show other posts except current one, but only on blog post pages -->{% endcomment %}
+  {% if site.posts.size > 1 and page.collection == 'posts' %}
     <div class="page__related">
       <h4 class="page__related-title">Other Posts You May Enjoy</h4>
       <div class="grid__wrapper">
