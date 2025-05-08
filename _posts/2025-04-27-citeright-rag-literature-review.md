@@ -1,7 +1,7 @@
 ---
 title: 'CiteRight: Automating Literature Review'
 date: 2025-05-10
-permalink: permalink: /posts/2025/05/citeright-rag-literature-review/
+permalink: /posts/2025/05/citeright-rag-literature-review/
 excerpt: "A deep dive into how I built CiteRight, an AI-powered assistant that generates structured, high-quality literature reviews using Retrieval Augmented Generation (RAG) and GPT-4."
 tags:
   - RAG
