@@ -80,7 +80,7 @@ Work Experience 💼
       <b style="font-size: 130%;">Western University</b>
       <span style="float:right; font-size:80%; color:#7a7a7a;">Apr 2024 - Dec 2024</span>
     </p>
-    Research Assistant, Intelligence Data Science Lab
+    Research Associate, Intelligence Data Science Lab
     <div style="color:#7a7a7a">
       Applied Generative AI techniques to accelerate drug discovery workflows, focusing on the identification and optimization of aptamers for targeted molecular binding.
     </div>
