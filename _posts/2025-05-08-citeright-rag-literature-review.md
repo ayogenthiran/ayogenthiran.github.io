@@ -53,7 +53,7 @@ In this post, I'll walk you through the journey of building CiteRight, its archi
 ## Architecture Overview
 
 <div style="text-align: center; margin: 20px auto; max-width: 600px;">
-    <img src="/images/blog/CiteRight/citeright-architecture-1-new.png" alt="CiteRight Architecture Diagram" style="width: 100%; height: auto;"/>
+    <img src="/images/blog/CiteRight/citeright-architecture.png" alt="CiteRight Architecture Diagram" style="width: 100%; height: auto;"/>
     <div style="font-size: 0.9em; color: #666; margin-top: 10px; font-style: italic;">
         Figure 1: CiteRight system architecture: from user input to final literature review generation using RAG and LLMs.
     </div>
