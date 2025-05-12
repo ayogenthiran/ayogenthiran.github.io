@@ -115,23 +115,15 @@ MCP complements and enhances existing AI infrastructure:
 
 It also strengthens **Retrieval-Augmented Generation (RAG)** pipelines by unifying how retrieved context is formatted and accessed.
 
-## Origins and Momentum
-
-- **Launched**: November 2024 by Anthropic
-- **Adopted By**: Block, Apollo, OpenAI, Google DeepMind
-- **Ecosystem**: SDKs in Python, Rust, TypeScript, Java
-- **Cloud Ready**: Remote server compatibility and OAuth in development
-- **Open Source**: [GitHub: MCP-Org](https://github.com/mcp-org)
-
 ## Final Thoughts: The Future of AI Integration
 
-The **Model Context Protocol** is more than just a technical spec—it's a **paradigm shift**. By offering a universal, modular, and secure way to plug AI into the world, MCP is laying the groundwork for deeply integrated, autonomous, and context-aware AI systems.
+The **Model Context Protocol** is more than just a technical spec—it's a paradigm shift. By offering a universal, modular, and secure way to plug AI into the world, MCP is laying the groundwork for deeply integrated, autonomous, and context-aware AI systems.
 
 As adoption grows and the spec matures, MCP could become the go-to backbone for building the next generation of AI applications.
 
 ## References
 
-- Anthropic. *[MCP Initial Release Announcement](https://www.anthropic.com/index/mcp)*
-- Anthropic. *[MCP Documentation and Whitepaper](https://docs.anthropic.com/mcp)*
-- GitHub. *[MCP PR Review Server Example](https://github.com/mcp-org/pr-review-server)*
+- Anthropic. *[Introducing the Model Context Protocol](https://www.anthropic.com/news/model-context-protocol)*
+- Anthropic. *[Why MCP?](https://modelcontextprotocol.io/introduction)*
+- GitHub. *[MCP PR Review Server Example](https://github.com/github/github-mcp-server)*
 - Composio. *[What is Model Context Protocol (MCP)? Explained](https://composio.dev/blog/what-is-model-context-protocol-mcp-explained/)*
