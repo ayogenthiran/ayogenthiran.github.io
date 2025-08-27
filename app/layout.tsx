@@ -14,7 +14,7 @@ const fontSans = FontSans({
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://ayogenthiran.github.io'),
   title: "Anojan Yogenthiran | Senior Software Engineer",
   description:
     "Portfolio of Anojan Yogenthiran, a Senior Software Engineer specializing in JavaScript, TypeScript, React.js, Node.js, Laravel, and AWS.",
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://nihalmaskey.com",
+    url: "https://ayogenthiran.github.io",
     title: "Anojan Yogenthiran | Senior Software Engineer",
     description:
       "Portfolio of Anojan Yogenthiran, a Senior Software Engineer specializing in JavaScript, TypeScript, React.js, Node.js, Laravel, and AWS.",
@@ -59,7 +59,7 @@ export const metadata: Metadata = {
     title: "Anojan Yogenthiran | Senior Software Engineer",
     description:
       "Portfolio of Anojan Yogenthiran, a Senior Software Engineer specializing in JavaScript, TypeScript, React.js, Node.js, Laravel, and AWS.",
-    creator: "@maskeynihal",
+    creator: "@ayogenth",
     images: ["/favicon.png"],
   },
   robots: {
