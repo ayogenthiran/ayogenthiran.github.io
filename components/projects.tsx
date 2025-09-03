@@ -7,6 +7,15 @@ import Image from "next/image"
 export default function Projects() {
   const projects = [
     {
+      title: "CiteRight — Literature Review Assistant",
+      description:
+        "Built a GPT-4-powered RAG pipeline integrating arXiv API to auto-generate literature reviews from user-defined inputs, reducing research time by 70%. Applied prompt engineering and integrated semantic keyword extraction, document retrieval, and summarization modules.",
+      tags: ["GPT-4", "RAG", "arXiv API", "Python", "Prompt Engineering"],
+      codeLink: "#",
+      liveLink: "#",
+      icon: "/images/projects/citeright-icon.png",
+    },
+    {
       title: "Policy Pilot — AI Document Assistant",
       description:
         "Upload, analyze, and chat with policy documents using an AI-powered RAG pipeline. Delivered citation-backed answers, summaries, and key clause extraction, cutting manual research time by ~70%.",
