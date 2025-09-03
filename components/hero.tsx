@@ -50,7 +50,7 @@ export default function Hero() {
               </Link>
             </Button>
             <Button variant="ghost" size="icon" asChild>
-              <Link href="/resume.pdf" target="_blank" rel="noopener noreferrer">
+              <Link href="/Anojan_Yogenthiran_Resume.pdf" target="_blank" rel="noopener noreferrer">
                 <FileText className="h-8 w-8" />
                 <span className="sr-only">Resume</span>
               </Link>
