@@ -2,38 +2,18 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { ExternalLink, Github } from "lucide-react"
 import Link from "next/link"
+import Image from "next/image"
 
 export default function Projects() {
   const projects = [
     {
-      title: "Pacman",
+      title: "Policy Pilot — AI Document Assistant",
       description:
-        "A recreation of the classic Pacman game with vanilla JavaScript, implementing various path-finding algorithms for ghost movement.",
-      tags: ["JavaScript", "Canvas API", "Path-finding Algorithms"],
-      codeLink: "https://github.com/maskeynihal/pacman",
-      liveLink: "https://maskeynihal.github.io/pacman/",
-    },
-    {
-      title: "Flappy Bird",
-      description: "A clone of the popular Flappy Bird game built with vanilla JavaScript and HTML5 Canvas.",
-      tags: ["JavaScript", "Canvas API", "Game Development"],
-      codeLink: "https://github.com/maskeynihal/flappy-bird",
-      liveLink: "https://maskeynihal.github.io/flappy-bird/",
-    },
-    {
-      title: "Pursue - Job Handling with AWS",
-      description:
-        "A JavaScript package for handling job processing using AWS services like SQS, Lambda, and Step Functions.",
-      tags: ["Node.js", "AWS", "SQS", "Lambda", "npm package"],
-      codeLink: "https://github.com/maskeynihal/pursue",
-      liveLink: null,
-    },
-    {
-      title: "Mailer",
-      description: "A JavaScript package to prepare and send emails using AWS SES, with templating support.",
-      tags: ["Node.js", "AWS", "SES", "Email Templates", "npm package"],
-      codeLink: "https://github.com/maskeynihal/mailer",
-      liveLink: null,
+        "Upload, analyze, and chat with policy documents using an AI-powered RAG pipeline. Delivered citation-backed answers, summaries, and key clause extraction, cutting manual research time by ~70%.",
+      tags: ["Python", "FAISS", "LangChain", "AWS", "Lambda"],
+      codeLink: "https://github.com/ayogenthiran/policy-pilot",
+      liveLink: "#",
+      icon: "/images/projects/pilot-icon.png",
     },
   ]
 
@@ -53,10 +33,29 @@ export default function Projects() {
               <div key={index} className="project-card">
                 <Card className="overflow-hidden h-full flex flex-col">
                   <CardContent className="project-content flex-1 flex flex-col p-5">
-                    <h3 className="text-lg font-bold">{project.title}</h3>
-                    <p className="text-sm text-muted-foreground mt-2 flex-1">{project.description}</p>
+                    <div className="flex items-start space-x-4">
+                      <div className="flex-shrink-0">
+                        <div className="w-16 h-16 bg-muted rounded-lg flex items-center justify-center overflow-hidden">
+                          {project.icon ? (
+                            <Image
+                              src={project.icon}
+                              alt={`${project.title} icon`}
+                              width={64}
+                              height={64}
+                              className="object-cover"
+                            />
+                          ) : (
+                            <div className="w-8 h-8 bg-muted-foreground/20 rounded" />
+                          )}
+                        </div>
+                      </div>
+                      <div className="flex-1 min-w-0">
+                        <h3 className="text-lg font-bold">{project.title}</h3>
+                        <p className="text-sm text-muted-foreground mt-2">{project.description}</p>
+                      </div>
+                    </div>
                     <div className="project-tags mt-3">
-                      {project.tags.slice(0, 3).map((tag, i) => (
+                      {project.tags.slice(0, 5).map((tag, i) => (
                         <span key={i} className="project-tag">
                           {tag}
                         </span>
@@ -65,16 +64,14 @@ export default function Projects() {
                     <div className="project-links mt-4">
                       <Button size="sm" variant="outline" asChild>
                         <Link href={project.codeLink} target="_blank" rel="noopener noreferrer">
-                          <Github className="mr-1 h-4 w-4" /> Code
+                          🐙 View Code
                         </Link>
                       </Button>
-                      {project.liveLink && (
-                        <Button size="sm" variant="outline" asChild>
-                          <Link href={project.liveLink} target="_blank" rel="noopener noreferrer">
-                            <ExternalLink className="mr-1 h-4 w-4" /> Live
-                          </Link>
-                        </Button>
-                      )}
+                      <Button size="sm" variant="outline" asChild>
+                        <Link href={project.liveLink} target="_blank" rel="noopener noreferrer">
+                          🔗 Demo
+                        </Link>
+                      </Button>
                     </div>
                   </CardContent>
                 </Card>
