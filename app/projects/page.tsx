@@ -8,17 +8,6 @@ export const metadata = {
 const projects = [
   {
     id: 1,
-    title: "CiteRight — Literature Review Assistant",
-    description:
-      "Built a GPT-4-powered RAG pipeline integrating arXiv API to auto-generate literature reviews from user-defined inputs, reducing research time by 70%. Applied prompt engineering and integrated semantic keyword extraction, document retrieval, and summarization modules.",
-    date: "May 2024",
-    technologies: ["GPT-4", "RAG", "arXiv API", "Python", "Prompt Engineering"],
-    image: "/images/projects/citeright-icon.png",
-    codeUrl: "#",
-    demoUrl: "#",
-  },
-  {
-    id: 2,
     title: "Policy Pilot — AI Document Assistant",
     description:
       "Upload, analyze, and chat with policy documents using an AI-powered RAG pipeline. Delivered citation-backed answers, summaries, and key clause extraction, cutting manual research time by ~70%.",
@@ -26,6 +15,17 @@ const projects = [
     technologies: ["Python", "FAISS", "LangChain", "AWS", "Lambda"],
     image: "/images/projects/pilot-icon.png",
     codeUrl: "https://github.com/ayogenthiran/policy-pilot",
+    demoUrl: "#",
+  },
+  {
+    id: 2,
+    title: "CiteRight — Literature Review Assistant",
+    description:
+      "Built a GPT-4-powered RAG pipeline integrating arXiv API to auto-generate literature reviews from user-defined inputs, reducing research time by 70%. Applied prompt engineering and integrated semantic keyword extraction, document retrieval, and summarization modules.",
+    date: "May 2024",
+    technologies: ["GPT-4", "RAG", "arXiv API", "Python", "Prompt Engineering"],
+    image: "/images/projects/CiteRight.jpg",
+    codeUrl: "https://github.com/ayogenthiran/citeright-rag",
     demoUrl: "#",
   },
 ]
