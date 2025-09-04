@@ -8,46 +8,24 @@ export const metadata = {
 const projects = [
   {
     id: 1,
-    title: "Neural Network from Scratch",
+    title: "CiteRight — Literature Review Assistant",
     description:
-      "Built a complete neural network library in Python without using any ML frameworks, implementing backpropagation, various optimizers, and regularization techniques.",
-    date: "August 2024",
-    technologies: ["Python", "NumPy", "Matplotlib"],
-    image: "/placeholder.svg?height=120&width=120",
+      "Built a GPT-4-powered RAG pipeline integrating arXiv API to auto-generate literature reviews from user-defined inputs, reducing research time by 70%. Applied prompt engineering and integrated semantic keyword extraction, document retrieval, and summarization modules.",
+    date: "May 2024",
+    technologies: ["GPT-4", "RAG", "arXiv API", "Python", "Prompt Engineering"],
+    image: "/images/projects/citeright-icon.png",
     codeUrl: "#",
     demoUrl: "#",
   },
   {
     id: 2,
-    title: "Transformer for Language Translation",
+    title: "Policy Pilot — AI Document Assistant",
     description:
-      "Implemented the Transformer architecture for English-French translation, achieving competitive BLEU scores on standard benchmarks.",
-    date: "July 2024",
-    technologies: ["PyTorch", "Transformers", "CUDA"],
-    image: "/placeholder.svg?height=120&width=120",
-    codeUrl: "#",
-    demoUrl: "#",
-  },
-  {
-    id: 3,
-    title: "End-to-End MLOps Pipeline",
-    description:
-      "Designed and implemented a complete MLOps pipeline with automated training, testing, and deployment using cloud-native technologies.",
-    date: "June 2024",
-    technologies: ["AWS", "Docker", "Kubernetes", "MLflow"],
-    image: "/placeholder.svg?height=120&width=120",
-    codeUrl: "#",
-    demoUrl: "#",
-  },
-  {
-    id: 4,
-    title: "CiteRight – Literature Review Assistant",
-    description:
-      "Built a GPT-4-powered RAG pipeline integrating arXiv API to auto-generate literature reviews from user-defined inputs, reducing research time by 70%. Applied prompt engineering and integrated semantic keyword extraction, document retrieval, and summarization modules.",
-    date: "May 2024",
-    technologies: ["GPT-4", "RAG", "arXiv API", "Python", "Prompt Engineering"],
-    image: "/placeholder.svg?height=120&width=120",
-    codeUrl: "#",
+      "Upload, analyze, and chat with policy documents using an AI-powered RAG pipeline. Delivered citation-backed answers, summaries, and key clause extraction, cutting manual research time by ~70%.",
+    date: "September 2025",
+    technologies: ["Python", "FAISS", "LangChain", "AWS", "Lambda"],
+    image: "/images/projects/pilot-icon.png",
+    codeUrl: "https://github.com/ayogenthiran/policy-pilot",
     demoUrl: "#",
   },
 ]
