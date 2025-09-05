@@ -10,6 +10,7 @@ import { cn } from "@/lib/utils"
 import { usePathname } from "next/navigation"
 import { motion } from "framer-motion"
 import Link from "next/link"
+import Image from "next/image"
 
 const navItems = [
   { name: "About", href: "#about", isRoute: false },
@@ -128,7 +129,15 @@ export default function Header() {
             transition={{ duration: 0.5 }}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
+            className="flex items-center space-x-2"
           >
+            <Image
+              src="/ML.svg"
+              alt="Anojan Yogenthiran"
+              width={32}
+              height={32}
+              className="h-8 w-8"
+            />
             <span className="text-2xl font-bold gradient-text">Anojan Yogenthiran</span>
           </motion.div>
         </Link>
