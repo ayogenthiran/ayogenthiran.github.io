@@ -138,7 +138,7 @@ export default function Header() {
               height={32}
               className="h-8 w-8"
             />
-            <span className="text-2xl font-bold gradient-text">Anojan Yogenthiran</span>
+            <span className="text-2xl font-bold gradient-text">AY</span>
           </motion.div>
         </Link>
 

@@ -15,7 +15,7 @@ const fontSans = FontSans({
 
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://ayogenthiran.github.io'),
-  title: "Anojan Yogenthiran | Senior Software Engineer",
+  title: "AY | Senior Software Engineer",
   description:
     "Portfolio of Anojan Yogenthiran, a Senior Software Engineer specializing in JavaScript, TypeScript, React.js, Node.js, Laravel, and AWS.",
   keywords: [
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://ayogenthiran.github.io",
-    title: "Anojan Yogenthiran | Senior Software Engineer",
+    title: "AY | Senior Software Engineer",
     description:
       "Portfolio of Anojan Yogenthiran, a Senior Software Engineer specializing in JavaScript, TypeScript, React.js, Node.js, Laravel, and AWS.",
     siteName: "Anojan Yogenthiran Portfolio",
@@ -56,7 +56,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Anojan Yogenthiran | Senior Software Engineer",
+    title: "AY | Senior Software Engineer",
     description:
       "Portfolio of Anojan Yogenthiran, a Senior Software Engineer specializing in JavaScript, TypeScript, React.js, Node.js, Laravel, and AWS.",
     creator: "@ayogenth",
