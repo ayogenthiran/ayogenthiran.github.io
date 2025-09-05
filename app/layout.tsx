@@ -32,8 +32,8 @@ export const metadata: Metadata = {
   creator: "Anojan Yogenthiran",
   icons: {
     icon: [
+      { url: "/favicon.svg", type: "image/svg+xml" },
       { url: "/favicon.ico", sizes: "any" },
-      { url: "/icon.png", type: "image/svg+xml" },
     ],
     apple: [{ url: "/apple-touch-icon.png" }],
   },
