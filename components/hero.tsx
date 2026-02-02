@@ -15,11 +15,11 @@ export default function Hero() {
             </h1>
             <p className="mx-auto max-w-[700px] text-xl text-muted-foreground md:text-2xl">
               <span className="js-only">
-                <span>AI/ML Software Engineer</span>
+                <span>AI/ML Engineer</span>
               </span>
               <noscript>
                 <span>
-                  AI/ML Software Engineer | Machine Learning Specialist | Python Expert | Data Science Professional
+                  AI Engineer | Machine Learning Engineer| Data Science Engineer
                 </span>
               </noscript>
             </p>
