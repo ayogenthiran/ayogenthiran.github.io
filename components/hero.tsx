@@ -44,6 +44,14 @@ export default function Hero() {
               </Link>
             </Button>
             <Button variant="ghost" size="icon" asChild>
+              <Link href="https://medium.com/@ayogenthiran" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 24 24" aria-hidden="true" className="h-8 w-8 fill-current">
+                  <path d="M4 6h2.2l4 7.6L14.2 6H16v12h-2V10l-3 6h-1.6l-3-6v8H4V6z" />
+                </svg>
+                <span className="sr-only">Medium</span>
+              </Link>
+            </Button>
+            <Button variant="ghost" size="icon" asChild>
               <Link href="https://x.com/ayogenth" target="_blank" rel="noopener noreferrer">
                 <Twitter className="h-8 w-8" />
                 <span className="sr-only">Twitter</span>

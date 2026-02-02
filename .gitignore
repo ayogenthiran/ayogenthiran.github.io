@@ -36,3 +36,8 @@ next-env.d.ts
 # Resume Management
 # Note: The placeholder resume.pdf in public/ should be replaced with your actual resume
 # If you want to ignore your actual resume file, add it here (e.g., public/my-actual-resume.pdf)
+
+
+#Ignore codacy and cursor files
+.codacy/
+.cursor/
