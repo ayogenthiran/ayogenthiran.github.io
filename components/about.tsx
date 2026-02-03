@@ -28,9 +28,9 @@ export default function About() {
                 Outside of work, I enjoy playing soccer, hiking, experimenting with new recipes, and watching anime ⚽ 🏔️
                 🍳 📺 🏆.
               </p>
-              <blockquote className="border-l-4 border-primary/60 pl-4 text-muted-foreground md:text-lg/relaxed lg:text-base/relaxed xl:text-lg/relaxed italic">
+              <blockquote className="text-center text-muted-foreground md:text-lg/relaxed lg:text-base/relaxed xl:text-lg/relaxed italic">
                 If you can dream it, you can do it.
-                <span className="ml-2 not-italic text-primary/80">- Walt Disney</span>
+                <span className="mt-2 block not-italic text-primary/80">- Walt Disney</span>
               </blockquote>
             </div>
           </div>
