@@ -14,10 +14,8 @@ export default function Experience() {
       ),
       period: "Jan 2026 – Present",
       location: "Toronto, Ontario",
-      logo: "/images/resume/Vector_Institute.jpg",
-      description: (
-        <>Currently working on research initiatives at Vector Institute.</>
-      ),
+      logo: "/images/resume/Vector_Institute.png",
+      description: <>Currently working on a PoC for a scheduling agent.</>,
     },
     {
       title: "Data Science and Engineering Intern",
@@ -126,11 +124,11 @@ export default function Experience() {
                     <div className="flex items-start gap-4">
                       {/* Company Logo */}
                       <div className="flex-shrink-0">
-                        <div className="w-16 h-16 rounded-lg border border-border/50 flex items-center justify-center overflow-hidden p-2 shadow-sm bg-white">
+                        <div className="w-16 h-16 rounded-lg border border-border/50 flex items-center justify-center overflow-hidden p-1 shadow-sm bg-white">
                           <img
                             src={experience.logo || "/placeholder.svg"}
                             alt={`${experience.company} logo`}
-                            className="w-12 h-12 object-contain"
+                            className="w-full h-full object-contain"
                             style={{ maxWidth: '100%', maxHeight: '100%' }}
                           />
                         </div>
