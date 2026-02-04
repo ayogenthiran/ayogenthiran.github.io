@@ -4,6 +4,22 @@ import { MapPin, Calendar } from "lucide-react"
 export default function Experience() {
   const experiences = [
     {
+      title: "Machine Learning Associate",
+      company: (
+        <>
+          <a href="https://vectorinstitute.ai/" target="_blank" rel="noopener noreferrer" className="cursor-pointer">
+            Vector Institute
+          </a>
+        </>
+      ),
+      period: "Jan 2026 – Present",
+      location: "Toronto, Ontario",
+      logo: "/images/resume/Vector_Institute.jpg",
+      description: (
+        <>Currently working on research initiatives at Vector Institute.</>
+      ),
+    },
+    {
       title: "Data Science and Engineering Intern",
       company: (
         <>
