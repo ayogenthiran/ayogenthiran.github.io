@@ -1,3 +1,54 @@
+function AboutBody() {
+  return (
+    <div className="mx-auto max-w-4xl">
+      <div className="grid gap-8 md:grid-cols-[220px,1fr] md:items-start">
+        <div className="flex justify-center md:justify-start">
+          <img
+            src="/images/profile/anojan-profile.png"
+            alt="Anojanyogenthiran profile picture"
+            className="h-40 w-40 rounded-full object-cover shadow-lg ring-4 ring-primary/30"
+            loading="lazy"
+          />
+        </div>
+
+        <div className="space-y-6">
+          <p className="text-muted-foreground md:text-lg/relaxed lg:text-base/relaxed xl:text-lg/relaxed text-justify">
+            I'm an experienced Machine Learning Engineer with a Master's in Computer Science from Western University,
+            specializing in Artificial Intelligence. Over the past 3+ years, I've developed and deployed AI-driven
+            solutions across research, healthcare, and IoT—blending technical expertise with a passion for solving
+            complex, real world problems.
+          </p>
+
+          <p className="text-muted-foreground md:text-lg/relaxed lg:text-base/relaxed xl:text-lg/relaxed text-justify">
+            As a Research Assistant at the Intelligence Data Science Lab, I had the opportunity to work under the
+            guidance of{" "}
+            <a
+              href="https://a-narayan.github.io/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-primary font-medium cursor-pointer"
+            >
+              Dr. Apurva Narayan
+            </a>
+            , focusing on generative AI research to accelerate drug discovery by identifying optimal aptamers. I'm
+            driven by the mission to craft AI solutions that not only tackle challenges but also create a positive
+            impact on millions of lives.
+          </p>
+
+          <p className="text-muted-foreground md:text-lg/relaxed lg:text-base/relaxed xl:text-lg/relaxed text-justify">
+            Outside of work, I enjoy playing soccer, hiking, experimenting with new recipes, and watching anime ⚽ 🏔️ 🍳
+            📺 🏆.
+          </p>
+          <blockquote className="text-center text-muted-foreground md:text-lg/relaxed lg:text-base/relaxed xl:text-lg/relaxed italic font-semibold">
+            If you can dream it, you can do it.
+            <span className="mt-2 block not-italic text-primary/80 font-semibold">- Walt Disney</span>
+          </blockquote>
+        </div>
+      </div>
+    </div>
+  )
+}
+
 export default function About() {
   return (
     <div className="w-full bg-muted/30">
@@ -8,31 +59,7 @@ export default function About() {
               <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-primary">About Me</h2>
             </div>
 
-            <div className="mx-auto max-w-4xl space-y-6">
-              <p className="text-muted-foreground md:text-lg/relaxed lg:text-base/relaxed xl:text-lg/relaxed text-justify">
-                I'm an experienced Machine Learning Engineer with a Master's in Computer Science from Western
-                University, specializing in Artificial Intelligence. Over the past 3+ years, I've developed and deployed
-                AI-driven solutions across research, healthcare, and IoT—blending technical expertise with a passion for
-                solving complex, real world problems.
-              </p>
-
-              <p className="text-muted-foreground md:text-lg/relaxed lg:text-base/relaxed xl:text-lg/relaxed text-justify">
-                As a Research Assistant at the Intelligence Data Science Lab, I had the opportunity to work under the
-                guidance of <a href="https://a-narayan.github.io/" target="_blank" rel="noopener noreferrer" className="text-primary font-medium cursor-pointer">Dr. Apurva Narayan</a>, focusing on generative
-                AI research to accelerate drug discovery by identifying optimal aptamers. I'm driven by the mission to
-                craft AI solutions that not only tackle challenges but also create a positive impact on millions of
-                lives.
-              </p>
-
-              <p className="text-muted-foreground md:text-lg/relaxed lg:text-base/relaxed xl:text-lg/relaxed text-justify">
-                Outside of work, I enjoy playing soccer, hiking, experimenting with new recipes, and watching anime ⚽ 🏔️
-                🍳 📺 🏆.
-              </p>
-              <blockquote className="text-center text-muted-foreground md:text-lg/relaxed lg:text-base/relaxed xl:text-lg/relaxed italic font-semibold">
-                If you can dream it, you can do it.
-                <span className="mt-2 block not-italic text-primary/80 font-semibold">- Walt Disney</span>
-              </blockquote>
-            </div>
+            <AboutBody />
           </div>
         </div>
       </section>
