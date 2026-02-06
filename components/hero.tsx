@@ -1,8 +1,37 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
-import { ArrowUpCircle, Github, Linkedin, Twitter, FileText } from "lucide-react"
+import { ArrowUpCircle, Github, Linkedin, Twitter } from "lucide-react"
 import Link from "next/link"
+
+const MediumIcon = () => (
+  <svg viewBox="0 0 24 24" aria-hidden="true" className="h-8 w-8 fill-current">
+    <path d="M4 6h2.2l4 7.6L14.2 6H16v12h-2V10l-3 6h-1.6l-3-6v8H4V6z" />
+  </svg>
+)
+
+const socialLinks = [
+  {
+    href: "https://www.linkedin.com/in/anojan-yogenthiran/",
+    label: "LinkedIn",
+    icon: <Linkedin className="h-8 w-8" />,
+  },
+  {
+    href: "https://github.com/ayogenthiran",
+    label: "GitHub",
+    icon: <Github className="h-8 w-8" />,
+  },
+  {
+    href: "https://medium.com/@ayogenthiran",
+    label: "Medium",
+    icon: <MediumIcon />,
+  },
+  {
+    href: "https://x.com/ayogenth",
+    label: "Twitter",
+    icon: <Twitter className="h-8 w-8" />,
+  },
+]
 
 export default function Hero() {
   return (
@@ -31,38 +60,14 @@ export default function Hero() {
             </p>
           </div>
           <div className="flex gap-4 mt-6">
-            <Button variant="ghost" size="icon" asChild>
-              <Link href="https://www.linkedin.com/in/anojan-yogenthiran/" target="_blank" rel="noopener noreferrer">
-                <Linkedin className="h-8 w-8" />
-                <span className="sr-only">LinkedIn</span>
-              </Link>
-            </Button>
-            <Button variant="ghost" size="icon" asChild>
-              <Link href="https://github.com/ayogenthiran" target="_blank" rel="noopener noreferrer">
-                <Github className="h-8 w-8" />
-                <span className="sr-only">GitHub</span>
-              </Link>
-            </Button>
-            <Button variant="ghost" size="icon" asChild>
-              <Link href="https://medium.com/@ayogenthiran" target="_blank" rel="noopener noreferrer">
-                <svg viewBox="0 0 24 24" aria-hidden="true" className="h-8 w-8 fill-current">
-                  <path d="M4 6h2.2l4 7.6L14.2 6H16v12h-2V10l-3 6h-1.6l-3-6v8H4V6z" />
-                </svg>
-                <span className="sr-only">Medium</span>
-              </Link>
-            </Button>
-            <Button variant="ghost" size="icon" asChild>
-              <Link href="https://x.com/ayogenth" target="_blank" rel="noopener noreferrer">
-                <Twitter className="h-8 w-8" />
-                <span className="sr-only">Twitter</span>
-              </Link>
-            </Button>
-            <Button variant="ghost" size="icon" asChild>
-              <Link href="/Anojan_Yogenthiran_Resume.pdf" target="_blank" rel="noopener noreferrer">
-                <FileText className="h-8 w-8" />
-                <span className="sr-only">Resume</span>
-              </Link>
-            </Button>
+            {socialLinks.map((link) => (
+              <Button key={link.label} variant="ghost" size="icon" asChild>
+                <Link href={link.href} target="_blank" rel="noopener noreferrer">
+                  {link.icon}
+                  <span className="sr-only">{link.label}</span>
+                </Link>
+              </Button>
+            ))}
           </div>
         </div>
         <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 hidden md:block js-only">

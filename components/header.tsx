@@ -13,10 +13,12 @@ import Link from "next/link"
 import Image from "next/image"
 
 const navItems = [
+  { name: "Home", href: "/", isRoute: true },
   { name: "About", href: "#about", isRoute: false },
   { name: "Education", href: "#education", isRoute: false },
   { name: "Experience", href: "#experience", isRoute: false },
   { name: "Projects", href: "/projects", isRoute: true },
+  { name: "CV", href: "/Anojan_Yogenthiran_Resume.pdf", isRoute: true },
   { name: "Blog", href: "/blog", isRoute: true },
   { name: "Contact Me", href: "#contact", isRoute: false },
 ]
