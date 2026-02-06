@@ -1,17 +1,17 @@
 function AboutBody() {
   return (
     <div className="mx-auto max-w-4xl">
-      <div className="grid gap-10 md:grid-cols-[260px,1fr] md:items-start">
-        <div className="flex justify-center md:justify-start">
+      <div className="grid gap-12 md:grid-cols-[240px,1fr] md:items-center">
+        <div className="flex justify-center">
           <img
             src="/images/profile/anojan-profile.png"
             alt="Anojanyogenthiran profile picture"
-            className="h-48 w-48 rounded-2xl object-cover shadow-lg ring-4 ring-primary/30"
+            className="h-56 w-56 rounded-2xl object-cover object-center shadow-lg ring-4 ring-primary/30"
             loading="lazy"
           />
         </div>
 
-        <div className="space-y-6 md:pl-2">
+        <div className="space-y-6 md:pl-4">
           <p className="text-muted-foreground md:text-lg/relaxed lg:text-base/relaxed xl:text-lg/relaxed text-justify">
             I'm an experienced Machine Learning Engineer with a Master's in Computer Science from Western University,
             specializing in Artificial Intelligence. Over the past 3+ years, I've developed and deployed AI-driven
