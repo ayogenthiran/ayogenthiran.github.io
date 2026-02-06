@@ -13,7 +13,7 @@ import Link from "next/link"
 import Image from "next/image"
 
 const navItems = [
-  { name: "Home", href: "/", isRoute: true },
+  { name: "Home", href: "#home", isRoute: false },
   { name: "About", href: "#about", isRoute: false },
   { name: "Education", href: "#education", isRoute: false },
   { name: "Experience", href: "#experience", isRoute: false },
@@ -26,7 +26,7 @@ const navItems = [
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
-  const [activeSection, setActiveSection] = useState("about")
+  const [activeSection, setActiveSection] = useState("home")
   const pathname = usePathname()
 
   // Function to determine which section is currently in view
@@ -52,8 +52,8 @@ export default function Header() {
       }
     }
 
-    // Default to about if no section is in view
-    return "about"
+    // Default to home if no section is in view
+    return "home"
   }, [pathname])
 
   useEffect(() => {
@@ -111,7 +111,7 @@ export default function Header() {
         top: 0,
         behavior: "smooth",
       })
-      setActiveSection("about")
+      setActiveSection("home")
     }
     if (isOpen) setIsOpen(false)
   }
