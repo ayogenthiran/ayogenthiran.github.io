@@ -3,8 +3,8 @@ import Image from "next/image"
 function AboutBody() {
   return (
     <div className="mx-auto max-w-5xl">
-      <div className="grid gap-12 md:grid-cols-[220px,1fr] md:items-center">
-        <div className="flex justify-center">
+      <div className="grid gap-12 md:grid-cols-[220px,1fr] md:items-start">
+        <div className="flex justify-center md:mt-20">
           <Image
             src="/images/profile/anojan-profile.png"
             alt="Anojanyogenthiran profile picture"
