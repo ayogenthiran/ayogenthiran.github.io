@@ -3,16 +3,16 @@ import Image from "next/image"
 function AboutBody() {
   return (
     <div className="mx-auto max-w-5xl">
-      <div className="grid gap-12 md:grid-cols-[220px,1fr] md:items-start">
+      <div className="grid gap-12 md:grid-cols-[250px,1fr] md:items-start">
         <div className="flex justify-center md:mt-20">
           <Image
             src="/images/profile/anojan-profile.png"
             alt="Anojanyogenthiran profile picture"
-            width={576}
-            height={624}
-            className="h-52 w-48 rounded-2xl object-cover object-center shadow-md ring-2 ring-primary/20"
+            width={672}
+            height={728}
+            className="h-60 w-56 rounded-2xl object-cover object-center shadow-md ring-2 ring-primary/20"
             loading="lazy"
-            sizes="192px"
+            sizes="224px"
           />
         </div>
 
