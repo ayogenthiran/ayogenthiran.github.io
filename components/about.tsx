@@ -10,7 +10,7 @@ function AboutBody() {
             alt="Anojanyogenthiran profile picture"
             width={672}
             height={728}
-            className="h-60 w-56 rounded-2xl object-cover object-center shadow-md ring-2 ring-primary/20"
+            className="h-72 w-64 rounded-2xl object-cover object-center shadow-md ring-2 ring-primary/20 scale-105"
             loading="lazy"
             sizes="224px"
           />
