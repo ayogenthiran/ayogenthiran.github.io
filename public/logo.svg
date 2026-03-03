@@ -1,4 +1,11 @@
-<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="40" height="40" rx="8" fill="currentColor" opacity="0.1"/>
-  <text x="20" y="26" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="currentColor">AY</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7c3aed"/>
+      <stop offset="100%" stop-color="#2563eb"/>
+    </linearGradient>
+  </defs>
+  <rect width="100" height="100" rx="20" fill="#0f0f23"/>
+  <text x="50" y="68" font-family="Arial Black, sans-serif" font-size="38" 
+        font-weight="900" fill="url(#g)" text-anchor="middle">AY</text>
 </svg>
