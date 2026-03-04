@@ -1,6 +1,5 @@
 "use client"
 
-import Image from "next/image"
 import Link from "next/link"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons"
@@ -27,14 +26,13 @@ function AboutBody() {
       <div className="grid grid-cols-1 gap-10 sm:gap-12 md:grid-cols-[300px_1fr] md:gap-14 lg:gap-16">
         {/* Left column: photo, name, role, social icons */}
         <div className="flex flex-col items-center text-center">
-          <Image
+          <img
             src="/images/profile/anojan-profile.png"
             alt="Anojan Yogenthiran profile picture"
             width={288}
             height={288}
             className="w-64 h-64 lg:w-72 lg:h-72 rounded-full object-cover object-[50%_65%] shadow-lg ring-2 ring-primary/20"
             loading="lazy"
-            sizes="(max-width: 1024px) 256px, 288px"
           />
           <h3 className="mt-4 text-xl font-bold text-foreground sm:text-2xl">Anojan Yogenthiran</h3>
           <p className="mt-1 text-muted-foreground sm:text-lg">AI/ML Engineer</p>
