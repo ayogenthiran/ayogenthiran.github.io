@@ -6,7 +6,7 @@ import { faEnvelope } from "@fortawesome/free-solid-svg-icons"
 import {
   faGithub,
   faLinkedin,
-  faMedium,
+  faMediumM,
 } from "@fortawesome/free-brands-svg-icons"
 
 const iconLinkClass =
@@ -16,7 +16,7 @@ const socialLinks = [
   { href: "#contact", label: "Mail", type: "icon" as const, icon: faEnvelope },
   { href: "https://github.com/ayogenthiran", label: "GitHub", type: "icon" as const, icon: faGithub },
   { href: "https://www.linkedin.com/in/anojan-yogenthiran/", label: "LinkedIn", type: "icon" as const, icon: faLinkedin },
-  { href: "https://medium.com/@anojanyogenthiran", label: "Medium", type: "icon" as const, icon: faMedium },
+  { href: "https://medium.com/@anojanyogenthiran", label: "Medium", type: "icon" as const, icon: faMediumM },
   { href: "/Anojan_Yogenthiran_Resume.pdf", label: "CV", type: "cv" as const },
 ]
 
@@ -69,14 +69,7 @@ function AboutBody() {
                 aria-label={link.label}
               >
                 {link.type === "icon" && (
-                  <FontAwesomeIcon
-                    icon={link.icon}
-                    style={
-                      link.label === "Medium"
-                        ? { width: 38, height: 30 }
-                        : { width: 30, height: 30 }
-                    }
-                  />
+                  <FontAwesomeIcon icon={link.icon} style={{ width: 30, height: 30 }} />
                 )}
                 {link.type === "cv" && (
                   <span className="text-slate-300 font-bold text-xl shrink-0">CV</span>
