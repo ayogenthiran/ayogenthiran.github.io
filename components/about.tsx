@@ -6,6 +6,7 @@ import { faEnvelope } from "@fortawesome/free-solid-svg-icons"
 import {
   faGithub,
   faLinkedin,
+  faMedium,
 } from "@fortawesome/free-brands-svg-icons"
 
 const iconLinkClass =
@@ -15,7 +16,7 @@ const socialLinks = [
   { href: "#contact", label: "Mail", type: "icon" as const, icon: faEnvelope },
   { href: "https://github.com/ayogenthiran", label: "GitHub", type: "icon" as const, icon: faGithub },
   { href: "https://www.linkedin.com/in/anojan-yogenthiran/", label: "LinkedIn", type: "icon" as const, icon: faLinkedin },
-  { href: "https://medium.com/@anojanyogenthiran", label: "Medium", type: "medium" as const },
+  { href: "https://medium.com/@anojanyogenthiran", label: "Medium", type: "icon" as const, icon: faMedium },
   { href: "/Anojan_Yogenthiran_Resume.pdf", label: "CV", type: "cv" as const },
 ]
 
@@ -71,11 +72,6 @@ function AboutBody() {
                   <span className="flex items-center justify-center p-2">
                     <FontAwesomeIcon icon={link.icon} style={{ width: 32, height: 32, minWidth: 32, maxWidth: 32 }} />
                   </span>
-                )}
-                {link.type === "medium" && (
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width={32} height={32} fill="currentColor" className="text-slate-300 group-hover:text-white transition-colors">
-                    <path d="M0 32v448h448V32H0zm372.2 106.1l-24 23c-2.1 1.6-3.1 4.2-2.7 6.7v169.3c-.4 2.6.6 5.2 2.7 6.7l23.5 23v5.1h-118V367l24.3-23.6c2.4-2.4 2.4-3.1 2.4-6.7V199.8l-67.6 171.6h-9.1L125 199.8v115c-.7 4.8 1 9.7 4.4 13.2l31.6 38.3v5.1H71.2v-5.1l31.6-38.3c3.4-3.5 4.9-8.4 4.1-13.2v-133c.4-3.7-1-7.3-3.8-9.8L75 138.1V133h87.3l67.4 148L289 133.1h83.2v5z" />
-                  </svg>
                 )}
                 {link.type === "cv" && (
                   <span className="text-slate-300 font-bold text-xl leading-none group-hover:text-white transition-colors">CV</span>
