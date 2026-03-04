@@ -1,5 +1,8 @@
+"use client"
+
 import Image from "next/image"
 import Link from "next/link"
+import { useState } from "react"
 import { Github, Linkedin, Twitter } from "lucide-react"
 
 const iconSize = "h-6 w-6"
@@ -11,8 +14,8 @@ const MediumIcon = () => (
 )
 
 const CVIcon = () => (
-  <span className={`${iconSize} flex items-center justify-center rounded-full border border-border dark:border-white/30 px-1.5 text-[10px] font-bold tracking-tight`}>
-    CV
+  <span className={`${iconSize} flex items-center justify-center text-xs font-bold tracking-tight`}>
+    cv
   </span>
 )
 
@@ -25,6 +28,16 @@ const socialLinks = [
 ]
 
 function AboutBody() {
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null)
+
+  const getIconTransform = (index: number) => {
+    if (hoveredIndex === null) return "scale(1) translateY(0)"
+    const distance = Math.abs(index - hoveredIndex)
+    if (distance === 0) return "scale(1.3) translateY(-4px)"
+    if (distance === 1) return "scale(1.1)"
+    return "scale(1)"
+  }
+
   return (
     <div className="mx-auto w-full max-w-6xl px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:max-w-7xl 2xl:px-16">
       <div className="grid grid-cols-1 gap-10 sm:gap-12 md:grid-cols-[300px_1fr] md:gap-14 lg:gap-16">
@@ -52,14 +65,17 @@ function AboutBody() {
             </a>
           </p>
           <div className="mt-4 flex flex-row flex-wrap items-center justify-center gap-4">
-            {socialLinks.map((link) => (
+            {socialLinks.map((link, index) => (
               <Link
                 key={link.label}
                 href={link.href}
                 target={link.href.startsWith("http") ? "_blank" : undefined}
                 rel={link.href.startsWith("http") ? "noopener noreferrer" : undefined}
-                className="flex items-center justify-center p-2 rounded-full border border-border dark:border-white/30 hover:bg-primary/10 transition-colors [&_svg]:!h-6 [&_svg]:!w-6 [&_span]:!h-6 [&_span]:!min-w-6"
+                className="flex items-center justify-center p-1.5 rounded-md transition-all duration-200 ease-out hover:bg-primary/10 [&_svg]:!h-6 [&_svg]:!w-6 [&_span]:!h-6 [&_span]:!min-w-6"
                 aria-label={link.label}
+                style={{ transform: getIconTransform(index) }}
+                onMouseEnter={() => setHoveredIndex(index)}
+                onMouseLeave={() => setHoveredIndex(null)}
               >
                 {link.icon}
               </Link>
