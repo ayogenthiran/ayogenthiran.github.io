@@ -64,7 +64,7 @@ function AboutBody() {
                 href={link.href}
                 target={link.href.startsWith("http") ? "_blank" : undefined}
                 rel={link.href.startsWith("http") ? "noopener noreferrer" : undefined}
-                className={iconLinkClass}
+                className={`${iconLinkClass} ${link.type === "cv" ? "-ml-1" : ""}`}
                 aria-label={link.label}
               >
                 {link.type === "icon" && (
