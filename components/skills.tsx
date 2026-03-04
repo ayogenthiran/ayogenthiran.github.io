@@ -76,8 +76,8 @@ export default function Skills() {
   ]
 
   return (
-    <section id="skills" className="py-20 bg-muted/30 scroll-mt-16">
-      <div className="container px-4 md:px-6">
+    <section id="skills" className="min-h-screen flex items-center py-20 bg-muted/30 scroll-mt-16">
+      <div className="container px-4 md:px-6 mx-auto w-full">
         <div className="space-y-12">
           <div className="space-y-4 text-center">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-primary">Skills</h2>

@@ -4,9 +4,9 @@ import { Textarea } from "@/components/ui/textarea"
 
 export default function Contact() {
   return (
-    <div className="w-full bg-background">
-      <section id="contact" className="py-20 bg-background scroll-mt-16">
-        <div className="container px-4 md:px-6 mx-auto">
+    <div className="w-full min-h-screen bg-background">
+      <section id="contact" className="min-h-screen flex items-center py-20 bg-background scroll-mt-16">
+        <div className="container px-4 md:px-6 mx-auto w-full">
           <div className="max-w-2xl mx-auto space-y-8">
             <div className="text-center">
               <h2 className="text-4xl md:text-5xl font-bold text-primary mb-6">Contact Me</h2>

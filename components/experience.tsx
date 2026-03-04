@@ -107,8 +107,8 @@ export default function Experience() {
   ]
 
   return (
-    <section id="experience" className="py-20 bg-background scroll-mt-16">
-      <div className="container px-4 md:px-6 mx-auto">
+    <section id="experience" className="min-h-screen flex items-center py-20 bg-background scroll-mt-16">
+      <div className="container px-4 md:px-6 mx-auto w-full">
         <div className="space-y-12">
           <div className="space-y-4 text-center">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-primary">
