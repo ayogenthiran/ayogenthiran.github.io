@@ -29,9 +29,9 @@ function AboutBody() {
           <img
             src="/images/profile/anojan-profile.png?v=2"
             alt="Anojan Yogenthiran profile picture"
-            width={288}
-            height={288}
-            className="w-64 h-64 lg:w-72 lg:h-72 rounded-full object-cover object-[50%_65%] shadow-lg ring-2 ring-primary/20"
+            width={240}
+            height={240}
+            className="w-56 h-56 lg:w-60 lg:h-60 rounded-full object-cover object-[50%_65%] shadow-lg ring-2 ring-primary/20"
             loading="eager"
             onError={(e) => {
               const target = e.target as HTMLImageElement
@@ -40,7 +40,7 @@ function AboutBody() {
             }}
           />
           <div
-            className="hidden w-64 h-64 lg:w-72 lg:h-72 rounded-full bg-muted flex items-center justify-center ring-2 ring-primary/20 shrink-0"
+            className="hidden w-56 h-56 lg:w-60 lg:h-60 rounded-full bg-muted flex items-center justify-center ring-2 ring-primary/20 shrink-0"
             aria-hidden="true"
           >
             <span className="text-4xl font-bold text-muted-foreground">AY</span>
