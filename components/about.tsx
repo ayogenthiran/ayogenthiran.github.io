@@ -9,7 +9,7 @@ import {
 } from "@fortawesome/free-brands-svg-icons"
 
 const iconLinkClass =
-  "group text-slate-300 hover:text-white hover:scale-125 transition-all duration-200 cursor-pointer flex items-center justify-center w-[30px] h-[30px] shrink-0 no-underline outline-none ring-0 focus:outline-none focus:ring-0 focus-visible:outline-none focus-visible:ring-0"
+  "group text-slate-300 hover:text-white hover:scale-125 transition-all duration-200 cursor-pointer flex items-center justify-center shrink-0 no-underline outline-none ring-0 focus:outline-none focus:ring-0 focus-visible:outline-none focus-visible:ring-0"
 
 const socialLinks = [
   { href: "#contact", label: "Mail", type: "icon" as const, icon: faEnvelope },
@@ -57,7 +57,7 @@ function AboutBody() {
               Vector Institute
             </a>
           </p>
-          <div className="mt-4 grid grid-flow-col auto-cols-[30px] justify-center gap-x-2 overflow-x-auto overflow-y-hidden border-0 border-b-0 border-none shadow-none [&::-webkit-scrollbar]:hidden [scrollbar-width:none] [&>*]:border-0 [&>*]:border-none [&>*]:no-underline [&>*]:outline-none [&>*]:ring-0 [&>*]:shadow-none [&>*]:after:content-none [&>*]:after:hidden [&>*]:before:content-none [&>*]:before:hidden">
+          <div className="mt-4 flex flex-row items-center justify-center gap-4 overflow-x-auto overflow-y-hidden [&::-webkit-scrollbar]:hidden [scrollbar-width:none]">
             {socialLinks.map((link) => (
               <Link
                 key={link.label}
@@ -68,13 +68,15 @@ function AboutBody() {
                 aria-label={link.label}
               >
                 {link.type === "icon" && (
-                  <FontAwesomeIcon icon={link.icon} style={{ width: 30, height: 30, minWidth: 30, maxWidth: 30 }} />
+                  <span className="flex items-center justify-center">
+                    <FontAwesomeIcon icon={link.icon} style={{ width: 24, height: 24, minWidth: 24, maxWidth: 24 }} />
+                  </span>
                 )}
                 {link.type === "medium" && (
-                  <span className="font-bold text-[22px] leading-[1] w-[30px] h-[30px] min-w-[30px] max-w-[30px] flex items-center justify-center text-slate-300 group-hover:text-white transition-colors">M</span>
+                  <span className="border border-slate-300 rounded px-2 py-1 text-slate-300 font-bold text-sm leading-none group-hover:text-white transition-colors">M</span>
                 )}
                 {link.type === "cv" && (
-                  <span className="text-slate-300 font-bold text-xl leading-[1] w-[30px] h-[30px] min-w-[30px] max-w-[30px] flex items-center justify-center tracking-tight">CV</span>
+                  <span className="border border-slate-300 rounded px-2 py-1 text-slate-300 font-bold text-sm leading-none group-hover:text-white transition-colors">CV</span>
                 )}
               </Link>
             ))}
