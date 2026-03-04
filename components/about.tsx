@@ -57,7 +57,7 @@ function AboutBody() {
               Vector Institute
             </a>
           </p>
-          <div className="mt-4 flex flex-row flex-nowrap items-center justify-center gap-1 overflow-x-auto overflow-y-hidden [&::-webkit-scrollbar]:hidden [scrollbar-width:none]">
+          <div className="mt-4 flex flex-row flex-nowrap items-center justify-center gap-0.5 overflow-x-auto overflow-y-hidden [&::-webkit-scrollbar]:hidden [scrollbar-width:none]">
             {socialLinks.map((link) => (
               <Link
                 key={link.label}
