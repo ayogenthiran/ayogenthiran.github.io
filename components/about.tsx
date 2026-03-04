@@ -1,9 +1,8 @@
 import Image from "next/image"
 import Link from "next/link"
 import { Github, Linkedin, Twitter } from "lucide-react"
-import { Button } from "@/components/ui/button"
 
-const iconSize = "h-7 w-7 sm:h-8 sm:w-8"
+const iconSize = "h-6 w-6"
 
 const MediumIcon = () => (
   <svg viewBox="0 0 24 24" aria-hidden="true" className={`${iconSize} fill-current`}>
@@ -12,9 +11,7 @@ const MediumIcon = () => (
 )
 
 const CVIcon = () => (
-  <span
-    className={`${iconSize} flex items-center justify-center rounded-md border border-border/50 bg-muted/50 text-[10px] sm:text-xs font-bold tracking-tight text-foreground`}
-  >
+  <span className={`${iconSize} flex items-center justify-center rounded-full border border-border dark:border-white/30 px-1.5 text-[10px] font-bold tracking-tight`}>
     CV
   </span>
 )
@@ -54,24 +51,18 @@ function AboutBody() {
               Vector Institute
             </a>
           </p>
-          <div className="mt-4 flex flex-wrap justify-center gap-2 sm:gap-3">
+          <div className="mt-4 flex flex-row flex-wrap items-center justify-center gap-4">
             {socialLinks.map((link) => (
-              <Button
+              <Link
                 key={link.label}
-                variant="ghost"
-                size="icon"
-                asChild
-                className="h-12 w-12 sm:h-14 sm:w-14 [&_svg]:!h-7 [&_svg]:!w-7 sm:[&_svg]:!h-8 sm:[&_svg]:!w-8 [&_span]:!h-7 [&_span]:!w-7 sm:[&_span]:!h-8 sm:[&_span]:!w-8"
+                href={link.href}
+                target={link.href.startsWith("http") ? "_blank" : undefined}
+                rel={link.href.startsWith("http") ? "noopener noreferrer" : undefined}
+                className="flex items-center justify-center p-2 rounded-full border border-border dark:border-white/30 hover:bg-primary/10 transition-colors [&_svg]:!h-6 [&_svg]:!w-6 [&_span]:!h-6 [&_span]:!min-w-6"
+                aria-label={link.label}
               >
-                <Link
-                  href={link.href}
-                  target={link.href.startsWith("http") ? "_blank" : undefined}
-                  rel={link.href.startsWith("http") ? "noopener noreferrer" : undefined}
-                >
-                  {link.icon}
-                  <span className="sr-only">{link.label}</span>
-                </Link>
-              </Button>
+                {link.icon}
+              </Link>
             ))}
           </div>
         </div>
