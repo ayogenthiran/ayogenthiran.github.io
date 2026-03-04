@@ -84,13 +84,17 @@ function AboutBody() {
         {/* Right column: About Me heading + bio */}
         <div className="flex flex-col justify-center font-sans text-left">
           <h2 className="text-2xl font-bold text-primary sm:text-3xl md:text-4xl">About Me</h2>
-          <div className="mt-4 space-y-5 sm:mt-6 sm:space-y-6 text-justify hyphens-auto">
-            <p className="text-muted-foreground text-base leading-7 sm:text-lg">
+          <div className="mt-4 space-y-4 sm:mt-6 sm:space-y-5 text-justify hyphens-auto">
+            <p className="text-muted-foreground text-base leading-relaxed sm:text-lg">
               I'm an experienced Machine Learning Engineer with a Master's in Computer Science from Western University,
               specializing in Artificial Intelligence. Over the past 3+ years, I've developed and deployed AI-driven
               solutions across research, healthcare, and IoT—blending technical expertise with a passion for solving
-              complex, real-world problems. As a Research Assistant at the Intelligence Data Science Lab, I had the
-              opportunity to work under the guidance of{" "}
+              complex, real world problems.
+            </p>
+
+            <p className="text-muted-foreground text-base leading-relaxed sm:text-lg">
+              As a Research Assistant at the Intelligence Data Science Lab, I had the opportunity to work under the
+              guidance of{" "}
               <a
                 href="https://a-narayan.github.io/"
                 target="_blank"
@@ -104,7 +108,7 @@ function AboutBody() {
               impact on millions of lives.
             </p>
 
-            <p className="text-muted-foreground text-base leading-7 sm:text-lg">
+            <p className="text-muted-foreground text-base leading-relaxed sm:text-lg">
               Outside of work, I enjoy playing soccer, hiking, experimenting with new recipes, and watching anime ⚽ 🏔️
               🍳 📺 🏆.
             </p>
