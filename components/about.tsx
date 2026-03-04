@@ -84,7 +84,7 @@ function AboutBody() {
         {/* Right column: About Me heading + bio */}
         <div className="flex flex-col justify-center font-sans text-left">
           <h2 className="text-2xl font-bold text-primary sm:text-3xl md:text-4xl">About Me</h2>
-          <div className="mt-4 space-y-4 sm:mt-6 sm:space-y-5">
+          <div className="mt-4 space-y-4 sm:mt-6 sm:space-y-5 text-justify hyphens-auto">
             <p className="text-muted-foreground text-base leading-relaxed sm:text-lg">
               I'm an experienced Machine Learning Engineer with a Master's in Computer Science from Western University,
               specializing in Artificial Intelligence. Over the past 3+ years, I've developed and deployed AI-driven
@@ -114,8 +114,8 @@ function AboutBody() {
             </p>
 
             <blockquote className="border-l-2 border-primary/40 pl-4 text-muted-foreground text-base italic sm:text-lg">
-              If you can dream it, you can do it.
-              <span className="mt-2 block not-italic text-primary/80 font-semibold">- Walt Disney</span>
+              &ldquo;If you can dream it, you can do it.&rdquo;
+              <span className="mt-2 block not-italic text-primary/80">— Walt Disney</span>
             </blockquote>
           </div>
         </div>

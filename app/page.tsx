@@ -6,7 +6,7 @@ import Contact from "@/components/contact"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Anojan Yogenthiran | AI/ML Software Engineer",
+  title: "Anojan Yogenthiran - ayogenthiran.github.io",
   description:
     "Portfolio of Anojan Yogenthiran, an AI/ML Software Engineer specializing in Machine Learning, Artificial Intelligence, and software development.",
 }
