@@ -1,9 +1,9 @@
 import Image from "next/image"
 import Link from "next/link"
-import { FileText, Github, Linkedin, Twitter } from "lucide-react"
+import { Github, Linkedin, Twitter } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
-const iconSize = "h-5 w-5 sm:h-6 sm:w-6"
+const iconSize = "h-7 w-7 sm:h-8 sm:w-8"
 
 const MediumIcon = () => (
   <svg viewBox="0 0 24 24" aria-hidden="true" className={`${iconSize} fill-current`}>
@@ -11,12 +11,20 @@ const MediumIcon = () => (
   </svg>
 )
 
+const CVIcon = () => (
+  <span
+    className={`${iconSize} flex items-center justify-center rounded-md border border-border/50 bg-muted/50 text-[10px] sm:text-xs font-bold tracking-tight text-foreground`}
+  >
+    CV
+  </span>
+)
+
 const socialLinks = [
   { href: "https://www.linkedin.com/in/anojan-yogenthiran/", label: "LinkedIn", icon: <Linkedin className={iconSize} /> },
   { href: "https://github.com/ayogenthiran", label: "GitHub", icon: <Github className={iconSize} /> },
   { href: "https://medium.com/@ayogenthiran", label: "Medium", icon: <MediumIcon /> },
   { href: "https://x.com/ayogenth", label: "Twitter", icon: <Twitter className={iconSize} /> },
-  { href: "/Anojan_Yogenthiran_Resume.pdf", label: "CV", icon: <FileText className={iconSize} /> },
+  { href: "/Anojan_Yogenthiran_Resume.pdf", label: "CV", icon: <CVIcon /> },
 ]
 
 function AboutBody() {
@@ -53,7 +61,7 @@ function AboutBody() {
                 variant="ghost"
                 size="icon"
                 asChild
-                className="h-10 w-10 sm:h-12 sm:w-12 [&_svg]:!h-5 [&_svg]:!w-5 sm:[&_svg]:!h-6 sm:[&_svg]:!w-6"
+                className="h-12 w-12 sm:h-14 sm:w-14 [&_svg]:!h-7 [&_svg]:!w-7 sm:[&_svg]:!h-8 sm:[&_svg]:!w-8 [&_span]:!h-7 [&_span]:!w-7 sm:[&_span]:!h-8 sm:[&_span]:!w-8"
               >
                 <Link
                   href={link.href}
