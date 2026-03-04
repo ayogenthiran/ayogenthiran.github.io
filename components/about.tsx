@@ -57,7 +57,7 @@ function AboutBody() {
               Vector Institute
             </a>
           </p>
-          <div className="mt-4 flex flex-row items-center justify-center gap-4 overflow-x-auto overflow-y-hidden [&::-webkit-scrollbar]:hidden [scrollbar-width:none]">
+          <div className="mt-4 flex flex-row flex-nowrap items-center justify-center gap-2 overflow-x-auto overflow-y-hidden [&::-webkit-scrollbar]:hidden [scrollbar-width:none]">
             {socialLinks.map((link) => (
               <Link
                 key={link.label}
@@ -69,14 +69,14 @@ function AboutBody() {
               >
                 {link.type === "icon" && (
                   <span className="flex items-center justify-center p-2">
-                    <FontAwesomeIcon icon={link.icon} style={{ width: 28, height: 28, minWidth: 28, maxWidth: 28 }} />
+                    <FontAwesomeIcon icon={link.icon} style={{ width: 32, height: 32, minWidth: 32, maxWidth: 32 }} />
                   </span>
                 )}
                 {link.type === "medium" && (
-                  <span className="border border-slate-300 rounded px-3 py-1.5 text-slate-300 font-bold text-base leading-none group-hover:text-white transition-colors">M</span>
+                  <span className="text-slate-300 font-bold text-xl leading-none group-hover:text-white transition-colors">M</span>
                 )}
                 {link.type === "cv" && (
-                  <span className="border border-slate-300 rounded px-3 py-1.5 text-slate-300 font-bold text-base leading-none group-hover:text-white transition-colors">CV</span>
+                  <span className="text-slate-300 font-bold text-xl leading-none group-hover:text-white transition-colors">CV</span>
                 )}
               </Link>
             ))}
