@@ -9,7 +9,7 @@ import {
 } from "@fortawesome/free-brands-svg-icons"
 
 const iconLinkClass =
-  "group text-slate-300 hover:text-white hover:scale-125 transition-all duration-200 cursor-pointer flex items-center justify-center shrink-0 no-underline outline-none ring-0 focus:outline-none focus:ring-0 focus-visible:outline-none focus-visible:ring-0"
+  "group text-slate-300 hover:text-white hover:scale-125 transition-all duration-200 cursor-pointer flex items-center justify-center w-[30px] h-[30px] shrink-0 no-underline outline-none ring-0 focus:outline-none focus:ring-0 focus-visible:outline-none focus-visible:ring-0"
 
 const socialLinks = [
   { href: "#contact", label: "Mail", type: "icon" as const, icon: faEnvelope },
@@ -71,10 +71,10 @@ function AboutBody() {
                   <FontAwesomeIcon icon={link.icon} style={{ width: 30, height: 30 }} />
                 )}
                 {link.type === "medium" && (
-                  <span className="font-bold text-[22px] leading-[30px] w-[30px] h-[30px] flex items-center justify-center text-slate-300 group-hover:text-white transition-colors">M</span>
+                  <span className="font-bold text-[22px] leading-none w-[30px] h-[30px] flex items-center justify-center text-slate-300 group-hover:text-white transition-colors">M</span>
                 )}
                 {link.type === "cv" && (
-                  <span className="text-slate-300 font-bold text-xl shrink-0">CV</span>
+                  <span className="text-slate-300 font-bold text-xl w-[30px] h-[30px] flex items-center justify-center leading-none">CV</span>
                 )}
               </Link>
             ))}
