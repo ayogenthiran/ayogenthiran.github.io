@@ -36,6 +36,16 @@ function AboutBody() {
           />
           <h3 className="mt-4 text-xl font-bold text-foreground sm:text-2xl">Anojan Yogenthiran</h3>
           <p className="mt-1 text-muted-foreground sm:text-lg">AI/ML Engineer</p>
+          <p className="mt-0.5 text-muted-foreground text-base sm:text-lg">
+            <a
+              href="https://vectorinstitute.ai/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-primary font-medium hover:underline"
+            >
+              Vector Institute
+            </a>
+          </p>
           <div className="mt-4 flex flex-wrap justify-center gap-2 sm:gap-3">
             {socialLinks.map((link) => (
               <Button
@@ -103,7 +113,7 @@ function AboutBody() {
 
 export default function About() {
   return (
-    <div className="w-full bg-muted/30">
+    <div className="w-full">
       <section id="home" className="w-full py-16 sm:py-20 md:py-24 lg:py-28">
         <div className="container mx-auto">
           <AboutBody />

@@ -4,7 +4,7 @@ import Image from "next/image"
 
 export default function Education() {
   return (
-    <section id="education" className="py-20">
+    <section id="education" className="py-20 bg-muted/30">
       <div className="container px-4 md:px-6 mx-auto">
         <div className="space-y-12">
           <div className="space-y-4 text-center">
