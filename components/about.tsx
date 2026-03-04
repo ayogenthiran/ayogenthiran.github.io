@@ -80,7 +80,7 @@ function AboutBody() {
                   </span>
                 )}
                 {link.type === "cv" && (
-                  <span className="flex items-center justify-center p-2 text-slate-300 font-bold text-2xl leading-none group-hover:text-white transition-colors">CV</span>
+                  <span className="flex items-center justify-center p-2 text-slate-300 font-bold text-3xl leading-none group-hover:text-white transition-colors">CV</span>
                 )}
               </Link>
             ))}
