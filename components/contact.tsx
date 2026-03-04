@@ -26,7 +26,7 @@ export default function Contact() {
                   name="name"
                   placeholder="Full Name"
                   required
-                  className="bg-slate-800 border-slate-700 text-white placeholder:text-slate-400 h-12"
+                  className="h-12"
                 />
               </div>
 
@@ -40,7 +40,7 @@ export default function Contact() {
                   type="email"
                   placeholder="example@domain.com"
                   required
-                  className="bg-slate-800 border-slate-700 text-white placeholder:text-slate-400 h-12"
+                  className="h-12"
                 />
               </div>
 
@@ -52,7 +52,7 @@ export default function Contact() {
                   id="message"
                   name="message"
                   placeholder="Type your message"
-                  className="bg-slate-800 border-slate-700 text-white placeholder:text-slate-400 min-h-[120px] resize-none"
+                  className="min-h-[120px] resize-none"
                   required
                 />
               </div>
@@ -60,7 +60,7 @@ export default function Contact() {
               <div className="flex justify-center pt-4">
                 <Button
                   type="submit"
-                  className="bg-primary hover:bg-primary/90 text-white px-8 py-3 text-base font-medium"
+                  className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-3 text-base font-medium"
                 >
                   Submit
                 </Button>

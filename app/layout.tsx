@@ -75,8 +75,21 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" className="dark" suppressHydrationWarning>
       <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                const savedTheme = localStorage.getItem('theme');
+                const defaultTheme = savedTheme || 'dark';
+                document.documentElement.setAttribute('data-theme', defaultTheme);
+                document.documentElement.classList.remove('light', 'dark');
+                document.documentElement.classList.add(defaultTheme);
+              })();
+            `,
+          }}
+        />
         <NoScriptStyles />
         <link rel="manifest" href="/manifest.json" />
       </head>

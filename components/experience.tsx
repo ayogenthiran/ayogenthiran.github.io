@@ -7,7 +7,7 @@ export default function Experience() {
       title: "Machine Learning Associate",
       company: (
         <>
-          <a href="https://vectorinstitute.ai/" target="_blank" rel="noopener noreferrer" className="cursor-pointer">
+          <a href="https://vectorinstitute.ai/" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-primary/80 hover:underline cursor-pointer">
             Vector Institute
           </a>
         </>
@@ -29,7 +29,7 @@ export default function Experience() {
       title: "Data Science and Engineering Intern",
       company: (
         <>
-          <a href="https://www.kaidu.ai/" target="_blank" rel="noopener noreferrer" className="cursor-pointer">
+          <a href="https://www.kaidu.ai/" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-primary/80 hover:underline cursor-pointer">
             Kaidu.ai
           </a>
         </>
@@ -50,7 +50,7 @@ export default function Experience() {
       title: "Research Associate",
       company: (
         <>
-          <a href="https://a-narayan.github.io/" target="_blank" rel="noopener noreferrer" className="cursor-pointer">
+          <a href="https://a-narayan.github.io/" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-primary/80 hover:underline cursor-pointer">
             Intelligence Data Science Lab, Western University
           </a>
         </>
@@ -71,7 +71,7 @@ export default function Experience() {
       title: "Associate AI/ML Engineer",
       company: (
         <>
-          <a href="https://hehealth.ai/" target="_blank" rel="noopener noreferrer" className="cursor-pointer">
+          <a href="https://hehealth.ai/" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-primary/80 hover:underline cursor-pointer">
             HeHealth
           </a>
         </>
@@ -95,7 +95,7 @@ export default function Experience() {
       title: "Associate ML Engineer",
       company: (
         <>
-          <a href="https://www.senzmate.com/" target="_blank" rel="noopener noreferrer" className="cursor-pointer">
+          <a href="https://www.senzmate.com/" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-primary/80 hover:underline cursor-pointer">
             SenzMate AIoT Intelligence
           </a>
         </>
@@ -132,7 +132,7 @@ export default function Experience() {
                     <div className="flex items-start gap-4">
                       {/* Company Logo */}
                       <div className="flex-shrink-0">
-                        <div className="w-16 h-16 rounded-lg border border-border/50 flex items-center justify-center overflow-hidden p-1 shadow-sm bg-white">
+                        <div className="w-16 h-16 rounded-lg border border-border/50 flex items-center justify-center overflow-hidden p-1 shadow-sm bg-muted">
                           <img
                             src={experience.logo || "/placeholder.svg"}
                             alt={`${experience.company} logo`}

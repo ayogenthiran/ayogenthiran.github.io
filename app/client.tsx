@@ -12,7 +12,7 @@ export default function ClientLayout({
   children: React.ReactNode
 }) {
   return (
-    <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false} disableTransitionOnChange>
+    <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false} disableTransitionOnChange storageKey="theme">
       <div className="relative flex min-h-screen flex-col overflow-hidden">
         <noscript>
           <div className="bg-yellow-100 dark:bg-yellow-900 p-4 text-center text-sm">

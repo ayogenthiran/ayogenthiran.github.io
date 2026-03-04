@@ -16,7 +16,7 @@ export default function Education() {
               <CardContent className="p-6">
                 <div className="flex items-start gap-4">
                   <div className="flex-shrink-0">
-                    <div className="w-16 h-16 bg-white rounded-lg flex items-center justify-center p-2">
+                    <div className="w-16 h-16 bg-muted rounded-lg flex items-center justify-center p-2">
                       <Image
                         src="/images/resume/uwo.png"
                         alt="Western University"
@@ -48,7 +48,7 @@ export default function Education() {
               <CardContent className="p-6">
                 <div className="flex items-start gap-4">
                   <div className="flex-shrink-0">
-                    <div className="w-16 h-16 bg-white rounded-lg flex items-center justify-center p-2">
+                    <div className="w-16 h-16 bg-muted rounded-lg flex items-center justify-center p-2">
                       <Image
                         src="/images/resume/sliit.png"
                         alt="SLIIT"
