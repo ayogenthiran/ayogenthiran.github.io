@@ -1,11 +1,13 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
-import { ArrowUpCircle, Github, Linkedin, Twitter } from "lucide-react"
+import { ArrowUpCircle, FileText, Github, Linkedin, Twitter } from "lucide-react"
 import Link from "next/link"
 
+const iconSize = "h-11 w-11"
+
 const MediumIcon = () => (
-  <svg viewBox="0 0 24 24" aria-hidden="true" className="h-8 w-8 fill-current">
+  <svg viewBox="0 0 24 24" aria-hidden="true" className={`${iconSize} fill-current`}>
     <path d="M4 6h2.2l4 7.6L14.2 6H16v12h-2V10l-3 6h-1.6l-3-6v8H4V6z" />
   </svg>
 )
@@ -14,12 +16,12 @@ const socialLinks = [
   {
     href: "https://www.linkedin.com/in/anojan-yogenthiran/",
     label: "LinkedIn",
-    icon: <Linkedin className="h-8 w-8" />,
+    icon: <Linkedin className={iconSize} />,
   },
   {
     href: "https://github.com/ayogenthiran",
     label: "GitHub",
-    icon: <Github className="h-8 w-8" />,
+    icon: <Github className={iconSize} />,
   },
   {
     href: "https://medium.com/@ayogenthiran",
@@ -29,7 +31,12 @@ const socialLinks = [
   {
     href: "https://x.com/ayogenth",
     label: "Twitter",
-    icon: <Twitter className="h-8 w-8" />,
+    icon: <Twitter className={iconSize} />,
+  },
+  {
+    href: "/Anojan_Yogenthiran_Resume.pdf",
+    label: "CV",
+    icon: <FileText className={iconSize} />,
   },
 ]
 
@@ -59,10 +66,20 @@ export default function Hero() {
               who enjoys solving complex and challenging real-world problems.
             </p>
           </div>
-          <div className="flex gap-4 mt-6">
+          <div className="flex gap-5 mt-6 flex-wrap justify-center">
             {socialLinks.map((link) => (
-              <Button key={link.label} variant="ghost" size="icon" asChild>
-                <Link href={link.href} target="_blank" rel="noopener noreferrer">
+              <Button
+                key={link.label}
+                variant="ghost"
+                size="icon"
+                asChild
+                className="h-14 w-14 [&_svg]:!h-11 [&_svg]:!w-11"
+              >
+                <Link
+                  href={link.href}
+                  target={link.href.startsWith("http") ? "_blank" : undefined}
+                  rel={link.href.startsWith("http") ? "noopener noreferrer" : undefined}
+                >
                   {link.icon}
                   <span className="sr-only">{link.label}</span>
                 </Link>

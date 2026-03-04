@@ -1,7 +1,12 @@
 {
-  "name": "Nihal Maskey | Senior Software Engineer",
-  "short_name": "Nihal Maskey",
+  "name": "AY | Senior Software Engineer",
+  "short_name": "AY",
   "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    },
     {
       "src": "/favicon.png",
       "sizes": "512x512",

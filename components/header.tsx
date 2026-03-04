@@ -18,7 +18,6 @@ const navItems = [
   { name: "Education", href: "#education", isRoute: false },
   { name: "Experience", href: "#experience", isRoute: false },
   { name: "Projects", href: "/projects", isRoute: true },
-  { name: "CV", href: "/Anojan_Yogenthiran_Resume.pdf", isRoute: true },
   { name: "Blog", href: "/blog", isRoute: true },
   { name: "Contact Me", href: "#contact", isRoute: false },
 ]
@@ -134,13 +133,12 @@ export default function Header() {
             className="flex items-center space-x-2"
           >
             <Image
-              src="/logo.svg"
+              src="/ML.svg"
               alt="Anojan Yogenthiran"
               width={32}
               height={32}
               className="h-8 w-8"
             />
-            <span className="text-2xl font-bold gradient-text">AY</span>
           </motion.div>
         </Link>
 
