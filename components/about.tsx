@@ -3,24 +3,23 @@
 import Image from "next/image"
 import Link from "next/link"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import {
-  faEnvelope,
-  faFileAlt,
-} from "@fortawesome/free-solid-svg-icons"
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons"
 import {
   faGithub,
   faLinkedin,
-  faMedium,
   faXTwitter,
 } from "@fortawesome/free-brands-svg-icons"
 
+const iconLinkClass =
+  "group text-slate-300 hover:text-white hover:scale-125 hover:-translate-y-1 transition-all duration-200 cursor-pointer flex items-center justify-center shrink-0"
+
 const socialLinks = [
-  { href: "#contact", label: "Mail", icon: faEnvelope },
-  { href: "https://github.com/ayogenthiran", label: "GitHub", icon: faGithub },
-  { href: "https://www.linkedin.com/in/anojan-yogenthiran/", label: "LinkedIn", icon: faLinkedin },
-  { href: "https://medium.com/@ayogenthiran", label: "Medium", icon: faMedium },
-  { href: "https://x.com/ayogenth", label: "Twitter/X", icon: faXTwitter },
-  { href: "/Anojan_Yogenthiran_Resume.pdf", label: "CV", icon: faFileAlt },
+  { href: "#contact", label: "Mail", type: "icon" as const, icon: faEnvelope },
+  { href: "https://github.com/ayogenthiran", label: "GitHub", type: "icon" as const, icon: faGithub },
+  { href: "https://www.linkedin.com/in/anojan-yogenthiran/", label: "LinkedIn", type: "icon" as const, icon: faLinkedin },
+  { href: "https://medium.com/@ayogenthiran", label: "Medium", type: "medium" as const },
+  { href: "https://x.com/ayogenth", label: "Twitter/X", type: "icon" as const, icon: faXTwitter },
+  { href: "/Anojan_Yogenthiran_Resume.pdf", label: "CV", type: "cv" as const },
 ]
 
 function AboutBody() {
@@ -51,17 +50,27 @@ function AboutBody() {
               Vector Institute
             </a>
           </p>
-          <div className="mt-4 flex flex-row flex-wrap items-center justify-center gap-5">
+          <div className="mt-4 flex flex-row flex-nowrap items-center justify-center gap-3 overflow-x-auto">
             {socialLinks.map((link) => (
               <Link
                 key={link.label}
                 href={link.href}
                 target={link.href.startsWith("http") ? "_blank" : undefined}
                 rel={link.href.startsWith("http") ? "noopener noreferrer" : undefined}
-                className="text-slate-300 hover:text-white hover:scale-110 transition-all duration-200"
+                className={iconLinkClass}
                 aria-label={link.label}
               >
-                <FontAwesomeIcon icon={link.icon} size="2x" />
+                {link.type === "icon" && (
+                  <FontAwesomeIcon icon={link.icon} style={{ width: 20, height: 20 }} />
+                )}
+                {link.type === "medium" && (
+                  <span className="font-bold text-lg text-slate-300 shrink-0">M</span>
+                )}
+                {link.type === "cv" && (
+                  <span className="border border-slate-300 rounded px-2 py-0.5 text-slate-300 font-bold text-xs tracking-wide group-hover:border-white shrink-0">
+                    CV
+                  </span>
+                )}
               </Link>
             ))}
           </div>
