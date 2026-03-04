@@ -13,7 +13,6 @@ import Link from "next/link"
 
 const navItems = [
   { name: "Home", href: "#home", isRoute: false },
-  { name: "About", href: "#about", isRoute: false },
   { name: "Education", href: "#education", isRoute: false },
   { name: "Experience", href: "#experience", isRoute: false },
   { name: "Projects", href: "/projects", isRoute: true },
@@ -44,7 +43,7 @@ export default function Header() {
         if (rect.top <= 150 && rect.bottom >= 150) {
           const sectionId = allSections[i]
           if (sectionId === "skills") return "experience"
-          if (!sections.includes(sectionId)) return "about"
+          if (!sections.includes(sectionId)) return "home"
           return sectionId
         }
       }

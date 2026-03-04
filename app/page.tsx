@@ -1,4 +1,3 @@
-import Hero from "@/components/hero"
 import About from "@/components/about"
 import Education from "@/components/education"
 import Experience from "@/components/experience"
@@ -15,7 +14,6 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <div className="w-full">
-      <Hero />
       <About />
       <Education />
       <Experience />

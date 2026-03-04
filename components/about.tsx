@@ -104,7 +104,7 @@ function AboutBody() {
 export default function About() {
   return (
     <div className="w-full bg-muted/30">
-      <section id="about" className="w-full py-16 sm:py-20 md:py-24 lg:py-28">
+      <section id="home" className="w-full py-16 sm:py-20 md:py-24 lg:py-28">
         <div className="container mx-auto">
           <AboutBody />
         </div>
