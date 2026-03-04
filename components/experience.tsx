@@ -107,7 +107,7 @@ export default function Experience() {
   ]
 
   return (
-    <section id="experience" className="py-20">
+    <section id="experience" className="py-20 bg-background scroll-mt-16">
       <div className="container px-4 md:px-6 mx-auto">
         <div className="space-y-12">
           <div className="space-y-4 text-center">

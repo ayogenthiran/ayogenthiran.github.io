@@ -6,18 +6,17 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons"
 import {
   faGithub,
-  faGoogle,
   faLinkedin,
 } from "@fortawesome/free-brands-svg-icons"
 
 const iconLinkClass =
-  "group text-slate-300 hover:text-white hover:scale-125 hover:-translate-y-1 transition-all duration-200 cursor-pointer flex items-center justify-center shrink-0"
+  "group text-slate-300 hover:text-white hover:scale-125 hover:-translate-y-1 transition-all duration-200 cursor-pointer flex items-center justify-center shrink-0 no-underline"
 
 const socialLinks = [
   { href: "#contact", label: "Mail", type: "icon" as const, icon: faEnvelope },
-  { href: "https://scholar.google.com/", label: "Google Scholar", type: "icon" as const, icon: faGoogle },
   { href: "https://github.com/ayogenthiran", label: "GitHub", type: "icon" as const, icon: faGithub },
   { href: "https://www.linkedin.com/in/anojan-yogenthiran/", label: "LinkedIn", type: "icon" as const, icon: faLinkedin },
+  { href: "https://medium.com/@anojanyogenthiran", label: "Medium", type: "medium" as const },
   { href: "/Anojan_Yogenthiran_Resume.pdf", label: "CV", type: "cv" as const },
 ]
 
@@ -49,7 +48,7 @@ function AboutBody() {
               Vector Institute
             </a>
           </p>
-          <div className="mt-4 flex flex-row flex-nowrap items-center justify-center gap-3 overflow-x-auto">
+          <div className="mt-4 flex flex-row flex-nowrap items-center justify-center gap-4 overflow-x-auto border-0 border-none [&>*]:border-0 [&>*]:border-none [&>*]:no-underline">
             {socialLinks.map((link) => (
               <Link
                 key={link.label}
@@ -60,10 +59,13 @@ function AboutBody() {
                 aria-label={link.label}
               >
                 {link.type === "icon" && (
-                  <FontAwesomeIcon icon={link.icon} style={{ width: 20, height: 20 }} />
+                  <FontAwesomeIcon icon={link.icon} style={{ width: 26, height: 26 }} />
+                )}
+                {link.type === "medium" && (
+                  <span className="font-bold text-lg text-slate-300 group-hover:text-white transition-all duration-200">M</span>
                 )}
                 {link.type === "cv" && (
-                  <span className="text-slate-300 font-bold text-sm shrink-0">cv</span>
+                  <span className="text-slate-300 font-bold text-base shrink-0 px-2.5 py-1 border border-border/50 rounded">CV</span>
                 )}
               </Link>
             ))}
@@ -115,9 +117,9 @@ function AboutBody() {
 
 export default function About() {
   return (
-    <div className="w-full">
-      <section id="home" className="w-full py-16 sm:py-20 md:py-24 lg:py-28">
-        <div className="container mx-auto">
+    <div className="min-h-screen w-full">
+      <section id="home" className="min-h-screen w-full flex items-center scroll-mt-16">
+        <div className="container mx-auto w-full">
           <AboutBody />
         </div>
       </section>
