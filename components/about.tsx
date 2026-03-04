@@ -57,7 +57,7 @@ function AboutBody() {
               Vector Institute
             </a>
           </p>
-          <div className="mt-4 flex flex-row flex-nowrap items-center justify-center gap-2 overflow-x-auto overflow-y-hidden border-0 border-b-0 border-none shadow-none [&::-webkit-scrollbar]:hidden [scrollbar-width:none] [&>*]:border-0 [&>*]:border-none [&>*]:no-underline [&>*]:outline-none [&>*]:ring-0 [&>*]:shadow-none [&>*]:after:content-none [&>*]:after:hidden [&>*]:before:content-none [&>*]:before:hidden">
+          <div className="mt-4 grid grid-flow-col auto-cols-[30px] justify-center gap-x-2 overflow-x-auto overflow-y-hidden border-0 border-b-0 border-none shadow-none [&::-webkit-scrollbar]:hidden [scrollbar-width:none] [&>*]:border-0 [&>*]:border-none [&>*]:no-underline [&>*]:outline-none [&>*]:ring-0 [&>*]:shadow-none [&>*]:after:content-none [&>*]:after:hidden [&>*]:before:content-none [&>*]:before:hidden">
             {socialLinks.map((link) => (
               <Link
                 key={link.label}
@@ -68,13 +68,13 @@ function AboutBody() {
                 aria-label={link.label}
               >
                 {link.type === "icon" && (
-                  <FontAwesomeIcon icon={link.icon} style={{ width: 30, height: 30 }} />
+                  <FontAwesomeIcon icon={link.icon} style={{ width: 30, height: 30, minWidth: 30, maxWidth: 30 }} />
                 )}
                 {link.type === "medium" && (
-                  <span className="font-bold text-[22px] leading-none w-[30px] h-[30px] flex items-center justify-center text-slate-300 group-hover:text-white transition-colors">M</span>
+                  <span className="font-bold text-[22px] leading-[1] w-[30px] h-[30px] min-w-[30px] max-w-[30px] flex items-center justify-center text-slate-300 group-hover:text-white transition-colors">M</span>
                 )}
                 {link.type === "cv" && (
-                  <span className="text-slate-300 font-bold text-xl w-[30px] h-[30px] flex items-center justify-center leading-none">CV</span>
+                  <span className="text-slate-300 font-bold text-xl leading-[1] w-[30px] h-[30px] min-w-[30px] max-w-[30px] flex items-center justify-center tracking-tight">CV</span>
                 )}
               </Link>
             ))}
