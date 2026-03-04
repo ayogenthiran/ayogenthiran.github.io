@@ -134,7 +134,7 @@ export default function Header() {
             className="flex items-center space-x-2"
           >
             <Image
-              src="/ML.svg"
+              src="/logo.svg"
               alt="Anojan Yogenthiran"
               width={32}
               height={32}
