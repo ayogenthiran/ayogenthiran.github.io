@@ -27,13 +27,24 @@ function AboutBody() {
         {/* Left column: photo, name, role, social icons */}
         <div className="flex flex-col items-center text-center">
           <img
-            src="/images/profile/anojan-profile.png"
+            src="/images/profile/anojan-profile.png?v=2"
             alt="Anojan Yogenthiran profile picture"
             width={288}
             height={288}
             className="w-64 h-64 lg:w-72 lg:h-72 rounded-full object-cover object-[50%_65%] shadow-lg ring-2 ring-primary/20"
-            loading="lazy"
+            loading="eager"
+            onError={(e) => {
+              const target = e.target as HTMLImageElement
+              target.style.display = "none"
+              target.nextElementSibling?.classList.remove("hidden")
+            }}
           />
+          <div
+            className="hidden w-64 h-64 lg:w-72 lg:h-72 rounded-full bg-muted flex items-center justify-center ring-2 ring-primary/20 shrink-0"
+            aria-hidden="true"
+          >
+            <span className="text-4xl font-bold text-muted-foreground">AY</span>
+          </div>
           <h3 className="mt-4 text-xl font-bold text-foreground sm:text-2xl">Anojan Yogenthiran</h3>
           <p className="mt-1 text-muted-foreground sm:text-lg">AI/ML Engineer</p>
           <p className="mt-0.5 text-muted-foreground text-base sm:text-lg">
@@ -46,7 +57,7 @@ function AboutBody() {
               Vector Institute
             </a>
           </p>
-          <div className="mt-4 flex flex-row flex-nowrap items-center justify-center gap-4 overflow-x-auto border-0 border-b-0 border-none shadow-none [&>*]:border-0 [&>*]:border-none [&>*]:no-underline [&>*]:outline-none [&>*]:ring-0 [&>*]:shadow-none [&>*]:after:content-none [&>*]:after:hidden [&>*]:before:content-none [&>*]:before:hidden">
+          <div className="mt-4 flex flex-row flex-nowrap items-center justify-center gap-4 overflow-x-auto overflow-y-hidden border-0 border-b-0 border-none shadow-none [&::-webkit-scrollbar]:hidden [scrollbar-width:none] [&>*]:border-0 [&>*]:border-none [&>*]:no-underline [&>*]:outline-none [&>*]:ring-0 [&>*]:shadow-none [&>*]:after:content-none [&>*]:after:hidden [&>*]:before:content-none [&>*]:before:hidden">
             {socialLinks.map((link) => (
               <Link
                 key={link.label}
