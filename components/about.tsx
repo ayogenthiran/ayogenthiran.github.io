@@ -10,7 +10,7 @@ import {
 } from "@fortawesome/free-brands-svg-icons"
 
 const iconLinkClass =
-  "group text-slate-300 hover:text-white hover:scale-125 hover:-translate-y-1 transition-all duration-200 cursor-pointer flex items-center justify-center shrink-0 no-underline"
+  "group text-slate-300 hover:text-white hover:scale-125 transition-all duration-200 cursor-pointer flex items-center justify-center shrink-0 no-underline outline-none ring-0 focus:outline-none focus:ring-0 focus-visible:outline-none focus-visible:ring-0"
 
 const socialLinks = [
   { href: "#contact", label: "Mail", type: "icon" as const, icon: faEnvelope },
@@ -32,7 +32,7 @@ function AboutBody() {
             alt="Anojan Yogenthiran profile picture"
             width={288}
             height={288}
-            className="w-64 h-64 lg:w-72 lg:h-72 rounded-full object-cover object-top shadow-lg ring-2 ring-primary/20"
+            className="w-64 h-64 lg:w-72 lg:h-72 rounded-full object-cover object-[50%_65%] shadow-lg ring-2 ring-primary/20"
             loading="lazy"
             sizes="(max-width: 1024px) 256px, 288px"
           />
@@ -48,7 +48,7 @@ function AboutBody() {
               Vector Institute
             </a>
           </p>
-          <div className="mt-4 flex flex-row flex-nowrap items-center justify-center gap-4 overflow-x-auto border-0 border-none [&>*]:border-0 [&>*]:border-none [&>*]:no-underline">
+          <div className="mt-4 flex flex-row flex-nowrap items-center justify-center gap-4 overflow-x-auto border-0 border-b-0 border-none shadow-none [&>*]:border-0 [&>*]:border-none [&>*]:no-underline [&>*]:outline-none [&>*]:ring-0 [&>*]:shadow-none [&>*]:after:content-none [&>*]:after:hidden [&>*]:before:content-none [&>*]:before:hidden">
             {socialLinks.map((link) => (
               <Link
                 key={link.label}
@@ -59,13 +59,13 @@ function AboutBody() {
                 aria-label={link.label}
               >
                 {link.type === "icon" && (
-                  <FontAwesomeIcon icon={link.icon} style={{ width: 26, height: 26 }} />
+                  <FontAwesomeIcon icon={link.icon} style={{ width: 30, height: 30 }} />
                 )}
                 {link.type === "medium" && (
-                  <span className="font-bold text-lg text-slate-300 group-hover:text-white transition-all duration-200">M</span>
+                  <span className="font-bold text-xl text-slate-300 group-hover:text-white transition-all duration-200">M</span>
                 )}
                 {link.type === "cv" && (
-                  <span className="text-slate-300 font-bold text-base shrink-0 px-2.5 py-1 border border-border/50 rounded">CV</span>
+                  <span className="text-slate-300 font-bold text-xl shrink-0">CV</span>
                 )}
               </Link>
             ))}
