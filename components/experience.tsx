@@ -15,7 +15,15 @@ export default function Experience() {
       period: "Jan 2026 – Present",
       location: "Toronto, Ontario",
       logo: "/images/resume/Vector_Institute.png",
-      description: <>Currently working on a PoC for a scheduling agent.</>,
+      description: (
+        <>
+          Building an AI-powered doctor scheduling assistant—a conversational agent that lets doctors manage
+          availability and preferences in natural language. Implementing a StateGraph-style ReAct agent with <strong>LangGraph</strong>, <strong>LangChain</strong>, and{" "}
+          <strong>Azure OpenAI</strong> models, <strong>RAG</strong> over{" "}
+          <strong>PostgreSQL</strong> for context retrieval, and deploying as a <strong>Docker</strong> containerized
+          LangGraph server on <strong>Kubernetes</strong> in the GenAI cluster.
+        </>
+      ),
     },
     {
       title: "Data Science and Engineering Intern",
