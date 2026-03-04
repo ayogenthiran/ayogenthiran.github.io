@@ -33,7 +33,7 @@ export default function Education() {
                     <p className="text-muted-foreground">London, Ontario</p>
                     <div className="flex items-center gap-2 text-muted-foreground">
                       <Calendar className="h-4 w-4" />
-                      <span>Sep 2023 – Dec 2024</span>
+                      <span>Sep 2023 – Feb2 2025</span>
                     </div>
                     <div className="flex items-start gap-2 text-muted-foreground mt-3">
                       <GraduationCap className="h-4 w-4 mt-0.5 flex-shrink-0" />
