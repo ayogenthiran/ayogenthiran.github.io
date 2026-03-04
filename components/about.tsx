@@ -68,15 +68,15 @@ function AboutBody() {
                 aria-label={link.label}
               >
                 {link.type === "icon" && (
-                  <span className="flex items-center justify-center">
-                    <FontAwesomeIcon icon={link.icon} style={{ width: 24, height: 24, minWidth: 24, maxWidth: 24 }} />
+                  <span className="flex items-center justify-center p-2">
+                    <FontAwesomeIcon icon={link.icon} style={{ width: 28, height: 28, minWidth: 28, maxWidth: 28 }} />
                   </span>
                 )}
                 {link.type === "medium" && (
-                  <span className="border border-slate-300 rounded px-2 py-1 text-slate-300 font-bold text-sm leading-none group-hover:text-white transition-colors">M</span>
+                  <span className="border border-slate-300 rounded px-3 py-1.5 text-slate-300 font-bold text-base leading-none group-hover:text-white transition-colors">M</span>
                 )}
                 {link.type === "cv" && (
-                  <span className="border border-slate-300 rounded px-2 py-1 text-slate-300 font-bold text-sm leading-none group-hover:text-white transition-colors">CV</span>
+                  <span className="border border-slate-300 rounded px-3 py-1.5 text-slate-300 font-bold text-base leading-none group-hover:text-white transition-colors">CV</span>
                 )}
               </Link>
             ))}
