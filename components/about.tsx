@@ -6,8 +6,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons"
 import {
   faGithub,
+  faGoogle,
   faLinkedin,
-  faXTwitter,
 } from "@fortawesome/free-brands-svg-icons"
 
 const iconLinkClass =
@@ -15,10 +15,9 @@ const iconLinkClass =
 
 const socialLinks = [
   { href: "#contact", label: "Mail", type: "icon" as const, icon: faEnvelope },
+  { href: "https://scholar.google.com/", label: "Google Scholar", type: "icon" as const, icon: faGoogle },
   { href: "https://github.com/ayogenthiran", label: "GitHub", type: "icon" as const, icon: faGithub },
   { href: "https://www.linkedin.com/in/anojan-yogenthiran/", label: "LinkedIn", type: "icon" as const, icon: faLinkedin },
-  { href: "https://medium.com/@ayogenthiran", label: "Medium", type: "medium" as const },
-  { href: "https://x.com/ayogenth", label: "Twitter/X", type: "icon" as const, icon: faXTwitter },
   { href: "/Anojan_Yogenthiran_Resume.pdf", label: "CV", type: "cv" as const },
 ]
 
@@ -63,13 +62,8 @@ function AboutBody() {
                 {link.type === "icon" && (
                   <FontAwesomeIcon icon={link.icon} style={{ width: 20, height: 20 }} />
                 )}
-                {link.type === "medium" && (
-                  <span className="font-bold text-lg text-slate-300 shrink-0">M</span>
-                )}
                 {link.type === "cv" && (
-                  <span className="border border-slate-300 rounded px-2 py-0.5 text-slate-300 font-bold text-xs tracking-wide group-hover:border-white shrink-0">
-                    CV
-                  </span>
+                  <span className="text-slate-300 font-bold text-sm shrink-0">cv</span>
                 )}
               </Link>
             ))}
