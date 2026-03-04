@@ -130,7 +130,7 @@ export default function Header() {
             whileTap={{ scale: 0.95 }}
             className="flex items-center"
           >
-            <span className="gradient-text text-lg font-bold tracking-tight md:text-xl">
+            <span className="gradient-text text-lg font-extrabold tracking-tight md:text-xl">
               Anojan Yogenthiran
             </span>
           </motion.div>
