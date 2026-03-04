@@ -58,7 +58,7 @@ function AboutBody() {
               Vector Institute
             </a>
           </p>
-          <div className="mt-4 flex flex-row flex-nowrap items-center justify-center gap-2 overflow-x-auto overflow-y-hidden [&::-webkit-scrollbar]:hidden [scrollbar-width:none]">
+          <div className="mt-4 flex flex-row flex-nowrap items-center justify-center gap-1 overflow-x-auto overflow-y-hidden [&::-webkit-scrollbar]:hidden [scrollbar-width:none]">
             {socialLinks.map((link) => (
               <Link
                 key={link.label}
@@ -74,7 +74,7 @@ function AboutBody() {
                   </span>
                 )}
                 {link.type === "cv" && (
-                  <span className="text-slate-300 font-bold text-xl leading-none group-hover:text-white transition-colors">CV</span>
+                  <span className="text-slate-300 font-bold text-2xl leading-none group-hover:text-white transition-colors">CV</span>
                 )}
               </Link>
             ))}
