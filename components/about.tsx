@@ -2,41 +2,28 @@
 
 import Image from "next/image"
 import Link from "next/link"
-import { useState } from "react"
-import { Github, Linkedin, Twitter } from "lucide-react"
-
-const iconSize = "h-6 w-6"
-
-const MediumIcon = () => (
-  <svg viewBox="0 0 24 24" aria-hidden="true" className={`${iconSize} fill-current`}>
-    <path d="M4 6h2.2l4 7.6L14.2 6H16v12h-2V10l-3 6h-1.6l-3-6v8H4V6z" />
-  </svg>
-)
-
-const CVIcon = () => (
-  <span className={`${iconSize} flex items-center justify-center text-xs font-bold tracking-tight`}>
-    cv
-  </span>
-)
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import {
+  faEnvelope,
+  faFileAlt,
+} from "@fortawesome/free-solid-svg-icons"
+import {
+  faGithub,
+  faLinkedin,
+  faMedium,
+  faXTwitter,
+} from "@fortawesome/free-brands-svg-icons"
 
 const socialLinks = [
-  { href: "https://www.linkedin.com/in/anojan-yogenthiran/", label: "LinkedIn", icon: <Linkedin className={iconSize} /> },
-  { href: "https://github.com/ayogenthiran", label: "GitHub", icon: <Github className={iconSize} /> },
-  { href: "https://medium.com/@ayogenthiran", label: "Medium", icon: <MediumIcon /> },
-  { href: "https://x.com/ayogenth", label: "Twitter", icon: <Twitter className={iconSize} /> },
-  { href: "/Anojan_Yogenthiran_Resume.pdf", label: "CV", icon: <CVIcon /> },
+  { href: "#contact", label: "Mail", icon: faEnvelope },
+  { href: "https://github.com/ayogenthiran", label: "GitHub", icon: faGithub },
+  { href: "https://www.linkedin.com/in/anojan-yogenthiran/", label: "LinkedIn", icon: faLinkedin },
+  { href: "https://medium.com/@ayogenthiran", label: "Medium", icon: faMedium },
+  { href: "https://x.com/ayogenth", label: "Twitter/X", icon: faXTwitter },
+  { href: "/Anojan_Yogenthiran_Resume.pdf", label: "CV", icon: faFileAlt },
 ]
 
 function AboutBody() {
-  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null)
-
-  const getIconTransform = (index: number) => {
-    if (hoveredIndex === null) return "scale(1) translateY(0)"
-    const distance = Math.abs(index - hoveredIndex)
-    if (distance === 0) return "scale(1.3) translateY(-4px)"
-    if (distance === 1) return "scale(1.1)"
-    return "scale(1)"
-  }
 
   return (
     <div className="mx-auto w-full max-w-6xl px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:max-w-7xl 2xl:px-16">
@@ -64,20 +51,17 @@ function AboutBody() {
               Vector Institute
             </a>
           </p>
-          <div className="mt-4 flex flex-row flex-wrap items-center justify-center gap-4">
-            {socialLinks.map((link, index) => (
+          <div className="mt-4 flex flex-row flex-wrap items-center justify-center gap-5">
+            {socialLinks.map((link) => (
               <Link
                 key={link.label}
                 href={link.href}
                 target={link.href.startsWith("http") ? "_blank" : undefined}
                 rel={link.href.startsWith("http") ? "noopener noreferrer" : undefined}
-                className="flex items-center justify-center p-1.5 rounded-md transition-all duration-200 ease-out hover:bg-primary/10 [&_svg]:!h-6 [&_svg]:!w-6 [&_span]:!h-6 [&_span]:!min-w-6"
+                className="text-slate-300 hover:text-white hover:scale-110 transition-all duration-200"
                 aria-label={link.label}
-                style={{ transform: getIconTransform(index) }}
-                onMouseEnter={() => setHoveredIndex(index)}
-                onMouseLeave={() => setHoveredIndex(null)}
               >
-                {link.icon}
+                <FontAwesomeIcon icon={link.icon} size="2x" />
               </Link>
             ))}
           </div>
