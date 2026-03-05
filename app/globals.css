@@ -24,8 +24,6 @@
     --input: 240 5.9% 90%;
     --ring: 11 76% 80%;
     --radius: 0.5rem;
-    --font-mono:
-      "Geist Mono", ui-monospace, SFMono-Regular, "Roboto Mono", Menlo, Monaco, "Liberation Mono", "DejaVu Sans Mono", "Courier New", monospace, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   }
 
   .dark {
@@ -56,8 +54,7 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground;
-    font-family: var(--font-mono);
+    @apply bg-background text-foreground font-sans;
     padding-top: 4rem; /* 64px, matches the header height */
   }
 }

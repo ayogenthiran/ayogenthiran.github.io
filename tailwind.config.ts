@@ -10,6 +10,10 @@ const config = {
     "*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    fontFamily: {
+      sans: ["var(--font-geist-sans)", "ui-sans-serif", "system-ui", "sans-serif"],
+      mono: ["var(--font-geist-mono)", "ui-monospace", "SFMono-Regular", "monospace"],
+    },
     container: {
       center: true,
       padding: "2rem",

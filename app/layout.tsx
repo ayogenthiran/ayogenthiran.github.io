@@ -3,15 +3,11 @@ import type { Metadata } from "next"
 import { Analytics } from "@/components/analytics"
 import ClientLayout from "./client"
 import { Suspense } from "react"
-import { Mona_Sans as FontSans } from "next/font/google"
+import { GeistSans } from "geist/font/sans"
+import { GeistMono } from "geist/font/mono"
 import "./globals.css"
 import { cn } from "@/lib/utils"
 import NoScriptStyles from "@/components/noscript-styles"
-
-const fontSans = FontSans({
-  subsets: ["latin"],
-  variable: "--font-sans",
-})
 
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://ayogenthiran.github.io'),
@@ -75,7 +71,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className="dark" suppressHydrationWarning>
+    <html lang="en" className={cn("dark", GeistSans.variable, GeistMono.variable)} suppressHydrationWarning>
       <head>
         <script
           dangerouslySetInnerHTML={{
@@ -93,7 +89,7 @@ export default function RootLayout({
         <NoScriptStyles />
         <link rel="manifest" href="/manifest.json" />
       </head>
-      <body className={cn("min-h-screen bg-background font-mono antialiased", fontSans.variable)}>
+      <body className="min-h-screen bg-background font-sans antialiased">
         <Suspense>
           <ClientLayout>{children}</ClientLayout>
         </Suspense>

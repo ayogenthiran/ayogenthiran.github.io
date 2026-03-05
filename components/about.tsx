@@ -45,8 +45,8 @@ function AboutBody() {
           >
             <span className="text-4xl font-bold text-muted-foreground">AY</span>
           </div>
-          <h3 className="mt-4 text-xl font-bold text-foreground sm:text-2xl">Anojan Yogenthiran</h3>
-          <p className="mt-1 text-muted-foreground sm:text-lg">AI/ML Engineer</p>
+          <h3 className="mt-4 text-xl font-bold text-foreground sm:text-2xl font-mono">Anojan Yogenthiran</h3>
+          <p className="mt-1 text-muted-foreground sm:text-lg font-mono">AI/ML Engineer</p>
           <p className="mt-0.5 text-muted-foreground text-base sm:text-lg">
             <a
               href="https://vectorinstitute.ai/"
@@ -88,7 +88,7 @@ function AboutBody() {
         </div>
 
         {/* Right column: About Me heading + bio */}
-        <div className="flex flex-col justify-center font-sans text-left">
+        <div className="flex flex-col justify-center text-left">
           <h2 className="text-2xl font-bold text-primary sm:text-3xl md:text-4xl">About Me</h2>
           <div className="mt-4 space-y-4 sm:mt-6 sm:space-y-5 text-justify hyphens-auto">
             <p className="text-muted-foreground text-base leading-relaxed sm:text-lg">
