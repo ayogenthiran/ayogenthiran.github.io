@@ -28,7 +28,7 @@ export default function Education() {
                   </div>
                   <div className="flex-1 space-y-2">
                     <h3 className="text-xl font-bold text-foreground">Master of Science in Computer Science</h3>
-                    <p className="text-primary font-medium">Artificial Intelligence • GPA: 3.8/4.0</p>
+                    <p className="text-primary font-medium">Artificial Intelligence • GPA: 3.9/4.0</p>
                     <p className="text-lg font-semibold text-foreground">Western University</p>
                     <p className="text-muted-foreground">London, Ontario</p>
                     <div className="flex items-center gap-2 text-muted-foreground">
