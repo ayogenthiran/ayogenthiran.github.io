@@ -94,7 +94,7 @@ function AboutBody() {
             <p className="text-muted-foreground text-base leading-relaxed sm:text-lg">
               I'm an experienced Machine Learning Engineer with a Master's in Computer Science from Western University,
               specializing in Artificial Intelligence. Over the past 3+ years, I've developed and deployed AI-driven
-              solutions across research, healthcare, and IoT—blending technical expertise with a passion for solving
+              solutions across research, healthcare, and IoT, blending technical expertise with a passion for solving
               complex, real world problems.
             </p>
 
