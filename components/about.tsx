@@ -92,7 +92,11 @@ function AboutBody() {
           <h2 className="text-2xl font-bold text-primary sm:text-3xl md:text-4xl">About Me</h2>
           <div className="mt-4 space-y-4 sm:mt-6 sm:space-y-5 text-justify hyphens-auto">
             <p className="text-muted-foreground text-base leading-relaxed sm:text-lg">
-              Hi, I&apos;m Anojan! I&apos;m a Machine Learning Engineer at the{" "}
+              Hi, I&apos;m Anojan!
+            </p>
+
+            <p className="text-muted-foreground text-base leading-relaxed sm:text-lg">
+              I&apos;m a Machine Learning Engineer at the{" "}
               <a
                 href="https://vectorinstitute.ai/"
                 target="_blank"
@@ -146,7 +150,7 @@ function AboutBody() {
             </p>
 
             <p className="text-muted-foreground text-base leading-relaxed sm:text-lg">
-              Outside of machine learning, I spend my time exercising 💪🏋️🏃, jogging 🏃, playing soccer 🏃⚽, hiking 🥾,
+              Outside of machine learning, I spend my time exercising 💪🏋️🏃, jogging 🏃, playing soccer ⚽🏃, hiking 🥾,
               and reading or writing blogs ✍️. 
             </p>
 
