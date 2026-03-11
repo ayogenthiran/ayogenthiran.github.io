@@ -92,15 +92,21 @@ function AboutBody() {
           <h2 className="text-2xl font-bold text-primary sm:text-3xl md:text-4xl">About Me</h2>
           <div className="mt-4 space-y-4 sm:mt-6 sm:space-y-5 text-justify hyphens-auto">
             <p className="text-muted-foreground text-base leading-relaxed sm:text-lg">
-              I'm an experienced Machine Learning Engineer with a Master's in Computer Science from Western University,
-              specializing in Artificial Intelligence. Over the past 3+ years, I've developed and deployed AI-driven
-              solutions across research, healthcare, and IoT, blending technical expertise with a passion for solving
-              complex, real world problems.
+              Hi, I&apos;m Anojan! I&apos;m a Machine Learning Engineer at the{" "}
+              <a
+                href="https://vectorinstitute.ai/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-primary font-medium cursor-pointer hover:underline"
+              >
+                Vector Institute
+              </a>
+              , where I&apos;m building and shipping production-grade agentic AI systems in healthcare. My work focuses on
+              multi-agent orchestration, LLM evaluation, and deploying AI that holds up in the real world.
             </p>
 
             <p className="text-muted-foreground text-base leading-relaxed sm:text-lg">
-              As a Research Assistant at the Intelligence Data Science Lab, I had the opportunity to work under the
-              guidance of{" "}
+              Previously, I was a Research Assistant at Western&apos;s Intelligence Data Science Lab under{" "}
               <a
                 href="https://a-narayan.github.io/"
                 target="_blank"
@@ -109,14 +115,39 @@ function AboutBody() {
               >
                 Dr. Apurva Narayan
               </a>
-              , focusing on generative AI research to accelerate drug discovery by identifying optimal aptamers. I'm
-              driven by the mission to craft AI solutions that not only tackle challenges but also create a positive
-              impact on millions of lives.
+              , fine-tuning LLMs on genomic data for drug discovery. Before that, I built medical imaging AI at{" "}
+              <a
+                href="https://hehealth.ai/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-primary font-medium cursor-pointer hover:underline"
+              >
+                HeHealth
+              </a>{" "}
+              in Singapore and motion classification models for IoT analytics at{" "}
+              <a
+                href="https://www.kaidu.ai/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-primary font-medium cursor-pointer hover:underline"
+              >
+                Kaidu.ai
+              </a>
+              . I&apos;m also collaborating with a special team at{" "}
+              <a
+                href="https://coremfg.io/en"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-primary font-medium cursor-pointer hover:underline"
+              >
+                Core MFG
+              </a>
+              , applying AI to the manufacturing industry.
             </p>
 
             <p className="text-muted-foreground text-base leading-relaxed sm:text-lg">
-              Outside of work, I enjoy playing soccer, hiking, experimenting with new recipes, and watching anime ⚽ 🏔️
-              🍳 📺 🏆.
+              Outside of machine learning, I spend my time exercising 💪🏋️🏃, jogging 🏃, playing soccer 🏃⚽, hiking 🥾,
+              and reading or writing blogs ✍️. 
             </p>
 
             <blockquote className="border-l-2 border-primary/40 pl-4 text-muted-foreground text-base italic sm:text-lg">
