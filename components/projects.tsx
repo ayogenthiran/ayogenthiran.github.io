@@ -15,15 +15,6 @@ export default function Projects() {
       liveLink: "#",
       icon: "/images/projects/pilot-icon.png",
     },
-    {
-      title: "CiteRight — Literature Review Assistant",
-      description:
-        "Built a GPT-4 powered RAG pipeline that integrates the arXiv API to automatically generate structured literature reviews from user-defined topics. Designed prompt engineering workflows with semantic keyword extraction, document retrieval, and summarization modules to deliver concise, citation-backed insights for researchers.",
-      tags: ["GPT-4", "RAG", "arXiv API", "Python", "Prompt Engineering"],
-      codeLink: "https://github.com/ayogenthiran/citeright-rag",
-      liveLink: "#",
-      icon: "/images/projects/CiteRight.jpg",
-    },
   ]
 
   return (
