@@ -17,6 +17,25 @@ const projects = [
     codeUrl: "https://github.com/ayogenthiran/policy-pilot",
     demoUrl: "#",
   },
+  {
+    id: 2,
+    title: "ArxivLens — AI Research Paper Assistant",
+    description:
+      "An AI-powered research assistant for exploring arXiv papers through natural language questions. It uses retrieval-augmented generation to find relevant paper excerpts and generate context-aware answers from scientific documents.",
+    date: "April 2026",
+    technologies: [
+      "Python",
+      "FastAPI",
+      "Streamlit",
+      "ChromaDB",
+      "Sentence-Transformers",
+      "OpenAI API",
+      "Cross-Encoder Reranker",
+    ],
+    image: "/images/projects/arxivlens.png",
+    codeUrl: "https://github.com/ayogenthiran/arxivlens",
+    demoUrl: "#",
+  },
 ]
 
 export default function ProjectsPage() {
