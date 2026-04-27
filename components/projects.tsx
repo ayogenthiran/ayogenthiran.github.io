@@ -6,6 +6,15 @@ import Image from "next/image"
 export default function Projects() {
   const projects = [
     {
+      title: "ArxivLens — AI Research Paper Assistant",
+      description:
+        "An AI-powered research assistant for exploring arXiv papers through natural language questions. It uses retrieval-augmented generation to find relevant paper excerpts and generate context-aware answers from scientific documents.",
+      tags: ["Python", "RAG", "FastAPI", "Streamlit", "ChromaDB", "OpenAI API"],
+      codeLink: "https://github.com/ayogenthiran/arxivlens",
+      liveLink: "#",
+      icon: "/images/projects/arxivlens.png",
+    },
+    {
       title: "Policy Pilot — AI Document Assistant",
       description:
         "Upload, analyze, and chat with policy documents using an AI-powered RAG pipeline. Delivered citation-backed answers, summaries, and key clause extraction, cutting manual research time by ~70%.",
@@ -13,15 +22,6 @@ export default function Projects() {
       codeLink: "https://github.com/ayogenthiran/policy-pilot",
       liveLink: "#",
       icon: "/images/projects/pilot-icon.png",
-    },
-    {
-      title: "ArxivLens — AI Research Paper Assistant",
-      description:
-        "An AI-powered research assistant for exploring arXiv papers through natural language questions. It uses retrieval-augmented generation to find relevant paper excerpts and generate context-aware answers from scientific documents.",
-      tags: ["Python", "FastAPI", "Streamlit", "ChromaDB", "OpenAI API"],
-      codeLink: "https://github.com/ayogenthiran/arxivlens",
-      liveLink: "#",
-      icon: "/images/projects/arxivlens.png",
     },
   ]
 

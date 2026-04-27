@@ -1,3 +1,4 @@
+import Image from "next/image"
 import { ExternalLink, Github } from "lucide-react"
 
 export const metadata = {
@@ -8,23 +9,13 @@ export const metadata = {
 const projects = [
   {
     id: 1,
-    title: "Policy Pilot — AI Document Assistant",
-    description:
-      "Upload, analyze, and chat with policy documents using an AI-powered RAG pipeline. Delivered citation-backed answers, summaries, and key clause extraction, cutting manual research time by ~70%.",
-    date: "September 2025",
-    technologies: ["Python", "FAISS", "LangChain", "AWS", "Lambda"],
-    image: "/images/projects/pilot-icon.png",
-    codeUrl: "https://github.com/ayogenthiran/policy-pilot",
-    demoUrl: "#",
-  },
-  {
-    id: 2,
     title: "ArxivLens — AI Research Paper Assistant",
     description:
       "An AI-powered research assistant for exploring arXiv papers through natural language questions. It uses retrieval-augmented generation to find relevant paper excerpts and generate context-aware answers from scientific documents.",
     date: "April 2026",
     technologies: [
       "Python",
+      "RAG",
       "FastAPI",
       "Streamlit",
       "ChromaDB",
@@ -36,65 +27,80 @@ const projects = [
     codeUrl: "https://github.com/ayogenthiran/arxivlens",
     demoUrl: "#",
   },
+  {
+    id: 2,
+    title: "Policy Pilot — AI Document Assistant",
+    description:
+      "Upload, analyze, and chat with policy documents using an AI-powered RAG pipeline. Delivered citation-backed answers, summaries, and key clause extraction, cutting manual research time by ~70%.",
+    date: "September 2025",
+    technologies: ["Python", "FAISS", "LangChain", "AWS", "Lambda"],
+    image: "/images/projects/pilot-icon.png",
+    codeUrl: "https://github.com/ayogenthiran/policy-pilot",
+    demoUrl: "#",
+  },
 ]
 
 export default function ProjectsPage() {
   return (
     <main className="min-h-screen bg-background">
       <div className="pt-20 pb-16">
-        <div className="container mx-auto px-4 max-w-4xl">
+        <div className="container mx-auto px-4 max-w-6xl">
           <h1 className="text-4xl font-bold text-center mb-12 text-primary">Featured Projects</h1>
 
-          <div className="space-y-8">
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
             {projects.map((project) => (
               <div
                 key={project.id}
-                className="bg-card border border-border rounded-lg p-6 hover:border-primary/20 transition-colors"
+                className="group flex h-full flex-col overflow-hidden rounded-2xl border border-border bg-card transition-colors hover:border-primary/30"
               >
-                <div className="flex flex-col md:flex-row gap-6">
-                  <div className="flex-shrink-0">
-                    <img
-                      src={project.image || "/placeholder.svg"}
-                      alt={project.title}
-                      className="w-32 h-32 rounded-lg object-cover bg-muted"
-                    />
+                <div className="relative aspect-[4/3] w-full overflow-hidden bg-muted">
+                  <Image
+                    src={project.image || "/placeholder.svg"}
+                    alt={project.title}
+                    fill
+                    sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
+                    className="object-cover transition-transform duration-300 group-hover:scale-105"
+                  />
+                </div>
+
+                <div className="flex flex-1 flex-col p-5">
+                  <div className="mb-3 space-y-2">
+                    <span className="text-sm text-muted-foreground">{project.date}</span>
+                    <h2 className="text-xl font-semibold leading-tight text-foreground">{project.title}</h2>
                   </div>
 
-                  <div className="flex-1">
-                    <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-3">
-                      <h2 className="text-xl font-semibold text-foreground mb-2 md:mb-0">{project.title}</h2>
-                      <span className="text-sm text-muted-foreground">{project.date}</span>
-                    </div>
+                  <p className="mb-4 text-sm leading-relaxed text-muted-foreground">{project.description}</p>
 
-                    <p className="text-muted-foreground mb-4 leading-relaxed">{project.description}</p>
-
-                    <div className="flex flex-wrap gap-2 mb-4">
-                      {project.technologies.map((tech) => (
-                        <span
-                          key={tech}
-                          className="px-3 py-1 bg-primary/10 text-primary text-sm rounded-full border border-primary/20"
-                        >
-                          {tech}
-                        </span>
-                      ))}
-                    </div>
-
-                    <div className="flex gap-4">
-                      <a
-                        href={project.codeUrl}
-                        className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors"
+                  <div className="mb-5 flex flex-wrap gap-2">
+                    {project.technologies.map((tech) => (
+                      <span
+                        key={tech}
+                        className="rounded-full border border-primary/20 bg-primary/10 px-3 py-1 text-xs text-primary"
                       >
-                        <Github className="w-4 h-4" />
-                        View Code
-                      </a>
-                      <a
-                        href={project.demoUrl}
-                        className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors"
-                      >
-                        <ExternalLink className="w-4 h-4" />
-                        Demo
-                      </a>
-                    </div>
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+
+                  <div className="mt-auto flex gap-4">
+                    <a
+                      href={project.codeUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 text-sm text-primary transition-colors hover:text-primary/80"
+                    >
+                      <Github className="h-4 w-4" />
+                      View Code
+                    </a>
+                    <a
+                      href={project.demoUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 text-sm text-primary transition-colors hover:text-primary/80"
+                    >
+                      <ExternalLink className="h-4 w-4" />
+                      Demo
+                    </a>
                   </div>
                 </div>
               </div>
