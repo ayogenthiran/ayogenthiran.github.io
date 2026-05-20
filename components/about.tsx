@@ -92,7 +92,7 @@ function AboutBody() {
           <h2 className="text-2xl font-bold text-primary sm:text-3xl md:text-4xl">About Me</h2>
           <div className="mt-4 space-y-4 sm:mt-6 sm:space-y-5 text-justify hyphens-auto">
             <p className="text-muted-foreground text-base leading-relaxed sm:text-lg">
-              Hi, I&apos;m Anojan!
+              Hi, I&apos;m Anojan.
             </p>
 
             <p className="text-muted-foreground text-base leading-relaxed sm:text-lg">
@@ -105,53 +105,19 @@ function AboutBody() {
               >
                 Vector Institute
               </a>
-              , where I&apos;m building and shipping production-grade agentic AI systems in healthcare. My work focuses on
-              multi-agent orchestration, LLM evaluation, and deploying AI that holds up in the real world.
+              , where I build and ship production-grade agentic AI systems for healthcare. My work focuses on designing AI assistants that support real clinical workflows through multi-agent orchestration, LLM evaluation, validation, and reliable deployment.
             </p>
 
             <p className="text-muted-foreground text-base leading-relaxed sm:text-lg">
-              Previously, I was a Research Assistant at Western&apos;s Intelligence Data Science Lab under{" "}
-              <a
-                href="https://a-narayan.github.io/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-primary font-medium cursor-pointer hover:underline"
-              >
-                Dr. Apurva Narayan
-              </a>
-              , fine-tuning LLMs on genomic data for drug discovery. Before that, I built medical imaging AI at{" "}
-              <a
-                href="https://hehealth.ai/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-primary font-medium cursor-pointer hover:underline"
-              >
-                HeHealth
-              </a>{" "}
-              in Singapore and motion classification models for IoT analytics at{" "}
-              <a
-                href="https://www.kaidu.ai/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-primary font-medium cursor-pointer hover:underline"
-              >
-                Kaidu.ai
-              </a>
-              . I&apos;m also collaborating with a special team at{" "}
-              <a
-                href="https://coremfg.io/en"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-primary font-medium cursor-pointer hover:underline"
-              >
-                Core MFG
-              </a>
-              , applying AI to the manufacturing industry.
+              One of my recent projects involved building a healthcare scheduling assistant that converts natural-language scheduling requests into structured, validated scheduling inputs.
             </p>
 
             <p className="text-muted-foreground text-base leading-relaxed sm:text-lg">
-              Outside of machine learning, I spend my time exercising 💪🏋️🏃, jogging 🏃, playing soccer ⚽🏃, hiking 🥾,
-              and reading or writing blogs ✍️. 
+              Previously, I worked across applied AI, computational biology, IoT analytics, and medical imaging, building models and ML systems that solve real-world problems. I enjoy working at the intersection of machine learning, software engineering, and product-focused AI.
+            </p>
+
+            <p className="text-muted-foreground text-base leading-relaxed sm:text-lg">
+              Outside of work, I enjoy exercising, jogging, playing soccer, hiking, and reading or writing technical blogs.
             </p>
 
             <blockquote className="border-l-2 border-primary/40 pl-4 text-muted-foreground text-base italic sm:text-lg">

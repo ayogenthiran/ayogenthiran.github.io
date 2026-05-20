@@ -17,8 +17,8 @@ export default function Projects() {
     {
       title: "Policy Pilot — AI Document Assistant",
       description:
-        "Upload, analyze, and chat with policy documents using an AI-powered RAG pipeline. Delivered citation-backed answers, summaries, and key clause extraction, cutting manual research time by ~70%.",
-      tags: ["Python", "FAISS", "LangChain", "AWS", "Lambda"],
+        "AI policy assistant that answers employee questions about company policies stored in a knowledge base, using RAG and source-backed responses.",
+      tags: ["Python", "Weaviate", "LangChain", "AWS", "Lambda"],
       codeLink: "https://github.com/ayogenthiran/policy-pilot",
       liveLink: "#",
       icon: "/images/projects/pilot-icon.png",

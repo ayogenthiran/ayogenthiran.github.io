@@ -31,9 +31,9 @@ const projects = [
     id: 2,
     title: "Policy Pilot — AI Document Assistant",
     description:
-      "Upload, analyze, and chat with policy documents using an AI-powered RAG pipeline. Delivered citation-backed answers, summaries, and key clause extraction, cutting manual research time by ~70%.",
+      "AI policy assistant that answers employee questions about company policies stored in a knowledge base, using RAG and source-backed responses.",
     date: "September 2025",
-    technologies: ["Python", "FAISS", "LangChain", "AWS", "Lambda"],
+    technologies: ["Python", "Weaviate", "LangChain", "AWS", "Lambda"],
     image: "/images/projects/pilot-icon.png",
     codeUrl: "https://github.com/ayogenthiran/policy-pilot",
     demoUrl: "#",
