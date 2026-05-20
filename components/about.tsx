@@ -90,7 +90,7 @@ function AboutBody() {
         {/* Right column: About Me heading + bio */}
         <div className="flex flex-col justify-center text-left">
           <h2 className="text-2xl font-bold text-primary sm:text-3xl md:text-4xl">About Me</h2>
-          <div className="mt-4 space-y-4 sm:mt-6 sm:space-y-5 text-justify hyphens-auto">
+          <div className="mt-4 space-y-4 sm:mt-6 sm:space-y-5 text-justify">
             <p className="text-muted-foreground text-base leading-relaxed sm:text-lg">
               Hi, I&apos;m Anojan.
             </p>
