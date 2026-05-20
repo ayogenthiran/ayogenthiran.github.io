@@ -16,13 +16,57 @@ export default function Experience() {
       location: "Toronto, Ontario",
       logo: "/images/resume/Vector_Institute.png",
       description: (
+        <ul className="list-disc space-y-2 pl-5">
+          <li>
+            Collaborated with{" "}
+            <a
+              href="https://www.petal-health.com/en/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-primary hover:text-primary/80 hover:underline cursor-pointer"
+            >
+              Petal Solutions Inc.
+            </a>{" "}
+            to build a healthcare scheduling assistant that converts natural-language physician availability and
+            preferences into structured scheduling inputs.
+          </li>
+          <li>
+            Designed a ReAct-style agent using LangGraph, LangChain, and Azure OpenAI to manage conversational
+            scheduling workflows.
+          </li>
+          <li>
+            Added validation, guardrails, and human review steps to ensure scheduling requests were accurate, safe, and
+            ready for downstream use.
+          </li>
+        </ul>
+      ),
+    },
+    {
+      title: "Applied AI Developer",
+      company: (
         <>
-          Building an AI-powered doctor scheduling assistant—a conversational agent that lets doctors manage
-          availability and preferences in natural language. Implementing a StateGraph-style ReAct agent with <strong>LangGraph</strong>, <strong>LangChain</strong>, and{" "}
-          <strong>Azure OpenAI</strong> models, <strong>RAG</strong> over{" "}
-          <strong>PostgreSQL</strong> for context retrieval, and deploying as a <strong>Docker</strong> containerized
-          LangGraph server on <strong>Kubernetes</strong> in the GenAI cluster.
+          <a href="https://transpots.com/" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-primary/80 hover:underline cursor-pointer">
+            Transpots
+          </a>
         </>
+      ),
+      period: "May 2025 – Dec 2025",
+      location: "Toronto, Ontario",
+      logo: "/placeholder.svg",
+      description: (
+        <ul className="list-disc space-y-2 pl-5">
+          <li>
+            Built agentic document automation workflows for invoice factoring, helping extract, validate, and process
+            invoices and related factoring documents more efficiently.
+          </li>
+          <li>
+            Designed LangChain and LangGraph-based AI pipelines using GPT-4o, rule-based validation, and human-in-the-loop
+            checks.
+          </li>
+          <li>
+            Deployed FastAPI microservices to support production document extraction, validation, and approval workflows.
+          </li>
+        </ul>
       ),
     },
     {
@@ -38,12 +82,19 @@ export default function Experience() {
       location: "Toronto, Ontario",
       logo: "/images/resume/kaidu.png",
       description: (
-        <>
-          As a Data Science and Engineering Intern, I developed and deployed an end-to-end pipeline for a real-time IoT
-          project. I used a machine learning approach with technologies including <strong>FastAPI</strong>,{" "}
-          <strong>Docker</strong>, <strong>PostgreSQL</strong>, and <strong>MLflow</strong> to deliver a
-          high-performance motion classification system.
-        </>
+        <ul className="list-disc space-y-2 pl-5">
+          <li>
+            Built an IoT motion classification system using Bluetooth RSSI sensor data to detect stationary and mobile
+            activity patterns.
+          </li>
+          <li>
+            Improved motion-detection reliability by applying signal preprocessing techniques, including Dynamic Fourier
+            smoothing.
+          </li>
+          <li>
+            Used MLflow and Optuna to track experiments, tune models, and support production-ready model iteration.
+          </li>
+        </ul>
       ),
     },
     {
@@ -59,12 +110,20 @@ export default function Experience() {
       location: "London, Ontario",
       logo: "/images/resume/uwo.png",
       description: (
-        <>
-          Advancing genomic research by pioneering the use of frontier <strong>LLMs</strong> (<strong>LLaMA 3.1</strong>
-          , <strong>Mistral-7B</strong>) and <strong>Deep Learning</strong> models (<strong>CNNs</strong>,{" "}
-          <strong>VAEs</strong>) to automate <strong>DNA sequence processing</strong> and improve gene prediction
-          accuracy.
-        </>
+        <ul className="list-disc space-y-2 pl-5">
+          <li>
+            Worked on AI-driven computational biology research focused on genomic sequence analysis and aptamer
+            discovery.
+          </li>
+          <li>
+            Fine-tuned LLaMA-3.2 and Mistral-7B models to support miRNA-target prediction and domain-specific biological
+            sequence tasks.
+          </li>
+          <li>
+            Built scalable data pipelines for HT-SELEX genomic workflows, enabling cleaner preprocessing, feature
+            extraction, and model evaluation.
+          </li>
+        </ul>
       ),
     },
     {
@@ -80,15 +139,16 @@ export default function Experience() {
       location: "Singapore",
       logo: "/images/resume/hehealth.png",
       description: (
-        <>
-          Core team member developing medical imaging models (<strong>ResNet</strong>, <strong>VGG16</strong>) and
-          enhancing robustness with <strong>GAN-based augmentation</strong> (<strong>SinGAN</strong>,{" "}
-          <strong>ConSinGAN</strong>), achieving <strong>96% accuracy</strong> in STD detection.
-          <br />
-          <br />I worked across <strong>MLOps pipelines</strong> (<strong>GitHub Actions</strong>,{" "}
-          <strong>AWS SageMaker</strong>) and <strong>XAI methods</strong> (<strong>Grad-CAM</strong>), automating
-          retraining, improving dataset balance, and integrating explainability into clinical dashboards.
-        </>
+        <ul className="list-disc space-y-2 pl-5">
+          <li>Developed medical imaging models using ResNet and VGG16 for clinical image classification.</li>
+          <li>
+            Improved model robustness using GAN-based augmentation techniques, including SinGAN and ConSinGAN.
+          </li>
+          <li>
+            Integrated explainability methods such as Grad-CAM into clinical dashboards to support model
+            interpretation.
+          </li>
+        </ul>
       ),
     },
     {
@@ -104,12 +164,13 @@ export default function Experience() {
       location: "Colombo, Sri Lanka",
       logo: "/images/resume/senzmate.png",
       description: (
-        <>
-          I worked on large-scale projects for the <strong>IoT sector</strong>. I used <strong>big data</strong> and{" "}
-          <strong>deep learning</strong> approaches with <strong>PySpark</strong>, <strong>Dask</strong>,{" "}
-          <strong>TensorFlow</strong>, and <strong>LSTMs</strong> to engineer distributed pipelines and deploy
-          predictive models for real-time anomaly detection.
-        </>
+        <ul className="list-disc space-y-2 pl-5">
+          <li>Built machine learning pipelines for IoT anomaly detection and predictive analytics.</li>
+          <li>
+            Used PySpark, Dask, TensorFlow, and LSTMs to process large-scale time-series sensor data.
+          </li>
+          <li>Supported deployment of real-time predictive models for industrial IoT use cases.</li>
+        </ul>
       ),
     },
   ]
