@@ -52,7 +52,9 @@ export default function Experience() {
       ),
       period: "May 2025 – Dec 2025",
       location: "Toronto, Ontario",
-      logo: "/placeholder.svg",
+      logo: "/images/resume/transpots.png",
+      logoAlt: "Transpots logo",
+      logoContainerClassName: "bg-white dark:bg-white",
       description: (
         <ul className="list-disc space-y-2 pl-5">
           <li>
@@ -193,10 +195,12 @@ export default function Experience() {
                     <div className="flex items-start gap-4">
                       {/* Company Logo */}
                       <div className="flex-shrink-0">
-                        <div className="w-16 h-16 rounded-lg border border-border/50 flex items-center justify-center overflow-hidden p-1 shadow-sm bg-muted">
+                        <div
+                          className={`w-16 h-16 rounded-lg border border-border/50 flex items-center justify-center overflow-hidden p-1 shadow-sm bg-muted ${"logoContainerClassName" in experience && experience.logoContainerClassName ? experience.logoContainerClassName : ""}`}
+                        >
                           <img
                             src={experience.logo || "/placeholder.svg"}
-                            alt={`${experience.company} logo`}
+                            alt={"logoAlt" in experience && experience.logoAlt ? experience.logoAlt : "Company logo"}
                             className="w-full h-full object-contain"
                             style={{ maxWidth: '100%', maxHeight: '100%' }}
                           />

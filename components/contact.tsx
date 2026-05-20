@@ -12,8 +12,8 @@ export default function Contact() {
               <h2 className="text-4xl md:text-5xl font-bold text-primary mb-6">Contact Me</h2>
               <div className="space-y-4">
                 <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-                  I&apos;m always open to discussing AI/ML engineering opportunities, applied AI projects, research
-                  collaborations, or technical conversations around LLMs, RAG, and agentic AI systems.
+                  I&apos;m open to AI/ML engineering opportunities, applied AI projects, research collaborations, and
+                  conversations around LLMs, RAG, and agentic AI.
                 </p>
                 <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
                   Feel free to reach out. I&apos;d be happy to connect.
