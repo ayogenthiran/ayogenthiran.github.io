@@ -26,6 +26,8 @@ const projects = [
     ],
     image: "/placeholder.svg",
     confidentialityNote: "Code not public due to healthcare and partner confidentiality.",
+    demoUrl: "https://drive.google.com/file/d/1SwkAuyqbm2zfD5U_XYb7pN2c51pkQSOe/view?usp=sharing",
+    demoLabel: "View Demo",
   },
   {
     id: 1,
@@ -101,30 +103,37 @@ export default function ProjectsPage() {
                     ))}
                   </div>
 
-                  {"confidentialityNote" in project && project.confidentialityNote ? (
-                    <p className="mt-auto text-sm italic text-muted-foreground">{project.confidentialityNote}</p>
-                  ) : (
-                    <div className="mt-auto flex gap-4">
-                      <a
-                        href={project.codeUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 text-sm text-primary transition-colors hover:text-primary/80"
-                      >
-                        <Github className="h-4 w-4" />
-                        View Code
-                      </a>
-                      <a
-                        href={project.demoUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 text-sm text-primary transition-colors hover:text-primary/80"
-                      >
-                        <ExternalLink className="h-4 w-4" />
-                        Demo
-                      </a>
-                    </div>
-                  )}
+                  <div className="mt-auto space-y-3">
+                    {"confidentialityNote" in project && project.confidentialityNote && (
+                      <p className="text-sm italic text-muted-foreground">{project.confidentialityNote}</p>
+                    )}
+                    {("codeUrl" in project || "demoUrl" in project) && (
+                      <div className="flex gap-4">
+                        {"codeUrl" in project && project.codeUrl && (
+                          <a
+                            href={project.codeUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-2 text-sm text-primary transition-colors hover:text-primary/80"
+                          >
+                            <Github className="h-4 w-4" />
+                            View Code
+                          </a>
+                        )}
+                        {"demoUrl" in project && project.demoUrl && (
+                          <a
+                            href={project.demoUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-2 text-sm text-primary transition-colors hover:text-primary/80"
+                          >
+                            <ExternalLink className="h-4 w-4" />
+                            {"demoLabel" in project && project.demoLabel ? project.demoLabel : "Demo"}
+                          </a>
+                        )}
+                      </div>
+                    )}
+                  </div>
                 </div>
               </div>
             ))}
