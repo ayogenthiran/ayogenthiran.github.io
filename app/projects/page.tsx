@@ -9,16 +9,10 @@ export const metadata = {
 const projects = [
   {
     id: 0,
-    title: "AI Physician Scheduling Agent — Turning Doctor Preferences into Structured Scheduling Constraints",
+    title: "AI Physician Scheduling Agent",
     description:
-      "Built a conversational AI assistant for healthcare scheduling that converts physician preferences and availability into structured scheduling constraints. The system uses agentic workflows, retrieval, validation guardrails, and human-in-the-loop review to support reliable clinical scheduling operations.",
-    date: "Jan 2026",
-    features: [
-      "Designed a ReAct-style agent workflow using LangGraph, LangChain, and Azure OpenAI.",
-      "Integrated RAG over scheduling context to improve grounded responses.",
-      "Added validation guardrails and human review before scheduling constraints are submitted.",
-      "Deployed as a Dockerized LangGraph server on Kubernetes.",
-    ],
+      "Built a conversational AI assistant that helps physicians share scheduling preferences in natural language and turns them into reliable scheduling inputs for clinical operations. The system uses retrieval, validation guardrails, and human-in-the-loop review to keep scheduling requests grounded, complete, and ready for submission.",
+    date: "2026",
     technologies: [
       "Python",
       "LangGraph",
@@ -37,16 +31,10 @@ const projects = [
     id: 1,
     title: "ArxivLens — AI Research Paper Assistant",
     description:
-      "An AI-powered research assistant that helps users explore arXiv papers through natural-language questions. It uses a retrieval-augmented generation pipeline to retrieve relevant paper excerpts, rerank results, and generate grounded answers from scientific documents.",
+      "Built an AI research assistant that helps users explore arXiv papers through natural-language questions. The system uses retrieval-augmented generation, semantic search, metadata filtering, and reranking to provide grounded answers from scientific papers.",
     date: "Apr 2026",
-    features: [
-      "Built a RAG pipeline with ChromaDB, Sentence-Transformers embeddings, and the OpenAI API.",
-      "Added metadata filtering and Cross-Encoder reranking to improve retrieval quality.",
-      "Served the backend with FastAPI and built an interactive Streamlit interface.",
-    ],
     technologies: [
       "Python",
-      "RAG",
       "FastAPI",
       "Streamlit",
       "ChromaDB",
@@ -62,14 +50,9 @@ const projects = [
     id: 2,
     title: "Policy Pilot — AI Document Assistant",
     description:
-      "A RAG-based document assistant for uploading, analyzing, and chatting with policy documents. It generates citation-backed answers, document summaries, and key clause extraction to reduce manual review time.",
+      "Built a document assistant that helps users upload, search, summarize, and ask questions over policy documents. The system uses retrieval-augmented generation to provide citation-backed answers and reduce manual document review time.",
     date: "Sep 2025",
-    features: [
-      "Processed policy documents for semantic search and question answering.",
-      "Generated summaries, clause extraction, and citation-backed responses.",
-      "Reduced manual document review time by approximately 70%.",
-    ],
-    technologies: ["Python", "FAISS", "LangChain", "AWS Lambda"],
+    technologies: ["Python", "LangChain", "FAISS", "AWS Lambda"],
     image: "/placeholder.svg",
     codeUrl: "https://github.com/ayogenthiran/policy-pilot",
     demoUrl: "#",
@@ -106,14 +89,6 @@ export default function ProjectsPage() {
                   </div>
 
                   <p className="mb-4 text-sm leading-relaxed text-muted-foreground">{project.description}</p>
-
-                  {"features" in project && project.features && (
-                    <ul className="mb-4 list-disc space-y-1 pl-5 text-sm leading-relaxed text-muted-foreground">
-                      {project.features.map((feature) => (
-                        <li key={feature}>{feature}</li>
-                      ))}
-                    </ul>
-                  )}
 
                   <div className="mb-5 flex flex-wrap gap-2">
                     {project.technologies.map((tech) => (
