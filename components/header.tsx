@@ -97,7 +97,6 @@ export default function Header() {
   }
 
   const handleHomeClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    console.log("[v0] Home link clicked")
     if (pathname !== "/") {
       // If not on home page, navigate to home
       return // Let Next.js handle the navigation
