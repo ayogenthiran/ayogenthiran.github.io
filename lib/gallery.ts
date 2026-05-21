@@ -31,8 +31,8 @@ export const galleryItems: GalleryItem[] = [
   {
     id: "conference-moment",
     src: "/images/gallery/conference-moment.jpg",
-    alt: "AI/ML conference or networking moment",
-    caption: "AI/ML conference or networking moment",
+    alt: "Vector Institute's Remarkable 2026 conference networking",
+    caption: "Vector Institute's Remarkable 2026 conference networking",
   },
   {
     id: "graduation",
