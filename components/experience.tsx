@@ -18,7 +18,7 @@ export default function Experience() {
       description: (
         <ul className="list-disc space-y-2 pl-5">
           <li>
-            Collaborated with{" "}
+            Building a production healthcare scheduling assistant with{" "}
             <a
               href="https://www.petal-health.com/en/"
               target="_blank"
@@ -27,16 +27,14 @@ export default function Experience() {
             >
               Petal Solutions Inc.
             </a>{" "}
-            to build a healthcare scheduling assistant that converts natural-language physician availability and
-            preferences into structured scheduling inputs.
+            that converts physician availability and preferences into validated scheduling inputs.
           </li>
           <li>
-            Designed a ReAct-style agent using LangGraph, LangChain, and Azure OpenAI to manage conversational
-            scheduling workflows.
+            Designed ReAct-style agent workflows with LangGraph, LangChain, and Azure OpenAI for multi-turn clinical
+            scheduling conversations.
           </li>
           <li>
-            Added validation, guardrails, and human review steps to ensure scheduling requests were accurate, safe, and
-            ready for downstream use.
+            Added validation, guardrails, and human review loops to improve reliability before downstream scheduling use.
           </li>
         </ul>
       ),
@@ -58,15 +56,13 @@ export default function Experience() {
       description: (
         <ul className="list-disc space-y-2 pl-5">
           <li>
-            Built agentic document automation workflows for invoice factoring, helping extract, validate, and process
-            invoices and related factoring documents more efficiently.
+            Built agentic document workflows for invoice factoring to extract, validate, and process financial documents.
           </li>
           <li>
-            Designed LangChain and LangGraph-based AI pipelines using GPT-4o, rule-based validation, and human-in-the-loop
-            checks.
+            Designed LangChain and LangGraph pipelines with GPT-4o, rule-based validation, and human-in-the-loop checks.
           </li>
           <li>
-            Deployed FastAPI microservices to support production document extraction, validation, and approval workflows.
+            Deployed FastAPI microservices for production extraction, validation, and approval workflows.
           </li>
         </ul>
       ),
@@ -86,15 +82,13 @@ export default function Experience() {
       description: (
         <ul className="list-disc space-y-2 pl-5">
           <li>
-            Built an IoT motion classification system using Bluetooth RSSI sensor data to detect stationary and mobile
-            activity patterns.
+            Built an IoT motion classification system using Bluetooth RSSI data to detect stationary and mobile activity.
           </li>
           <li>
-            Improved motion-detection reliability by applying signal preprocessing techniques, including Dynamic Fourier
-            smoothing.
+            Improved detection reliability with signal preprocessing techniques, including Dynamic Fourier smoothing.
           </li>
           <li>
-            Used MLflow and Optuna to track experiments, tune models, and support production-ready model iteration.
+            Used MLflow and Optuna to track experiments, tune models, and support production-ready iteration.
           </li>
         </ul>
       ),
@@ -114,16 +108,14 @@ export default function Experience() {
       description: (
         <ul className="list-disc space-y-2 pl-5">
           <li>
-            Worked on AI-driven computational biology research focused on genomic sequence analysis and aptamer
-            discovery.
+            Conducted AI-driven computational biology research for genomic sequence analysis and aptamer discovery.
           </li>
           <li>
-            Fine-tuned LLaMA-3.2 and Mistral-7B models to support miRNA-target prediction and domain-specific biological
+            Fine-tuned Llama 3.2 and Mistral 7B models for miRNA-target prediction and domain-specific biological
             sequence tasks.
           </li>
           <li>
-            Built scalable data pipelines for HT-SELEX genomic workflows, enabling cleaner preprocessing, feature
-            extraction, and model evaluation.
+            Built scalable HT-SELEX data pipelines for preprocessing, feature extraction, and model evaluation.
           </li>
         </ul>
       ),
@@ -142,13 +134,12 @@ export default function Experience() {
       logo: "/images/resume/hehealth.png",
       description: (
         <ul className="list-disc space-y-2 pl-5">
-          <li>Developed medical imaging models using ResNet and VGG16 for clinical image classification.</li>
+          <li>Developed ResNet and VGG16 medical imaging models for clinical image classification.</li>
           <li>
-            Improved model robustness using GAN-based augmentation techniques, including SinGAN and ConSinGAN.
+            Improved model robustness with GAN-based augmentation techniques, including SinGAN and ConSinGAN.
           </li>
           <li>
-            Integrated explainability methods such as Grad-CAM into clinical dashboards to support model
-            interpretation.
+            Integrated Grad-CAM explainability into clinical dashboards to support model interpretation.
           </li>
         </ul>
       ),
@@ -167,7 +158,7 @@ export default function Experience() {
       logo: "/images/resume/senzmate.png",
       description: (
         <ul className="list-disc space-y-2 pl-5">
-          <li>Built machine learning pipelines for IoT anomaly detection and predictive analytics.</li>
+          <li>Built ML pipelines for IoT anomaly detection and predictive analytics.</li>
           <li>
             Used PySpark, Dask, TensorFlow, and LSTMs to process large-scale time-series sensor data.
           </li>
@@ -192,7 +183,7 @@ export default function Experience() {
               <div key={index} className="timeline-item">
                 <Card className="bg-card/50 border border-border/50 transition-all duration-300 hover:shadow-lg">
                   <CardContent className="p-6">
-                    <div className="flex items-start gap-4">
+                    <div className="flex flex-col gap-4 sm:flex-row sm:items-start">
                       {/* Company Logo */}
                       <div className="flex-shrink-0">
                         <div

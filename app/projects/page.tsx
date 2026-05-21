@@ -2,7 +2,7 @@ import { ExternalLink, Github } from "lucide-react"
 
 export const metadata = {
   title: "Projects - Anojan Yogenthiran",
-  description: "A selection of my personal and professional AI/ML projects and software development work.",
+  description: "Selected AI/ML, GenAI, RAG, and agentic AI projects by Anojan Yogenthiran.",
 }
 
 const projects = [
@@ -10,13 +10,13 @@ const projects = [
     id: 0,
     title: "AI Physician Scheduling Agent",
     description:
-      "Built a conversational AI assistant that helps physicians share scheduling preferences in natural language and turns them into reliable scheduling inputs for clinical operations.",
+      "A healthcare AI assistant that turns physician scheduling preferences into structured, validated inputs for clinical operations.",
     keyFeatures: [
-      "Converts natural-language physician preferences into structured scheduling inputs.",
-      "Uses retrieval, validation guardrails, and human review to improve reliability.",
-      "Supports production-ready healthcare scheduling workflows with secure deployment.",
+      "Extracts availability, constraints, and preferences from natural-language conversations.",
+      "Combines LangGraph orchestration, retrieval, validation guardrails, and human review.",
+      "Designed for secure deployment into production healthcare scheduling workflows.",
     ],
-    date: "2026",
+    date: "Jan 2026 – Present",
     technologies: [
       "Python",
       "LangGraph",
@@ -34,13 +34,13 @@ const projects = [
   },
   {
     id: 1,
-    title: "ArxivLens — AI Research Paper Assistant",
+    title: "arXivLens — AI Research Paper Assistant",
     description:
-      "Built an AI research assistant that helps users explore arXiv papers through natural-language questions, semantic search, metadata filtering, and reranking. The system is designed for faster literature discovery and grounded answers from scientific papers.",
+      "An AI research assistant for faster literature discovery across arXiv papers using semantic search, reranking, and grounded answers.",
     keyFeatures: [
-      "Helps users discover and understand relevant research papers.",
-      "Uses metadata filtering and reranking to improve scientific paper retrieval.",
-      "Provides grounded answers from retrieved paper context.",
+      "Supports natural-language questions over scientific paper collections.",
+      "Uses metadata filters, embeddings, and cross-encoder reranking to improve retrieval quality.",
+      "Generates grounded answers from retrieved paper context instead of unsupported summaries.",
     ],
     date: "Apr 2026",
     technologies: [
@@ -63,7 +63,12 @@ export default function ProjectsPage() {
     <main className="min-h-screen bg-background">
       <div className="pt-20 pb-16">
         <div className="container mx-auto px-4 max-w-6xl">
-          <h1 className="text-4xl font-bold text-center mb-12 text-primary">Featured Projects</h1>
+          <div className="mx-auto mb-12 max-w-3xl space-y-3 text-center">
+            <h1 className="text-4xl font-bold text-primary">Featured Projects</h1>
+            <p className="text-muted-foreground">
+              Selected work focused on agentic AI, RAG, evaluation, guardrails, and deployment-ready ML systems.
+            </p>
+          </div>
 
           <div className="mx-auto grid w-full grid-cols-1 items-stretch justify-items-stretch gap-6 lg:grid-cols-[repeat(2,minmax(360px,460px))] lg:justify-center lg:gap-8">
             {projects.map((project) => (

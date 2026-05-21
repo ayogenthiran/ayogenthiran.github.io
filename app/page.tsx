@@ -8,7 +8,7 @@ import type { Metadata } from "next"
 export const metadata: Metadata = {
   title: "Anojan Yogenthiran - ayogenthiran.github.io",
   description:
-    "Portfolio of Anojan Yogenthiran, an AI/ML Software Engineer specializing in Machine Learning, Artificial Intelligence, and software development.",
+    "Portfolio of Anojan Yogenthiran, an AI/ML Engineer focused on GenAI, agentic AI, RAG, LLM evaluation, guardrails, and production deployment.",
 }
 
 export default function Home() {

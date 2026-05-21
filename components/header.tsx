@@ -137,7 +137,7 @@ export default function Header() {
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center space-x-6">
+        <nav className="hidden lg:flex items-center space-x-6">
           <div className="relative flex space-x-4 items-center">
             {navItems.map((item, index) => {
               const isActive = item.isRoute ? pathname === item.href : activeSection === item.href.substring(1)
@@ -182,7 +182,7 @@ export default function Header() {
         </nav>
 
         {/* Mobile Navigation Toggle */}
-        <div className="flex items-center md:hidden space-x-4">
+        <div className="flex items-center lg:hidden space-x-4">
           <ModeToggle />
           <Button
             variant="ghost"
@@ -208,7 +208,7 @@ export default function Header() {
 
       {/* Mobile Navigation Menu */}
       <motion.div
-        className="md:hidden overflow-hidden"
+        className="lg:hidden overflow-hidden"
         initial={{ height: 0 }}
         animate={{ height: isOpen ? "auto" : 0 }}
         transition={{ duration: 0.3, ease: "easeInOut" }}

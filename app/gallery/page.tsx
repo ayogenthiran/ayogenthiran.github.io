@@ -3,7 +3,7 @@ import { galleryItems } from "@/lib/gallery"
 
 export const metadata = {
   title: "Gallery - Anojan Yogenthiran",
-  description: "A collection of memorable professional moments from projects, conferences, and milestones.",
+  description: "Professional moments from AI project showcases, demos, conferences, and academic milestones.",
 }
 
 export default function GalleryPage() {
@@ -13,10 +13,11 @@ export default function GalleryPage() {
         <div className="mx-auto max-w-6xl space-y-12">
           <div className="space-y-3 text-center">
             <h1 className="text-3xl font-bold tracking-tighter text-primary sm:text-4xl md:text-5xl">
-              Gallery
+              Professional Gallery
             </h1>
-            <p className="text-lg text-muted-foreground sm:text-xl">
-              A collection of memorable moments
+            <p className="mx-auto max-w-2xl text-lg text-muted-foreground sm:text-xl">
+              Selected moments from AI project showcases, healthcare demos, conferences, hackathons, and academic
+              milestones.
             </p>
           </div>
 

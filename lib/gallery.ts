@@ -14,7 +14,7 @@ export const galleryItems: GalleryItem[] = [
     id: "vector-showcase",
     src: "/images/gallery/vector-showcase-01.jpg",
     alt: "Vector Institute project showcase",
-    caption: "Vector Institute project showcase",
+    caption: "Vector Institute AI project showcase",
   },
   {
     id: "healthcare-ai-demo",
@@ -25,19 +25,19 @@ export const galleryItems: GalleryItem[] = [
   {
     id: "hackathon",
     src: "/images/gallery/no-name-hackathon.jpg",
-    alt: "Team collaboration and hackathon",
-    caption: "Team collaboration and hackathon",
+    alt: "Team collaboration during a hackathon",
+    caption: "Hackathon collaboration and rapid prototyping",
   },
   {
     id: "conference-moment",
     src: "/images/gallery/conference-moment.jpg",
     alt: "Vector Institute's Remarkable 2026 conference networking",
-    caption: "Vector Institute's Remarkable 2026 conference networking",
+    caption: "Vector Institute Remarkable 2026 conference",
   },
   {
     id: "graduation",
     src: "/images/gallery/masters-graduation.JPG",
-    alt: "Graduation",
-    caption: "Graduation",
+    alt: "Master's graduation ceremony",
+    caption: "Master's graduation milestone",
   },
 ]

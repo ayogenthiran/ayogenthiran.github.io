@@ -2,112 +2,90 @@ import { Card, CardContent } from "@/components/ui/card"
 
 const skillCategories = [
   {
-    category: "Programming Languages",
-    skills: ["Python", "SQL", "JavaScript", "TypeScript", "C++", "Java", "MATLAB", "R"],
-  },
-  {
-    category: "GenAI & LLMs",
+    category: "Agentic AI & RAG",
     skills: [
+      "Agentic AI",
       "RAG",
       "Graph RAG",
-      "Agentic AI",
-      "Model Chaining",
-      "LLM Fine-Tuning",
-      "Prompt Engineering",
-      "LLM Evaluation",
       "LangChain",
       "LangGraph",
-    ],
-  },
-  {
-    category: "Machine Learning",
-    skills: [
-      "Supervised Learning",
-      "Unsupervised Learning",
-      "Deep Learning",
-      "Predictive Modeling",
-      "Feature Engineering",
-      "Model Evaluation",
-      "Classification",
-      "Hyperparameter Tuning",
-    ],
-  },
-  {
-    category: "Natural Language Processing",
-    skills: [
-      "Transformers",
+      "Tool Calling",
+      "Prompt Engineering",
       "Semantic Search",
-      "Text Classification",
-      "Named Entity Recognition",
-      "Sentiment Analysis",
-      "Embeddings",
+      "Vector Databases",
     ],
   },
   {
-    category: "Responsible AI",
+    category: "LLM Evaluation & Safety",
     skills: [
+      "LLM Evaluation",
+      "OpenEvals",
       "Guardrails",
       "Human-in-the-Loop Review",
       "PII Redaction",
       "Prompt Injection Defense",
-      "Model Explainability",
-      "Bias Detection",
-      "Fairness Metrics",
-      "AI Ethics",
       "Audit Trails",
+      "Model Explainability",
     ],
   },
   {
-    category: "Cloud Platforms — AWS & Azure",
+    category: "Machine Learning & NLP",
+    skills: [
+      "Deep Learning",
+      "Transformers",
+      "Embeddings",
+      "Text Classification",
+      "Named Entity Recognition",
+      "Predictive Modeling",
+      "Feature Engineering",
+      "Model Evaluation",
+      "Hyperparameter Tuning",
+    ],
+  },
+  {
+    category: "MLOps & Deployment",
+    skills: [
+      "Docker",
+      "Kubernetes",
+      "FastAPI",
+      "CI/CD",
+      "GitHub Actions",
+      "GitLab CI/CD",
+      "MLflow",
+      "Optuna",
+      "Model Deployment",
+      "API Development",
+    ],
+  },
+  {
+    category: "Cloud & Data Platforms",
     skills: [
       "AWS",
       "Azure",
+      "Azure OpenAI",
       "SageMaker",
       "Bedrock",
       "Lambda",
       "S3",
       "EC2",
       "CloudWatch",
-      "Azure OpenAI",
-    ],
-  },
-  {
-    category: "MLOps & Infrastructure",
-    skills: [
-      "Docker",
-      "Kubernetes",
-      "CI/CD",
-      "GitHub Actions",
-      "GitLab CI/CD",
-      "MLflow",
-      "Optuna",
-      "OpenEvals",
-      "Model Deployment",
-      "API Development",
-    ],
-  },
-  {
-    category: "Data Science & Analytics",
-    skills: [
-      "Data Analysis",
-      "Statistical Modeling",
-      "Data Visualization",
-      "Exploratory Data Analysis",
-      "Power BI",
-      "Tableau",
-    ],
-  },
-  {
-    category: "Development Tools",
-    skills: [
-      "Git",
-      "Jupyter Notebook",
-      "VS Code",
-      "Linux",
-      "FastAPI",
       "PostgreSQL",
       "ChromaDB",
-      "Vector Databases",
+    ],
+  },
+  {
+    category: "Languages & Tools",
+    skills: [
+      "Python",
+      "SQL",
+      "TypeScript",
+      "JavaScript",
+      "C++",
+      "Java",
+      "Git",
+      "Linux",
+      "Jupyter Notebook",
+      "VS Code",
     ],
   },
 ]
@@ -122,7 +100,7 @@ export default function Skills() {
               Technical Skills
             </h2>
             <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-              Core technologies and areas I work in across AI, ML, and software development
+              Focused skills across GenAI systems, model reliability, and production ML deployment
             </p>
           </div>
 

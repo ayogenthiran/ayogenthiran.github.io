@@ -90,13 +90,13 @@ function AboutBody() {
         {/* Right column: About Me heading + bio */}
         <div className="flex flex-col justify-center text-left">
           <h2 className="text-2xl font-bold text-primary sm:text-3xl md:text-4xl">About Me</h2>
-          <div className="mt-4 space-y-4 sm:mt-6 sm:space-y-5 text-justify">
+          <div className="mt-4 space-y-4 sm:mt-6 sm:space-y-5">
             <p className="text-muted-foreground text-base leading-relaxed sm:text-lg">
-              Hi, I&apos;m Anojan.
+              I&apos;m an AI/ML Engineer focused on production GenAI systems, agentic workflows, RAG, LLM evaluation, and safe deployment.
             </p>
 
             <p className="text-muted-foreground text-base leading-relaxed sm:text-lg">
-              I&apos;m a Machine Learning Engineer at the{" "}
+              At the{" "}
               <a
                 href="https://vectorinstitute.ai/"
                 target="_blank"
@@ -105,19 +105,15 @@ function AboutBody() {
               >
                 Vector Institute
               </a>
-              , where I build and ship production-grade agentic AI systems for healthcare. My work focuses on designing AI assistants that support real clinical workflows through multi-agent orchestration, LLM evaluation, validation, and reliable deployment.
+              , I build healthcare AI assistants that turn natural-language clinical workflows into structured, validated actions. My work combines LangGraph, LangChain, Azure OpenAI, guardrails, human review, and deployment-ready APIs.
             </p>
 
             <p className="text-muted-foreground text-base leading-relaxed sm:text-lg">
-              One of my recent projects involved building a healthcare scheduling assistant that converts natural-language scheduling requests into structured, validated scheduling inputs.
+              I bring experience across applied AI, computational biology, IoT analytics, and medical imaging, with a consistent focus on reliable ML systems that can move from prototype to production.
             </p>
 
             <p className="text-muted-foreground text-base leading-relaxed sm:text-lg">
-              Previously, I worked across applied AI, computational biology, IoT analytics, and medical imaging, building models and ML systems that solve real-world problems. I enjoy working at the intersection of machine learning, software engineering, and product-focused AI.
-            </p>
-
-            <p className="text-muted-foreground text-base leading-relaxed sm:text-lg">
-              Outside of work, I enjoy exercising, jogging, playing soccer, hiking, and reading or writing technical blogs.
+              Outside work, I enjoy technical writing, hiking, soccer, and staying active.
             </p>
 
             <blockquote className="border-l-2 border-primary/40 pl-4 text-muted-foreground text-base italic sm:text-lg">
