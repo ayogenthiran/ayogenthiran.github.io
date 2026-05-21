@@ -11,7 +11,12 @@ const projects = [
     id: 0,
     title: "AI Physician Scheduling Agent",
     description:
-      "Built a conversational AI assistant that helps physicians share scheduling preferences in natural language and turns them into reliable scheduling inputs for clinical operations. The system uses retrieval, validation guardrails, and human-in-the-loop review to keep scheduling requests grounded, complete, and ready for submission.",
+      "Built a conversational AI assistant that helps physicians share scheduling preferences in natural language and turns them into reliable scheduling inputs for clinical operations.",
+    keyFeatures: [
+      "Converts natural-language physician preferences into structured scheduling inputs.",
+      "Uses retrieval, validation guardrails, and human review to improve reliability.",
+      "Supports production-ready healthcare scheduling workflows with secure deployment.",
+    ],
     date: "2026",
     technologies: [
       "Python",
@@ -33,7 +38,12 @@ const projects = [
     id: 1,
     title: "ArxivLens — AI Research Paper Assistant",
     description:
-      "Built an AI research assistant that helps users explore arXiv papers through natural-language questions. The system uses retrieval-augmented generation, semantic search, metadata filtering, and reranking to provide grounded answers from scientific papers.",
+      "Built an AI research assistant that helps users explore arXiv papers through natural-language questions, semantic search, metadata filtering, and reranking. The system is designed for faster literature discovery and grounded answers from scientific papers.",
+    keyFeatures: [
+      "Helps users discover and understand relevant research papers.",
+      "Uses metadata filtering and reranking to improve scientific paper retrieval.",
+      "Provides grounded answers from retrieved paper context.",
+    ],
     date: "Apr 2026",
     technologies: [
       "Python",
@@ -47,17 +57,7 @@ const projects = [
     image: "/images/projects/arxivlens.png",
     codeUrl: "https://github.com/ayogenthiran/arxivlens",
     demoUrl: "#",
-  },
-  {
-    id: 2,
-    title: "Policy Pilot — AI Document Assistant",
-    description:
-      "Built a document assistant that helps users upload, search, summarize, and ask questions over policy documents. The system uses retrieval-augmented generation to provide citation-backed answers and reduce manual document review time.",
-    date: "Sep 2025",
-    technologies: ["Python", "LangChain", "FAISS", "AWS Lambda"],
-    image: "/images/projects/pilot-icon.png",
-    codeUrl: "https://github.com/ayogenthiran/policy-pilot",
-    demoUrl: "#",
+    demoLabel: "Live Demo",
   },
 ]
 
@@ -68,19 +68,19 @@ export default function ProjectsPage() {
         <div className="container mx-auto px-4 max-w-6xl">
           <h1 className="text-4xl font-bold text-center mb-12 text-primary">Featured Projects</h1>
 
-          <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
             {projects.map((project) => (
               <div
                 key={project.id}
                 className="group flex h-full flex-col overflow-hidden rounded-2xl border border-border bg-card transition-colors hover:border-primary/30"
               >
-                <div className="relative aspect-[4/3] w-full overflow-hidden bg-muted">
+                <div className="relative h-48 w-full overflow-hidden bg-muted sm:h-52 md:h-56">
                   <Image
                     src={project.image || "/placeholder.svg"}
                     alt={project.title}
                     fill
-                    sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
-                    className="object-cover transition-transform duration-300 group-hover:scale-105"
+                    sizes="(min-width: 768px) 50vw, 100vw"
+                    className="object-cover object-center transition-transform duration-300 group-hover:scale-105"
                   />
                 </div>
 
@@ -90,7 +90,18 @@ export default function ProjectsPage() {
                     <h2 className="text-xl font-semibold leading-tight text-foreground">{project.title}</h2>
                   </div>
 
-                  <p className="mb-4 text-sm leading-relaxed text-muted-foreground">{project.description}</p>
+                  <p className="mb-3 text-sm leading-relaxed text-muted-foreground">{project.description}</p>
+
+                  {"keyFeatures" in project && project.keyFeatures && (
+                    <div className="mb-4">
+                      <p className="mb-1.5 text-xs font-medium text-foreground">Key Features</p>
+                      <ul className="list-disc space-y-1 pl-4 text-xs leading-relaxed text-muted-foreground">
+                        {project.keyFeatures.map((feature) => (
+                          <li key={feature}>{feature}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
 
                   <div className="mb-5 flex flex-wrap gap-2">
                     {project.technologies.map((tech) => (
@@ -128,7 +139,7 @@ export default function ProjectsPage() {
                             className="inline-flex items-center gap-2 text-sm text-primary transition-colors hover:text-primary/80"
                           >
                             <ExternalLink className="h-4 w-4" />
-                            {"demoLabel" in project && project.demoLabel ? project.demoLabel : "Demo"}
+                            {"demoLabel" in project && project.demoLabel ? project.demoLabel : "Live Demo"}
                           </a>
                         )}
                       </div>
