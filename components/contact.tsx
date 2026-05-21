@@ -10,15 +10,10 @@ export default function Contact() {
           <div className="max-w-2xl mx-auto space-y-8">
             <div className="text-center">
               <h2 className="text-4xl md:text-5xl font-bold text-primary mb-6">Contact Me</h2>
-              <div className="space-y-4">
-                <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-                  I&apos;m open to AI/ML engineering opportunities, applied AI projects, research collaborations, and
-                  conversations around LLMs, RAG, and agentic AI.
-                </p>
-                <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-                  Feel free to reach out. I&apos;d be happy to connect.
-                </p>
-              </div>
+              <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+                Feel free to reach out if you'd like to discuss opportunities, have a quick coffee chat, or just say hi!
+                I'm always looking forward to meeting new people.
+              </p>
             </div>
 
             <form action="https://formspree.io/f/xanoenzo" method="POST" className="space-y-6">
