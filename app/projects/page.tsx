@@ -65,19 +65,21 @@ export default function ProjectsPage() {
         <div className="container mx-auto px-4 max-w-6xl">
           <h1 className="text-4xl font-bold text-center mb-12 text-primary">Featured Projects</h1>
 
-          <div className="mx-auto grid max-w-5xl grid-cols-1 items-stretch gap-6 md:grid-cols-2 md:gap-7">
+          <div className="mx-auto grid w-full grid-cols-1 items-stretch justify-items-stretch gap-6 lg:grid-cols-[repeat(2,minmax(360px,460px))] lg:justify-center lg:gap-8">
             {projects.map((project) => (
               <div
                 key={project.id}
-                className="group flex h-full flex-col overflow-hidden rounded-2xl border border-border bg-card transition-colors hover:border-primary/30"
+                className="group flex h-full w-full flex-col overflow-hidden rounded-2xl border border-border bg-card transition-colors hover:border-primary/30"
               >
-                <div className="flex flex-1 flex-col p-4 md:p-5">
+                <div className="flex min-h-[28rem] flex-1 flex-col p-5 md:p-6">
                   <div className="mb-2 space-y-1">
                     <span className="text-sm text-muted-foreground">{project.date}</span>
-                    <h2 className="text-xl font-semibold leading-snug text-foreground">{project.title}</h2>
+                    <h2 className="text-xl font-semibold leading-snug text-foreground break-words">
+                      {project.title}
+                    </h2>
                   </div>
 
-                  <p className="mb-2.5 text-sm leading-snug text-muted-foreground">{project.description}</p>
+                  <p className="mb-2.5 text-sm leading-relaxed text-muted-foreground">{project.description}</p>
 
                   {"keyFeatures" in project && project.keyFeatures && (
                     <div className="mb-3">
