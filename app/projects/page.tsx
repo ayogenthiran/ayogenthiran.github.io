@@ -29,8 +29,8 @@ const projects = [
       "Kubernetes",
       "FastAPI",
     ],
-    image: "/images/projects/sch-agent.png",
-    imageClassName: "object-cover object-[center_42%] scale-[1.08]",
+    image: "/images/projects/sch-agent-card.png",
+    imageClassName: "object-cover object-center",
     confidentialityNote: "Code not public due to healthcare and partner confidentiality.",
     demoUrl: "https://drive.google.com/file/d/1SwkAuyqbm2zfD5U_XYb7pN2c51pkQSOe/view?usp=sharing",
     demoLabel: "View Demo",
@@ -139,7 +139,7 @@ export default function ProjectsPage() {
                             rel="noopener noreferrer"
                             className="inline-flex items-center gap-2 text-sm text-primary transition-colors hover:text-primary/80"
                           >
-                            <Github className="h-4 w-4" />
+                            <Github className="h-4 w-4 shrink-0" aria-hidden="true" />
                             View Code
                           </a>
                         )}
@@ -150,7 +150,7 @@ export default function ProjectsPage() {
                             rel="noopener noreferrer"
                             className="inline-flex items-center gap-2 text-sm text-primary transition-colors hover:text-primary/80"
                           >
-                            <ExternalLink className="h-4 w-4" />
+                            <ExternalLink className="h-4 w-4 shrink-0" aria-hidden="true" />
                             {"demoLabel" in project && project.demoLabel ? project.demoLabel : "Live Demo"}
                           </a>
                         )}
