@@ -16,8 +16,7 @@ export default function GalleryPage() {
               Professional Gallery
             </h1>
             <p className="mx-auto max-w-2xl text-lg text-muted-foreground sm:text-xl">
-              Selected moments from AI project showcases, healthcare demos, conferences, hackathons, and academic
-              milestones.
+              A collection of memorable moments
             </p>
           </div>
 

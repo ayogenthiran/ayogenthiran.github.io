@@ -65,9 +65,6 @@ export default function ProjectsPage() {
         <div className="container mx-auto px-4 max-w-6xl">
           <div className="mx-auto mb-12 max-w-3xl space-y-3 text-center">
             <h1 className="text-4xl font-bold text-primary">Featured Projects</h1>
-            <p className="text-muted-foreground">
-              Selected work focused on agentic AI, RAG, evaluation, guardrails, and deployment-ready ML systems.
-            </p>
           </div>
 
           <div className="mx-auto grid w-full grid-cols-1 items-stretch justify-items-stretch gap-6 lg:grid-cols-[repeat(2,minmax(360px,460px))] lg:justify-center lg:gap-8">
