@@ -30,6 +30,7 @@ const projects = [
       "FastAPI",
     ],
     image: "/images/projects/sch-agent.png",
+    imageClassName: "object-cover object-[center_42%] scale-[1.08]",
     confidentialityNote: "Code not public due to healthcare and partner confidentiality.",
     demoUrl: "https://drive.google.com/file/d/1SwkAuyqbm2zfD5U_XYb7pN2c51pkQSOe/view?usp=sharing",
     demoLabel: "View Demo",
@@ -55,6 +56,7 @@ const projects = [
       "Cross-Encoder Reranker",
     ],
     image: "/images/projects/arxivlens.png",
+    imageClassName: "object-cover object-center",
     codeUrl: "https://github.com/ayogenthiran/arxivlens",
     demoUrl: "#",
     demoLabel: "Live Demo",
@@ -68,55 +70,65 @@ export default function ProjectsPage() {
         <div className="container mx-auto px-4 max-w-6xl">
           <h1 className="text-4xl font-bold text-center mb-12 text-primary">Featured Projects</h1>
 
-          <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+          <div className="mx-auto grid max-w-5xl grid-cols-1 items-stretch gap-6 md:grid-cols-2 md:gap-7">
             {projects.map((project) => (
               <div
                 key={project.id}
                 className="group flex h-full flex-col overflow-hidden rounded-2xl border border-border bg-card transition-colors hover:border-primary/30"
               >
-                <div className="relative h-48 w-full overflow-hidden bg-muted sm:h-52 md:h-56">
+                <div className="relative h-[11.25rem] w-full shrink-0 overflow-hidden bg-muted sm:h-[13.75rem] md:h-[15rem]">
                   <Image
                     src={project.image || "/placeholder.svg"}
                     alt={project.title}
                     fill
                     sizes="(min-width: 768px) 50vw, 100vw"
-                    className="object-cover object-center transition-transform duration-300 group-hover:scale-105"
+                    className={
+                      "imageClassName" in project && project.imageClassName
+                        ? `${project.imageClassName} transition-transform duration-300 group-hover:scale-[1.03]`
+                        : "object-cover object-center transition-transform duration-300 group-hover:scale-[1.03]"
+                    }
                   />
                 </div>
 
-                <div className="flex flex-1 flex-col p-5">
-                  <div className="mb-3 space-y-2">
+                <div className="flex flex-1 flex-col p-4 md:p-5">
+                  <div className="mb-2 space-y-1">
                     <span className="text-sm text-muted-foreground">{project.date}</span>
-                    <h2 className="text-xl font-semibold leading-tight text-foreground">{project.title}</h2>
+                    <h2 className="text-xl font-semibold leading-snug text-foreground">{project.title}</h2>
                   </div>
 
-                  <p className="mb-3 text-sm leading-relaxed text-muted-foreground">{project.description}</p>
+                  <p className="mb-2.5 text-sm leading-snug text-muted-foreground">{project.description}</p>
 
                   {"keyFeatures" in project && project.keyFeatures && (
-                    <div className="mb-4">
-                      <p className="mb-1.5 text-xs font-medium text-foreground">Key Features</p>
-                      <ul className="list-disc space-y-1 pl-4 text-xs leading-relaxed text-muted-foreground">
+                    <div className="mb-3">
+                      <p className="mb-1.5 text-xs font-medium uppercase tracking-wide text-muted-foreground">
+                        Key Features
+                      </p>
+                      <ul className="list-disc space-y-1.5 pl-5 text-sm leading-snug text-muted-foreground marker:text-primary/50">
                         {project.keyFeatures.map((feature) => (
-                          <li key={feature}>{feature}</li>
+                          <li key={feature} className="pl-0.5">
+                            {feature}
+                          </li>
                         ))}
                       </ul>
                     </div>
                   )}
 
-                  <div className="mb-5 flex flex-wrap gap-2">
+                  <div className="mb-3 flex flex-wrap gap-1.5">
                     {project.technologies.map((tech) => (
                       <span
                         key={tech}
-                        className="rounded-full border border-primary/20 bg-primary/10 px-3 py-1 text-xs text-primary"
+                        className="rounded-full border border-primary/20 bg-primary/10 px-2.5 py-0.5 text-xs text-primary"
                       >
                         {tech}
                       </span>
                     ))}
                   </div>
 
-                  <div className="mt-auto space-y-3">
+                  <div className="mt-auto space-y-2 pt-1">
                     {"confidentialityNote" in project && project.confidentialityNote && (
-                      <p className="text-sm italic text-muted-foreground">{project.confidentialityNote}</p>
+                      <p className="text-xs italic leading-snug text-muted-foreground md:text-sm">
+                        {project.confidentialityNote}
+                      </p>
                     )}
                     {("codeUrl" in project || "demoUrl" in project) && (
                       <div className="flex gap-4">
