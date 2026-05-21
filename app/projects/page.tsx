@@ -1,4 +1,3 @@
-import Image from "next/image"
 import { ExternalLink, Github } from "lucide-react"
 
 export const metadata = {
@@ -29,8 +28,6 @@ const projects = [
       "Kubernetes",
       "FastAPI",
     ],
-    image: "/images/projects/sch-agent-card.png",
-    imageClassName: "object-cover object-center",
     confidentialityNote: "Code not public due to healthcare and partner confidentiality.",
     demoUrl: "https://drive.google.com/file/d/1SwkAuyqbm2zfD5U_XYb7pN2c51pkQSOe/view?usp=sharing",
     demoLabel: "View Demo",
@@ -55,8 +52,6 @@ const projects = [
       "OpenAI API",
       "Cross-Encoder Reranker",
     ],
-    image: "/images/projects/arxivlens.png",
-    imageClassName: "object-cover object-center",
     codeUrl: "https://github.com/ayogenthiran/arxivlens",
     demoUrl: "#",
     demoLabel: "Live Demo",
@@ -76,20 +71,6 @@ export default function ProjectsPage() {
                 key={project.id}
                 className="group flex h-full flex-col overflow-hidden rounded-2xl border border-border bg-card transition-colors hover:border-primary/30"
               >
-                <div className="relative h-[11.25rem] w-full shrink-0 overflow-hidden bg-muted sm:h-[13.75rem] md:h-[15rem]">
-                  <Image
-                    src={project.image || "/placeholder.svg"}
-                    alt={project.title}
-                    fill
-                    sizes="(min-width: 768px) 50vw, 100vw"
-                    className={
-                      "imageClassName" in project && project.imageClassName
-                        ? `${project.imageClassName} transition-transform duration-300 group-hover:scale-[1.03]`
-                        : "object-cover object-center transition-transform duration-300 group-hover:scale-[1.03]"
-                    }
-                  />
-                </div>
-
                 <div className="flex flex-1 flex-col p-4 md:p-5">
                   <div className="mb-2 space-y-1">
                     <span className="text-sm text-muted-foreground">{project.date}</span>
