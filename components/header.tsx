@@ -17,6 +17,7 @@ const navItems = [
   { name: "Experience", href: "#experience", isRoute: false },
   { name: "Projects", href: "/projects", isRoute: true },
   { name: "Blog", href: "/blog", isRoute: true },
+  { name: "Gallery", href: "/gallery", isRoute: true },
   { name: "Contact Me", href: "#contact", isRoute: false },
 ]
 
