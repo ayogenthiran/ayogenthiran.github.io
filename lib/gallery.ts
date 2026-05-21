@@ -23,13 +23,6 @@ export const galleryItems: GalleryItem[] = [
     caption: "Healthcare AI scheduling assistant demo",
   },
   {
-    id: "research-presentation",
-    // Replace src when you add a dedicated image (e.g. research-presentation.jpg)
-    src: "/images/gallery/conference-moment.jpg",
-    alt: "Research and technical presentation",
-    caption: "Research and technical presentation",
-  },
-  {
     id: "hackathon",
     src: "/images/gallery/no-name-hackathon.jpg",
     alt: "Team collaboration and hackathon",
