@@ -16,7 +16,7 @@ export default function GalleryPage() {
               Professional Gallery
             </h1>
             <p className="mx-auto max-w-2xl text-lg text-muted-foreground sm:text-xl">
-              A collection of memorable moments
+              A collection of memorable professional moments.
             </p>
           </div>
 
