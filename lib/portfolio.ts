@@ -66,6 +66,29 @@ export const projects: Project[] = [
     demoLabel: "View Demo",
   },
   {
+    id: "telco-churn-prediction",
+    title: "Telco Churn Prediction - End-to-End ML Project",
+    description:
+      "A production-style machine learning system that predicts telecom customer churn and serves predictions through an API and web UI.",
+    keyFeatures: [
+      "Trains an XGBoost churn classifier with feature engineering and experiment tracking in MLflow.",
+      "Serves predictions through a FastAPI endpoint and Gradio interface for quick manual testing.",
+      "Packages the app with Docker and supports repeatable deployment through GitHub Actions and AWS ECS Fargate.",
+    ],
+    date: "Dec 2025",
+    technologies: [
+      "Python",
+      "XGBoost",
+      "FastAPI",
+      "Gradio",
+      "MLflow",
+      "Docker",
+      "GitHub Actions",
+      "AWS ECS",
+    ],
+    codeUrl: "https://github.com/ayogenthiran/telco-churn-prediction",
+  },
+  {
     id: "arxivlens",
     title: "arXivLens - AI Research Paper Assistant",
     description:
