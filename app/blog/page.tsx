@@ -2,6 +2,7 @@ import * as LucideIcons from "lucide-react"
 import type { LucideIcon } from "lucide-react"
 import Link from "next/link"
 import { getAllPosts } from "@/lib/markdown"
+import { siteProfile } from "@/lib/portfolio"
 
 const iconMap = LucideIcons as unknown as Record<string, LucideIcon>
 
@@ -55,6 +56,21 @@ export default function BlogPage() {
                 </Link>
               )
             })}
+          </div>
+
+          <div className="mx-auto max-w-2xl rounded-2xl border border-border bg-card/50 p-6 text-center">
+            <p className="text-muted-foreground">
+              Want to read more articles? Visit my{" "}
+              <Link
+                href={siteProfile.links.medium}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-medium text-primary hover:text-primary/80 hover:underline"
+              >
+                Medium page
+              </Link>{" "}
+              for additional writing on AI, machine learning, and engineering.
+            </p>
           </div>
         </div>
       </div>
