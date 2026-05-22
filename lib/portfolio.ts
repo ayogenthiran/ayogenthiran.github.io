@@ -11,7 +11,7 @@ export const siteProfile = {
   links: {
     github: "https://github.com/ayogenthiran",
     linkedin: "https://www.linkedin.com/in/anojan-yogenthiran/",
-    medium: "https://medium.com/@anojanyogenthiran",
+    medium: "https://medium.com/@ayogenthiran",
     twitter: "https://x.com/ayogenth",
     resume: "/Anojan_Yogenthiran_Resume.pdf",
   },
