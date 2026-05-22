@@ -11,8 +11,8 @@ export default function Contact() {
             <div className="text-center">
               <h2 className="text-4xl md:text-5xl font-bold text-primary mb-6">Contact Me</h2>
               <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-                Feel free to reach out if you'd like to discuss opportunities, have a quick coffee chat, or just say hi!
-                I'm always looking forward to meeting new people.
+                Feel free to reach out if you&apos;d like to discuss opportunities, have a quick coffee chat, or just say
+                hi! I&apos;m always looking forward to meeting new people.
               </p>
             </div>
 

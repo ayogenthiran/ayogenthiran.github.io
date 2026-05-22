@@ -49,13 +49,7 @@ export default function Education() {
                 <div className="flex items-start gap-4">
                   <div className="flex-shrink-0">
                     <div className="w-16 h-16 bg-muted rounded-lg flex items-center justify-center p-2">
-                      <Image
-                        src="/images/resume/sliit.png"
-                        alt="SLIIT"
-                        width={64}
-                        height={64}
-                        className="rounded-lg object-contain"
-                      />
+                      <GraduationCap className="h-9 w-9 text-primary" aria-hidden="true" />
                     </div>
                   </div>
                   <div className="flex-1 space-y-2">

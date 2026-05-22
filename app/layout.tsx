@@ -8,24 +8,24 @@ import { GeistMono } from "geist/font/mono"
 import "./globals.css"
 import { cn } from "@/lib/utils"
 import NoScriptStyles from "@/components/noscript-styles"
+import { siteProfile } from "@/lib/portfolio"
 
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://ayogenthiran.github.io'),
-  title: "Anojan Yogenthiran - ayogenthiran.github.io",
-  description:
-    "Portfolio of Anojan Yogenthiran, a Senior Software Engineer specializing in JavaScript, TypeScript, React.js, Node.js, Laravel, and AWS.",
+  title: `${siteProfile.name} - ayogenthiran.github.io`,
+  description: `Portfolio of ${siteProfile.name}, an ${siteProfile.headline}`,
   keywords: [
     "Anojan Yogenthiran",
-    "Software Engineer",
-    "Full Stack Developer",
-    "JavaScript",
-    "TypeScript",
-    "React",
-    "Node.js",
-    "AWS",
+    "AI/ML Engineer",
+    "Machine Learning Engineer",
+    "Generative AI",
+    "Agentic AI",
+    "RAG",
+    "LLM Evaluation",
+    "MLOps",
   ],
-  authors: [{ name: "Anojan Yogenthiran" }],
-  creator: "Anojan Yogenthiran",
+  authors: [{ name: siteProfile.name }],
+  creator: siteProfile.name,
   icons: {
     icon: [
       { url: "/favicon.svg", type: "image/svg+xml" },
@@ -37,24 +37,22 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://ayogenthiran.github.io",
-    title: "Anojan Yogenthiran - ayogenthiran.github.io",
-    description:
-      "Portfolio of Anojan Yogenthiran, a Senior Software Engineer specializing in JavaScript, TypeScript, React.js, Node.js, Laravel, and AWS.",
-    siteName: "Anojan Yogenthiran Portfolio",
+    title: `${siteProfile.name} - ayogenthiran.github.io`,
+    description: `Portfolio of ${siteProfile.name}, an ${siteProfile.headline}`,
+    siteName: `${siteProfile.name} Portfolio`,
     images: [
       {
         url: "/favicon.png",
         width: 512,
         height: 512,
-        alt: "Anojan Yogenthiran Logo",
+        alt: `${siteProfile.name} Logo`,
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Anojan Yogenthiran - ayogenthiran.github.io",
-    description:
-      "Portfolio of Anojan Yogenthiran, a Senior Software Engineer specializing in JavaScript, TypeScript, React.js, Node.js, Laravel, and AWS.",
+    title: `${siteProfile.name} - ayogenthiran.github.io`,
+    description: `Portfolio of ${siteProfile.name}, an ${siteProfile.headline}`,
     creator: "@ayogenth",
     images: ["/favicon.png"],
   },
@@ -62,7 +60,6 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
-  generator: 'v0.app'
 }
 
 export default function RootLayout({

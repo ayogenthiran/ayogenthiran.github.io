@@ -1,23 +1,33 @@
-"use client"
-
+import Image from "next/image"
 import Link from "next/link"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faEnvelope } from "@fortawesome/free-solid-svg-icons"
-import {
-  faGithub,
-  faLinkedin,
-} from "@fortawesome/free-brands-svg-icons"
+import { FileText, Github, Linkedin, Mail } from "lucide-react"
+import { siteProfile, socialLinks } from "@/lib/portfolio"
 
 const iconLinkClass =
-  "group text-muted-foreground hover:text-foreground hover:scale-125 transition-all duration-200 cursor-pointer flex items-center justify-center shrink-0 no-underline outline-none ring-0 focus:outline-none focus:ring-0 focus-visible:outline-none focus-visible:ring-0"
+  "group text-muted-foreground hover:text-foreground hover:scale-125 transition-all duration-200 cursor-pointer flex items-center justify-center shrink-0 no-underline"
 
-const socialLinks = [
-  { href: "#contact", label: "Mail", type: "icon" as const, icon: faEnvelope },
-  { href: "https://github.com/ayogenthiran", label: "GitHub", type: "icon" as const, icon: faGithub },
-  { href: "https://www.linkedin.com/in/anojan-yogenthiran/", label: "LinkedIn", type: "icon" as const, icon: faLinkedin },
-  { href: "https://medium.com/@anojanyogenthiran", label: "Medium", type: "medium" as const },
-  { href: "/Anojan_Yogenthiran_Resume.pdf", label: "CV", type: "cv" as const },
-]
+const iconClassName = "h-8 w-8 transition-colors"
+
+function SocialIcon({ type }: { type: (typeof socialLinks)[number]["type"] }) {
+  if (type === "email") return <Mail className={iconClassName} aria-hidden="true" />
+  if (type === "github") return <Github className={iconClassName} aria-hidden="true" />
+  if (type === "linkedin") return <Linkedin className={iconClassName} aria-hidden="true" />
+  if (type === "cv") return <FileText className={iconClassName} aria-hidden="true" />
+
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 448 512"
+      width={32}
+      height={32}
+      fill="currentColor"
+      className={iconClassName}
+      aria-hidden="true"
+    >
+      <path d="M0 32v448h448V32H0zm372.2 106.1l-24 23c-2.1 1.6-3.1 4.2-2.7 6.7v169.3c-.4 2.6.6 5.2 2.7 6.7l23.5 23v5.1h-118V367l24.3-23.6c2.4-2.4 2.4-3.1 2.4-6.7V199.8l-67.6 171.6h-9.1L125 199.8v115c-.7 4.8 1 9.7 4.4 13.2l31.6 38.3v5.1H71.2v-5.1l31.6-38.3c3.4-3.5 4.9-8.4 4.1-13.2v-133c.4-3.7-1-7.3-3.8-9.8L75 138.1V133h87.3l67.4 148L289 133.1h83.2v5z" />
+    </svg>
+  )
+}
 
 function AboutBody() {
 
@@ -26,35 +36,24 @@ function AboutBody() {
       <div className="grid grid-cols-1 gap-10 sm:gap-12 md:grid-cols-[300px_1fr] md:gap-14 lg:gap-16">
         {/* Left column: photo, name, role, social icons */}
         <div className="flex flex-col items-center text-center">
-          <img
+          <Image
             src="/images/profile/anojan-profile.png?v=2"
             alt="Anojan Yogenthiran profile picture"
             width={240}
             height={240}
             className="w-56 h-56 lg:w-60 lg:h-60 rounded-full object-cover object-[50%_65%] shadow-lg ring-2 ring-primary/20"
-            loading="eager"
-            onError={(e) => {
-              const target = e.target as HTMLImageElement
-              target.style.display = "none"
-              target.nextElementSibling?.classList.remove("hidden")
-            }}
+            priority
           />
-          <div
-            className="hidden w-56 h-56 lg:w-60 lg:h-60 rounded-full bg-muted flex items-center justify-center ring-2 ring-primary/20 shrink-0"
-            aria-hidden="true"
-          >
-            <span className="text-4xl font-bold text-muted-foreground">AY</span>
-          </div>
-          <h3 className="mt-4 text-xl font-bold text-foreground sm:text-2xl font-mono">Anojan Yogenthiran</h3>
-          <p className="mt-1 text-muted-foreground sm:text-lg font-mono">AI/ML Engineer</p>
+          <h3 className="mt-4 text-xl font-bold text-foreground sm:text-2xl font-mono">{siteProfile.name}</h3>
+          <p className="mt-1 text-muted-foreground sm:text-lg font-mono">{siteProfile.role}</p>
           <p className="mt-0.5 text-muted-foreground text-base sm:text-lg">
             <a
-              href="https://vectorinstitute.ai/"
+              href={siteProfile.organization.url}
               target="_blank"
               rel="noopener noreferrer"
               className="text-primary font-medium hover:underline"
             >
-              Vector Institute
+              {siteProfile.organization.name}
             </a>
           </p>
           <div className="mt-4 flex flex-row flex-nowrap items-center justify-center gap-0.5 overflow-x-auto overflow-y-hidden [&::-webkit-scrollbar]:hidden [scrollbar-width:none]">
@@ -64,24 +63,12 @@ function AboutBody() {
                 href={link.href}
                 target={link.href.startsWith("http") ? "_blank" : undefined}
                 rel={link.href.startsWith("http") ? "noopener noreferrer" : undefined}
-                className={`${iconLinkClass} ${link.type === "cv" ? "-ml-1" : ""}`}
+                className={iconLinkClass}
                 aria-label={link.label}
               >
-                {link.type === "icon" && (
-                  <span className="flex items-center justify-center p-2">
-                    <FontAwesomeIcon icon={link.icon} style={{ width: 32, height: 32, minWidth: 32, maxWidth: 32 }} />
-                  </span>
-                )}
-                {link.type === "medium" && (
-                  <span className="flex items-center justify-center p-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width={32} height={32} fill="currentColor" className="text-muted-foreground group-hover:text-foreground transition-colors">
-                      <path d="M0 32v448h448V32H0zm372.2 106.1l-24 23c-2.1 1.6-3.1 4.2-2.7 6.7v169.3c-.4 2.6.6 5.2 2.7 6.7l23.5 23v5.1h-118V367l24.3-23.6c2.4-2.4 2.4-3.1 2.4-6.7V199.8l-67.6 171.6h-9.1L125 199.8v115c-.7 4.8 1 9.7 4.4 13.2l31.6 38.3v5.1H71.2v-5.1l31.6-38.3c3.4-3.5 4.9-8.4 4.1-13.2v-133c.4-3.7-1-7.3-3.8-9.8L75 138.1V133h87.3l67.4 148L289 133.1h83.2v5z" />
-                    </svg>
-                  </span>
-                )}
-                {link.type === "cv" && (
-                  <span className="flex items-center justify-center p-2 text-muted-foreground font-bold text-3xl leading-none group-hover:text-foreground transition-colors">CV</span>
-                )}
+                <span className="flex items-center justify-center p-2">
+                  <SocialIcon type={link.type} />
+                </span>
               </Link>
             ))}
           </div>
@@ -98,12 +85,12 @@ function AboutBody() {
             <p className="text-muted-foreground text-base leading-relaxed sm:text-lg">
               I&apos;m a Machine Learning Engineer at the{" "}
               <a
-                href="https://vectorinstitute.ai/"
+                href={siteProfile.organization.url}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-primary font-medium cursor-pointer hover:underline"
               >
-                Vector Institute
+                {siteProfile.organization.name}
               </a>
               , where I build and ship production-grade agentic AI systems for healthcare. My work focuses on designing AI assistants that support real clinical workflows through multi-agent orchestration, LLM evaluation, validation, and reliable deployment.
             </p>

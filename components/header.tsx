@@ -7,7 +7,7 @@ import { ModeToggle } from "./mode-toggle"
 import { Button } from "@/components/ui/button"
 import { Menu, X } from "lucide-react"
 import { cn } from "@/lib/utils"
-import { usePathname } from "next/navigation"
+import { usePathname, useRouter } from "next/navigation"
 import { motion } from "framer-motion"
 import Link from "next/link"
 
@@ -26,6 +26,7 @@ export default function Header() {
   const [scrolled, setScrolled] = useState(false)
   const [activeSection, setActiveSection] = useState("home")
   const pathname = usePathname()
+  const router = useRouter()
 
   // Function to determine which section is currently in view
   const determineActiveSection = useCallback(() => {
@@ -61,8 +62,6 @@ export default function Header() {
     }
 
     window.addEventListener("scroll", handleScroll)
-    // Initial check
-    setActiveSection(determineActiveSection())
 
     return () => window.removeEventListener("scroll", handleScroll)
   }, [determineActiveSection])
@@ -79,8 +78,8 @@ export default function Header() {
     
     // If we're not on the home page, navigate to home first
     if (pathname !== "/") {
-      // Navigate to home page with the section hash
-      window.location.href = `/${item.href}`
+      router.push(`/${item.href}`)
+      if (isOpen) setIsOpen(false)
       return
     }
 

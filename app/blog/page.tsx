@@ -1,14 +1,15 @@
 import * as LucideIcons from "lucide-react"
+import type { LucideIcon } from "lucide-react"
 import Link from "next/link"
 import { getAllPosts } from "@/lib/markdown"
+
+const iconMap = LucideIcons as unknown as Record<string, LucideIcon>
 
 export default function BlogPage() {
   const posts = getAllPosts()
 
   const getIconComponent = (iconName: string) => {
-    // Default to Brain if icon doesn't exist
-    const IconComponent = (LucideIcons as any)[iconName] || LucideIcons.Brain
-    return IconComponent
+    return iconMap[iconName] ?? LucideIcons.Brain
   }
 
   return (

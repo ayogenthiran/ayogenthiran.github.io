@@ -56,7 +56,7 @@ export function getPostBySlug(slug: string): BlogPost | null {
       icon: matterResult.data.icon,
       content: matterResult.content,
     }
-  } catch (error) {
+  } catch {
     return null
   }
 }
@@ -74,11 +74,6 @@ export async function markdownToHtml(markdown: string): Promise<string> {
     /<h2[^>]*>References<\/h2>/g,
     '<h2 class="references">References</h2>'
   )
-  
-  // Debug: Log the HTML structure for references
-  if (htmlContent.includes('References')) {
-    console.log('References HTML:', htmlContent.match(/<h2[^>]*>References<\/h2>[\s\S]*?<\/ul>/)?.[0])
-  }
   
   return htmlContent
 }

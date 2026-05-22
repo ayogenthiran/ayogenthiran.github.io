@@ -1,6 +1,6 @@
 import { notFound } from 'next/navigation'
 import { getPostBySlug, markdownToHtml, getAllPosts } from '@/lib/markdown'
-import { Brain, Clock, Calendar } from 'lucide-react'
+import { Clock, Calendar } from 'lucide-react'
 import { Metadata } from 'next'
 
 interface BlogPostPageProps {

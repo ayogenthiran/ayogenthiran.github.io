@@ -1,62 +1,10 @@
 import { ExternalLink, Github } from "lucide-react"
+import { projects } from "@/lib/portfolio"
 
 export const metadata = {
   title: "Projects - Anojan Yogenthiran",
   description: "Selected AI/ML, GenAI, RAG, and agentic AI projects by Anojan Yogenthiran.",
 }
-
-const projects = [
-  {
-    id: 0,
-    title: "AI Physician Scheduling Agent",
-    description:
-      "A healthcare AI assistant that turns physician scheduling preferences into structured, validated inputs for clinical operations.",
-    keyFeatures: [
-      "Extracts availability, constraints, and preferences from natural-language conversations.",
-      "Combines LangGraph orchestration, retrieval, validation guardrails, and human review.",
-      "Designed for secure deployment into production healthcare scheduling workflows.",
-    ],
-    date: "Jan 2026 – Present",
-    technologies: [
-      "Python",
-      "LangGraph",
-      "LangChain",
-      "Azure OpenAI",
-      "RAG",
-      "PostgreSQL",
-      "Docker",
-      "Kubernetes",
-      "FastAPI",
-    ],
-    confidentialityNote: "Code not public due to healthcare and partner confidentiality.",
-    demoUrl: "https://drive.google.com/file/d/1SwkAuyqbm2zfD5U_XYb7pN2c51pkQSOe/view?usp=sharing",
-    demoLabel: "View Demo",
-  },
-  {
-    id: 1,
-    title: "arXivLens — AI Research Paper Assistant",
-    description:
-      "An AI research assistant for faster literature discovery across arXiv papers using semantic search, reranking, and grounded answers.",
-    keyFeatures: [
-      "Supports natural-language questions over scientific paper collections.",
-      "Uses metadata filters, embeddings, and cross-encoder reranking to improve retrieval quality.",
-      "Generates grounded answers from retrieved paper context instead of unsupported summaries.",
-    ],
-    date: "Apr 2026",
-    technologies: [
-      "Python",
-      "FastAPI",
-      "Streamlit",
-      "ChromaDB",
-      "Sentence-Transformers",
-      "OpenAI API",
-      "Cross-Encoder Reranker",
-    ],
-    codeUrl: "https://github.com/ayogenthiran/arxivlens",
-    demoUrl: "#",
-    demoLabel: "Live Demo",
-  },
-]
 
 export default function ProjectsPage() {
   return (
@@ -83,7 +31,7 @@ export default function ProjectsPage() {
 
                   <p className="mb-2.5 text-sm leading-relaxed text-muted-foreground">{project.description}</p>
 
-                  {"keyFeatures" in project && project.keyFeatures && (
+                  {project.keyFeatures && (
                     <div className="mb-3">
                       <p className="mb-1.5 text-xs font-medium uppercase tracking-wide text-muted-foreground">
                         Key Features
@@ -110,14 +58,14 @@ export default function ProjectsPage() {
                   </div>
 
                   <div className="mt-auto space-y-2 pt-1">
-                    {"confidentialityNote" in project && project.confidentialityNote && (
+                    {project.confidentialityNote && (
                       <p className="text-xs italic leading-snug text-muted-foreground md:text-sm">
                         {project.confidentialityNote}
                       </p>
                     )}
-                    {("codeUrl" in project || "demoUrl" in project) && (
+                    {(project.codeUrl || project.demoUrl) && (
                       <div className="flex gap-4">
-                        {"codeUrl" in project && project.codeUrl && (
+                        {project.codeUrl && (
                           <a
                             href={project.codeUrl}
                             target="_blank"
@@ -128,7 +76,7 @@ export default function ProjectsPage() {
                             View Code
                           </a>
                         )}
-                        {"demoUrl" in project && project.demoUrl && (
+                        {project.demoUrl && (
                           <a
                             href={project.demoUrl}
                             target="_blank"
@@ -136,7 +84,7 @@ export default function ProjectsPage() {
                             className="inline-flex items-center gap-2 text-sm text-primary transition-colors hover:text-primary/80"
                           >
                             <ExternalLink className="h-4 w-4 shrink-0" aria-hidden="true" />
-                            {"demoLabel" in project && project.demoLabel ? project.demoLabel : "Live Demo"}
+                            {project.demoLabel ?? "Live Demo"}
                           </a>
                         )}
                       </div>
