@@ -66,6 +66,28 @@ export const projects: Project[] = [
     demoLabel: "View Demo",
   },
   {
+    id: "arxivlens",
+    title: "arXivLens - AI Research Paper Assistant",
+    description:
+      "An AI research assistant for faster literature discovery across arXiv papers using semantic search, reranking, and grounded answers.",
+    keyFeatures: [
+      "Supports natural-language questions over scientific paper collections.",
+      "Uses metadata filters, embeddings, and cross-encoder reranking to improve retrieval quality.",
+      "Generates grounded answers from retrieved paper context instead of unsupported summaries.",
+    ],
+    date: "Apr 2026",
+    technologies: [
+      "Python",
+      "FastAPI",
+      "Streamlit",
+      "ChromaDB",
+      "Sentence-Transformers",
+      "OpenAI API",
+      "Cross-Encoder Reranker",
+    ],
+    codeUrl: "https://github.com/ayogenthiran/arxivlens",
+  },
+  {
     id: "telco-churn-prediction",
     title: "Telco Churn Prediction - End-to-End ML Project",
     description:
@@ -87,28 +109,6 @@ export const projects: Project[] = [
       "AWS ECS",
     ],
     codeUrl: "https://github.com/ayogenthiran/telco-churn-prediction",
-  },
-  {
-    id: "arxivlens",
-    title: "arXivLens - AI Research Paper Assistant",
-    description:
-      "An AI research assistant for faster literature discovery across arXiv papers using semantic search, reranking, and grounded answers.",
-    keyFeatures: [
-      "Supports natural-language questions over scientific paper collections.",
-      "Uses metadata filters, embeddings, and cross-encoder reranking to improve retrieval quality.",
-      "Generates grounded answers from retrieved paper context instead of unsupported summaries.",
-    ],
-    date: "Apr 2026",
-    technologies: [
-      "Python",
-      "FastAPI",
-      "Streamlit",
-      "ChromaDB",
-      "Sentence-Transformers",
-      "OpenAI API",
-      "Cross-Encoder Reranker",
-    ],
-    codeUrl: "https://github.com/ayogenthiran/arxivlens",
   },
 ] as const
 

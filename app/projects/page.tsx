@@ -15,13 +15,13 @@ export default function ProjectsPage() {
             <h1 className="text-4xl font-bold text-primary">Featured Projects</h1>
           </div>
 
-          <div className="mx-auto grid w-full grid-cols-1 items-stretch justify-items-stretch gap-6 lg:grid-cols-[repeat(2,minmax(360px,460px))] lg:justify-center lg:gap-8">
+          <div className="mx-auto grid w-full grid-cols-1 items-stretch gap-6 md:grid-cols-2 xl:grid-cols-3">
             {projects.map((project) => (
               <div
                 key={project.id}
                 className="group flex h-full w-full flex-col overflow-hidden rounded-2xl border border-border bg-card transition-colors hover:border-primary/30"
               >
-                <div className="flex min-h-[28rem] flex-1 flex-col p-5 md:p-6">
+                <div className="flex min-h-[28rem] flex-1 flex-col p-5">
                   <div className="mb-2 space-y-1">
                     <span className="text-sm text-muted-foreground">{project.date}</span>
                     <h2 className="text-xl font-semibold leading-snug text-foreground break-words">
