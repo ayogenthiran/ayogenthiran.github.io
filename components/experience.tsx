@@ -2,6 +2,7 @@ import Image from "next/image"
 import { Calendar, MapPin } from "lucide-react"
 import { Card, CardContent } from "@/components/ui/card"
 import { experiences } from "@/lib/portfolio"
+import { cn } from "@/lib/utils"
 
 export default function Experience() {
   return (
@@ -31,7 +32,7 @@ export default function Experience() {
                             alt={experience.logoAlt}
                             width={64}
                             height={64}
-                            className="h-full w-full object-contain"
+                            className={cn("h-full w-full object-contain", experience.logoClassName)}
                           />
                         </div>
                       </div>

@@ -87,20 +87,6 @@ export const projects: Project[] = [
     ],
     codeUrl: "https://github.com/ayogenthiran/arxivlens",
   },
-  {
-    id: "policy-pilot",
-    title: "Policy Pilot - AI Document Assistant",
-    description:
-      "A policy assistant that answers employee questions from a company knowledge base with source-backed RAG responses.",
-    keyFeatures: [
-      "Indexes internal policy documents into a searchable knowledge base.",
-      "Uses retrieval and grounded generation to answer policy questions with supporting context.",
-      "Designed around practical enterprise document-assistant workflows.",
-    ],
-    date: "2025",
-    technologies: ["Python", "Weaviate", "LangChain", "AWS", "Lambda", "RAG"],
-    codeUrl: "https://github.com/ayogenthiran/policy-pilot",
-  },
 ] as const
 
 export const skillCategories = [
@@ -205,6 +191,7 @@ export interface ExperienceItem {
   logo: string
   logoAlt: string
   logoContainerClassName?: string
+  logoClassName?: string
   bullets: string[]
 }
 
@@ -231,7 +218,8 @@ export const experiences: ExperienceItem[] = [
     location: "Toronto, Ontario",
     logo: "/images/resume/transpots.png",
     logoAlt: "Transpots logo",
-    logoContainerClassName: "bg-white dark:bg-white",
+    logoContainerClassName: "bg-white dark:bg-white !p-0",
+    logoClassName: "h-20 w-20 -translate-y-1 object-contain",
     bullets: [
       "Built agentic document workflows for invoice factoring to extract, validate, and process financial documents.",
       "Designed LangChain and LangGraph pipelines with GPT-4o, rule-based validation, and human-in-the-loop checks.",
@@ -274,6 +262,8 @@ export const experiences: ExperienceItem[] = [
     location: "Singapore",
     logo: "/images/resume/hehealth.png",
     logoAlt: "HeHealth logo",
+    logoContainerClassName: "bg-white dark:bg-white !p-0",
+    logoClassName: "h-20 w-20 -translate-y-1 object-contain",
     bullets: [
       "Developed ResNet and VGG16 medical imaging models for clinical image classification.",
       "Improved model robustness with GAN-based augmentation techniques, including SinGAN and ConSinGAN.",

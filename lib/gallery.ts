@@ -19,8 +19,8 @@ export const galleryItems: GalleryItem[] = [
   {
     id: "healthcare-ai-demo",
     src: "/images/gallery/healthcare-ai-demo.jpeg",
-    alt: "Healthcare AI scheduling assistant demo",
-    caption: "Healthcare AI scheduling assistant demo",
+    alt: "Petal Health AI assistant project demo",
+    caption: "Petal Health AI assistant project demo",
   },
   {
     id: "hackathon",
